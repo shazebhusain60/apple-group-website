@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Apple Group | Hotels & Bakery</title>
 
   <meta
     name="description"
-    content="Apple Group of Hotels and Apple Bakery - Comfortable stays, warm hospitality and delicious bakery products."
+    content="Apple Group - Premium hotels, comfortable stays and Apple Bakery."
   >
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -29,6 +31,7 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
+
 
     /* =========================
        HEADER
@@ -74,23 +77,28 @@
       color: #d4af37;
     }
 
+
     /* =========================
        HERO
     ========================= */
 
     .hero {
       min-height: 580px;
+
       background:
         linear-gradient(
           135deg,
-          rgba(16, 42, 31, .92),
-          rgba(0, 0, 0, .55)
+          rgba(16, 42, 31, 0.92),
+          rgba(0, 0, 0, 0.55)
         ),
-        url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80')
-        center/cover;
+        url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80');
+
+      background-position: center;
+      background-size: cover;
 
       display: flex;
       align-items: center;
+
       color: white;
       padding: 70px 6%;
     }
@@ -122,6 +130,7 @@
       margin-bottom: 30px;
     }
 
+
     /* =========================
        BUTTONS
     ========================= */
@@ -148,6 +157,7 @@
       color: white;
       border: 2px solid white;
     }
+
 
     /* =========================
        GENERAL SECTIONS
@@ -182,12 +192,12 @@
       margin-bottom: 35px;
     }
 
+
     /* =========================
        HOTEL CARDS
     ========================= */
 
-    .hotel-grid,
-    .bakery-grid {
+    .hotel-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 25px;
@@ -197,7 +207,7 @@
       background: white;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
       transition: 0.3s ease;
     }
 
@@ -227,11 +237,12 @@
       margin-bottom: 15px;
     }
 
-    .card a {
+    .card-link {
       color: #a77d0a;
       font-weight: bold;
       text-decoration: none;
     }
+
 
     /* =========================
        APPLE BAKERY
@@ -254,6 +265,12 @@
       color: #ddd;
     }
 
+    .bakery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
     .product-card {
       background: white;
       color: #222;
@@ -267,4 +284,662 @@
       height: 200px;
       object-fit: cover;
       border-radius: 8px;
-     
+      margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+      color: #1d3328;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      color: #b48a10;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      background: white;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-box {
+      background: #d4af37;
+      padding: 45px;
+      border-radius: 15px;
+      text-align: center;
+      color: #1d3328;
+    }
+
+    .contact-box h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .contact-box p {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .contact-box a {
+      color: #1d3328;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #10231b;
+      color: white;
+      text-align: center;
+      padding: 30px 6%;
+    }
+
+
+    /* =========================
+       WHATSAPP BUTTON
+    ========================= */
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+
+      background: #25D366;
+      color: white;
+
+      width: 60px;
+      height: 60px;
+
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-decoration: none;
+      font-size: 28px;
+
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+
+      z-index: 999;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 700px) {
+
+      header {
+        padding: 14px 5%;
+      }
+
+      .navbar {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 15px;
+      }
+
+      nav a {
+        font-size: 14px;
+      }
+
+      .hero {
+        min-height: 500px;
+        padding: 60px 6%;
+      }
+
+      .hero h2 {
+        font-size: 18px;
+      }
+
+      .hero p {
+        font-size: 14px;
+        letter-spacing: 2px;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+        margin-right: 0;
+      }
+
+      section {
+        padding: 60px 5%;
+      }
+
+      .section-title {
+        font-size: 32px;
+      }
+
+      .section-text {
+        font-size: 16px;
+      }
+
+      .hotel-grid,
+      .bakery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card img {
+        height: 230px;
+      }
+
+      .contact-box {
+        padding: 30px 20px;
+      }
+
+      .contact-box h2 {
+        font-size: 28px;
+      }
+
+      .contact-box p {
+        font-size: 16px;
+      }
+
+      .floating-whatsapp {
+        width: 55px;
+        height: 55px;
+        right: 15px;
+        bottom: 15px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header>
+
+    <div class="navbar">
+
+      <div class="logo">
+        APPLE GROUP
+      </div>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#hotels">Our Hotels</a>
+        <a href="#bakery">Apple Bakery</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <p>WELCOME TO</p>
+
+      <h1>
+        Experience
+        <span>Exceptional</span>
+        Hospitality
+      </h1>
+
+      <h2>
+        Comfortable stays, warm hospitality and memorable experiences
+        with Apple Group.
+      </h2>
+
+      <a href="#hotels" class="btn">
+        Explore Our Hotels
+      </a>
+
+      <a href="#bakery" class="btn btn-outline">
+        Apple Bakery
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       HOTELS
+  ========================= -->
+
+  <section id="hotels">
+
+    <div class="container">
+
+      <p class="section-tag">
+        OUR DESTINATIONS
+      </p>
+
+      <h2 class="section-title">
+        Stay With Apple Group
+      </h2>
+
+      <p class="section-text">
+        Discover our collection of hotels designed for comfort,
+        hospitality and memorable stays.
+      </p>
+
+
+      <div class="hotel-grid">
+
+
+        <!-- HOTEL NEXA -->
+
+        <div class="card">
+
+          <img
+            src="Hotel_nexa.png"
+            alt="Hotel Nexa"
+          >
+
+          <div class="card-content">
+
+            <h3>
+              Hotel Nexa
+            </h3>
+
+            <p>
+              Modern luxury, premium comfort and a memorable stay
+              experience for tourists and families.
+            </p>
+
+            <a
+              href="hotel-nexa.html"
+              class="card-link"
+            >
+              Explore Hotel Nexa →
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- HOTEL APPLE PALACE -->
+
+        <div class="card">
+
+          <img
+            src="Hotel-apple-palace.png"
+            alt="Hotel Apple Palace"
+          >
+
+          <div class="card-content">
+
+            <h3>
+              Hotel Apple Palace
+            </h3>
+
+            <p>
+              Comfortable rooms, quality service and warm hospitality
+              for every guest.
+            </p>
+
+            <a
+              href="hotel-apple-palace.html"
+              class="card-link"
+            >
+              Explore Hotel Apple Palace →
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- HOTEL APPLE GRAND -->
+
+        <div class="card">
+
+          <img
+            src="Hotel-apple-grand.png"
+            alt="Hotel Apple Grand"
+          >
+
+          <div class="card-content">
+
+            <h3>
+              Hotel Apple Grand
+            </h3>
+
+            <p>
+              Experience a comfortable stay with modern amenities
+              and trusted Apple Group hospitality.
+            </p>
+
+            <a
+              href="hotel-apple-grand.html"
+              class="card-link"
+            >
+              Explore Hotel Apple Grand →
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- HOTEL APPLE PRIME -->
+
+        <div class="card">
+
+          <img
+            src="Hotel-apple-prime.png"
+            alt="Hotel Apple Prime"
+          >
+
+          <div class="card-content">
+
+            <h3>
+              Hotel Apple Prime
+            </h3>
+
+            <p>
+              A welcoming stay with comfort, convenience and excellent
+              service for every traveler.
+            </p>
+
+            <a
+              href="hotel-apple-prime.html"
+              class="card-link"
+            >
+              Explore Hotel Apple Prime →
+            </a>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       APPLE BAKERY
+  ========================= -->
+
+  <section class="bakery" id="bakery">
+
+    <div class="container">
+
+      <p class="section-tag">
+        FRESH • DELICIOUS • APPLE BAKERY
+      </p>
+
+      <h2 class="section-title">
+        Taste the Goodness
+      </h2>
+
+      <p class="section-text">
+        Explore our delicious bakery range. More products and online
+        ordering will be added here.
+      </p>
+
+
+      <div class="bakery-grid">
+
+
+        <!-- RUSK -->
+
+        <div class="product-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=800&q=80"
+            alt="Kesar Elaichi Rusk"
+          >
+
+          <h3>
+            Apple Kesar Elaichi Rusk
+          </h3>
+
+          <p>
+            Delicious crispy rusk with the rich flavour
+            of kesar and elaichi.
+          </p>
+
+          <div class="price">
+            Available Now
+          </div>
+
+          <a
+            href="https://wa.me/918770434255?text=Hello%2C%20I%20want%20to%20order%20Apple%20Kesar%20Elaichi%20Rusk."
+            class="btn"
+            target="_blank"
+            rel="noopener"
+          >
+            Order on WhatsApp
+          </a>
+
+        </div>
+
+
+
+        <!-- ATTA TOAST -->
+
+        <div class="product-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80"
+            alt="Premium Atta Toast"
+          >
+
+          <h3>
+            Premium Atta Toast
+          </h3>
+
+          <p>
+            Fresh, crispy and delicious toast for
+            your everyday moments.
+          </p>
+
+          <div class="price">
+            Coming Soon
+          </div>
+
+        </div>
+
+
+
+        <!-- MORE PRODUCTS -->
+
+        <div class="product-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&w=800&q=80"
+            alt="Apple Bakery Products"
+          >
+
+          <h3>
+            More Bakery Products
+          </h3>
+
+          <p>
+            Discover more delicious products from Apple Bakery.
+          </p>
+
+          <div class="price">
+            Coming Soon
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       ABOUT
+  ========================= -->
+
+  <section class="about" id="about">
+
+    <div class="container">
+
+      <p class="section-tag">
+        ABOUT US
+      </p>
+
+      <h2 class="section-title">
+        One Group. Many Experiences.
+      </h2>
+
+      <p class="section-text">
+        Apple Group brings together hospitality and delicious food
+        experiences. Our aim is to provide comfortable stays, warm
+        service and quality products that our guests and customers
+        can trust.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       CONTACT
+  ========================= -->
+
+  <section id="contact">
+
+    <div class="container">
+
+      <div class="contact-box">
+
+        <h2>
+          Get in Touch
+        </h2>
+
+        <p>
+          For Hotel Bookings & Apple Bakery Orders
+        </p>
+
+        <p>
+          📞
+          <a href="tel:+918770434255">
+            8770434255
+          </a>
+        </p>
+
+        <p>
+          🌐
+          <a
+            href="https://www.applegroup.info"
+            target="_blank"
+            rel="noopener"
+          >
+            www.applegroup.info
+          </a>
+        </p>
+
+        <a
+          href="https://wa.me/918770434255"
+          class="btn"
+          target="_blank"
+          rel="noopener"
+        >
+          Chat on WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <p>
+      <strong>APPLE GROUP</strong>
+    </p>
+
+    <p>
+      Hotels • Hospitality • Apple Bakery
+    </p>
+
+    <br>
+
+    <p>
+      © 2026 Apple Group. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+
+  <!-- =========================
+       FLOATING WHATSAPP
+  ========================= -->
+
+  <a
+    href="https://wa.me/918770434255"
+    class="floating-whatsapp"
+    aria-label="WhatsApp"
+    target="_blank"
+    rel="noopener"
+  >
+    ☎
+  </a>
+
+
+</body>
+</html>
