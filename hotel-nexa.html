@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Hotel Nexa by Apple | Apple Group</title>
+  <title>Hotel Nexa | Apple Group</title>
 
   <style>
     * {
@@ -19,126 +19,143 @@
       color: #222;
     }
 
-    header {
-      background: #1f3a2e;
-      color: white;
-      text-align: center;
-      padding: 22px 15px;
-    }
-
-    header h1 {
-      font-size: 32px;
-      letter-spacing: 2px;
-    }
-
-    header p {
-      margin-top: 8px;
-      color: #d9d9d9;
-    }
-
     .hero {
       position: relative;
+      height: 65vh;
+      min-height: 400px;
+      overflow: hidden;
+      background: #111;
     }
 
     .hero img {
       width: 100%;
-      height: 350px;
+      height: 100%;
       object-fit: cover;
-      display: block;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.8),
+        rgba(0,0,0,0.1)
+      );
+    }
+
+    .hero-content {
+      position: absolute;
+      bottom: 50px;
+      left: 8%;
+      right: 8%;
+      color: white;
+    }
+
+    .hero-content h1 {
+      font-size: 45px;
+      margin-bottom: 10px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 18px;
+      color: white;
+      border: 1px solid white;
+      border-radius: 30px;
+      text-decoration: none;
     }
 
     .container {
-      width: 90%;
       max-width: 1100px;
       margin: auto;
-      padding: 45px 0;
+      padding: 50px 20px;
     }
 
     .intro {
       text-align: center;
-      margin-bottom: 45px;
+      max-width: 750px;
+      margin: auto;
     }
 
     .intro h2 {
       font-size: 32px;
-      color: #1f3a2e;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
 
     .intro p {
-      font-size: 18px;
+      font-size: 17px;
       line-height: 1.7;
-      color: #555;
+      color: #666;
     }
 
-    .section-title {
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 50px;
+    }
+
+    .feature {
+      background: white;
+      padding: 30px 20px;
       text-align: center;
-      font-size: 28px;
-      margin: 45px 0 25px;
-      color: #1f3a2e;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .feature h3 {
+      margin-bottom: 10px;
+    }
+
+    .gallery-title {
+      text-align: center;
+      margin-top: 60px;
+      margin-bottom: 25px;
+      font-size: 32px;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
 
     .gallery img {
       width: 100%;
-      height: 230px;
+      height: 300px;
       object-fit: cover;
       border-radius: 12px;
     }
 
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .feature {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    }
-
     .booking {
-      background: #1f3a2e;
-      color: white;
       text-align: center;
+      margin-top: 60px;
       padding: 50px 20px;
-      margin-top: 50px;
+      background: #222;
+      color: white;
+      border-radius: 15px;
     }
 
     .booking h2 {
-      font-size: 30px;
       margin-bottom: 15px;
+      font-size: 30px;
     }
 
     .booking p {
       margin-bottom: 25px;
-      font-size: 17px;
     }
 
-    .whatsapp-btn {
+    .booking a {
       display: inline-block;
-      background: #25D366;
-      color: white;
-      padding: 16px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .back-btn {
-      display: inline-block;
-      margin-top: 25px;
-      color: #1f3a2e;
+      background: white;
+      color: #222;
+      padding: 14px 28px;
+      border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
     }
@@ -147,73 +164,103 @@
       text-align: center;
       padding: 25px;
       background: #111;
-      color: #ccc;
+      color: white;
+    }
+
+    @media (max-width: 700px) {
+      .hero-content h1 {
+        font-size: 34px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery img {
+        height: 250px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>HOTEL NEXA</h1>
-  <p>By Apple Group of Hotels</p>
-</header>
+  <section class="hero">
+    <img src="Hotel_nexa.png" alt="Hotel Nexa">
 
-<section class="hero">
-  <img src="Hotel_nexa.png" alt="Hotel Nexa">
-</section>
+    <div class="hero-overlay"></div>
 
-<div class="container">
+    <div class="hero-content">
+      <a href="index.html" class="back-btn">← Back to Apple Group</a>
 
-  <section class="intro">
-    <h2>Experience the Art of Luxury</h2>
-    <p>
-      Hotel Nexa offers modern luxury, premium comfort and warm hospitality
-      for tourists, families and business travellers.
-    </p>
+      <h1>Hotel Nexa</h1>
+      <p>Experience Comfort, Luxury & Hospitality</p>
+    </div>
   </section>
 
-  <h2 class="section-title">Explore Hotel Nexa</h2>
 
-  <div class="gallery">
-    <img src="Hotel_nexa.png" alt="Hotel Nexa Exterior">
-    <!-- Reception photo -->
-    <!-- Room photo -->
-    <!-- Lobby photo -->
-    <!-- Bathroom photo -->
+  <div class="container">
+
+    <section class="intro">
+      <h2>Welcome to Hotel Nexa</h2>
+
+      <p>
+        Hotel Nexa by Apple Group offers a comfortable and memorable stay
+        with quality service and warm hospitality. Whether you are travelling
+        with family, friends or visiting for business, we are here to make
+        your stay special.
+      </p>
+    </section>
+
+
+    <section class="features">
+
+      <div class="feature">
+        <h3>🏨 Comfortable Rooms</h3>
+        <p>Clean, comfortable and well-maintained rooms for a relaxing stay.</p>
+      </div>
+
+      <div class="feature">
+        <h3>✨ Quality Service</h3>
+        <p>Dedicated hospitality and service to make every guest feel welcome.</p>
+      </div>
+
+      <div class="feature">
+        <h3>📍 Prime Location</h3>
+        <p>A convenient stay for tourists, families and business travellers.</p>
+      </div>
+
+    </section>
+
+
+    <h2 class="gallery-title">Hotel Nexa Gallery</h2>
+
+    <section class="gallery">
+      <img src="Hotel_nexa.png" alt="Hotel Nexa">
+      <img src="Hotel_nexa.png" alt="Hotel Nexa Interior">
+    </section>
+
+
+    <section class="booking">
+      <h2>Book Your Stay</h2>
+
+      <p>
+        Experience a comfortable and memorable stay with Hotel Nexa.
+      </p>
+
+      <a href="tel:8770434255">Call Now: 8770434255</a>
+    </section>
+
   </div>
 
-  <h2 class="section-title">Our Facilities</h2>
 
-  <div class="features">
-    <div class="feature">🛏️ Comfortable Rooms</div>
-    <div class="feature">🛎️ 24/7 Reception</div>
-    <div class="feature">📶 Free Wi-Fi</div>
-    <div class="feature">🅿️ Parking</div>
-    <div class="feature">🧹 Daily Housekeeping</div>
-    <div class="feature">👨‍👩‍👧 Family Friendly</div>
-  </div>
-
-</div>
-
-<section class="booking">
-  <h2>Book Your Stay</h2>
-  <p>Contact us on WhatsApp for room availability and booking.</p>
-
-  <a class="whatsapp-btn"
-     href="https://wa.me/918770434255?text=Hello%2C%20I%20want%20to%20enquire%20about%20Hotel%20Nexa%20by%20Apple."
-     target="_blank">
-     WhatsApp Us
-  </a>
-</section>
-
-<div style="text-align:center; padding: 25px;">
-  <a class="back-btn" href="index.html">← Back to Apple Group</a>
-</div>
-
-<footer>
-  © Apple Group of Hotels
-</footer>
+  <footer>
+    <p>© Apple Group of Hotels | Hotel Nexa</p>
+  </footer>
 
 </body>
 </html>
