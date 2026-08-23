@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Apple Bakery | Freshness in Every Bite</title>
+
+  <meta
+    name="description"
+    content="Apple Bakery offers delicious bakery products. Explore our range and apply for distributorship."
+  >
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f6f1;
+      color: #2b241d;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      background: #1d3328;
+      padding: 14px 6%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 500px;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(29, 51, 40, 0.88),
+          rgba(0, 0, 0, 0.45)
+        ),
+        url('https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=1600&q=85');
+
+      background-size: cover;
+      background-position: center;
+
+      display: flex;
+      align-items: center;
+
+      padding: 70px 7%;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .hero-tag {
+      color: #f2c94c;
+      font-size: 14px;
+      letter-spacing: 3px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      color: #f2c94c;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #f0f0f0;
+      margin-bottom: 30px;
+      max-width: 600px;
+    }
+
+
+    /* =========================
+       BUTTON
+    ========================= */
+
+    .btn {
+      display: inline-block;
+      background: #d4af37;
+      color: #1d3328;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 14px 25px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s ease;
+      font-size: 16px;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: #f2c94c;
+    }
+
+
+    /* =========================
+       GENERAL
+    ========================= */
+
+    section {
+      padding: 75px 7%;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-tag {
+      color: #b88935;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 40px;
+      color: #1d3328;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    .section-text {
+      max-width: 720px;
+      margin: 0 auto 40px;
+      text-align: center;
+      color: #666;
+      font-size: 17px;
+    }
+
+
+    /* =========================
+       PRODUCTS
+    ========================= */
+
+    .products {
+      background: white;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      transition: 0.3s ease;
+      border: 1px solid #eee;
+    }
+
+    .product-card:hover {
+      transform: translateY(-7px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-content {
+      padding: 22px;
+    }
+
+    .product-content h3 {
+      color: #1d3328;
+      font-size: 23px;
+      margin-bottom: 8px;
+    }
+
+    .product-content p {
+      color: #666;
+      margin-bottom: 18px;
+      font-size: 15px;
+    }
+
+    .product-status {
+      display: inline-block;
+      background: #edf5ee;
+      color: #1d7a3a;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+
+    /* =========================
+       DISTRIBUTORSHIP
+    ========================= */
+
+    .distributorship {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(29, 51, 40, 0.96),
+          rgba(16, 35, 27, 0.96)
+        );
+      color: white;
+    }
+
+    .distributorship .section-tag {
+      color: #f2c94c;
+    }
+
+    .distributorship .section-title {
+      color: white;
+    }
+
+    .distributorship .section-text {
+      color: #dddddd;
+    }
+
+    .form-box {
+      max-width: 850px;
+      margin: auto;
+      background: white;
+      padding: 35px;
+      border-radius: 18px;
+      color: #222;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 7px;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 15px;
+      font-family: Arial, sans-serif;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #d4af37;
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.12);
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    .form-submit .btn {
+      min-width: 240px;
+    }
+
+
+    /* =========================
+       WHY DISTRIBUTOR
+    ========================= */
+
+    .benefits {
+      background: #f8f6f1;
+    }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .benefit-card {
+      background: white;
+      padding: 25px 20px;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+    }
+
+    .benefit-icon {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .benefit-card h3 {
+      color: #1d3328;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .benefit-card p {
+      color: #666;
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      background: #d4af37;
+      text-align: center;
+      color: #1d3328;
+    }
+
+    .contact h2 {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .contact p {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .contact a {
+      color: #1d3328;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #10231b;
+      color: white;
+      text-align: center;
+      padding: 28px 6%;
+    }
+
+    footer p {
+      margin-bottom: 5px;
+      color: #dddddd;
+    }
+
+
+    /* =========================
+       WHATSAPP
+    ========================= */
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+
+      width: 58px;
+      height: 58px;
+
+      border-radius: 50%;
+
+      background: #25d366;
+      color: white;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-decoration: none;
+      font-size: 26px;
+
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+      z-index: 999;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 768px) {
+
+      header {
+        padding: 13px 5%;
+      }
+
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .logo {
+        font-size: 21px;
+      }
+
+      nav {
+        width: 100%;
+        justify-content: center;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .hero {
+        min-height: 470px;
+        padding: 60px 6%;
+        background-position: center;
+      }
+
+      .hero-tag {
+        font-size: 12px;
+        letter-spacing: 2px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 55px 5%;
+      }
+
+      .section-title {
+        font-size: 30px;
+      }
+
+      .section-text {
+        font-size: 15px;
+        margin-bottom: 30px;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .product-card {
+        border-radius: 12px;
+      }
+
+      .product-card img {
+        height: 145px;
+      }
+
+      .product-content {
+        padding: 14px;
+      }
+
+      .product-content h3 {
+        font-size: 17px;
+        line-height: 1.25;
+      }
+
+      .product-content p {
+        font-size: 13px;
+        line-height: 1.5;
+        margin-bottom: 12px;
+      }
+
+      .product-status {
+        font-size: 11px;
+        padding: 4px 8px;
+      }
+
+      .product-content .btn {
+        width: 100%;
+        text-align: center;
+        padding: 11px 8px;
+        font-size: 13px;
+      }
+
+      .benefit-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .benefit-card {
+        padding: 18px 12px;
+      }
+
+      .benefit-icon {
+        font-size: 26px;
+      }
+
+      .benefit-card h3 {
+        font-size: 15px;
+      }
+
+      .benefit-card p {
+        font-size: 12px;
+      }
+
+      .form-box {
+        padding: 20px 15px;
+        border-radius: 14px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .form-group.full {
+        grid-column: auto;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        padding: 12px;
+        font-size: 14px;
+      }
+
+      .form-submit .btn {
+        width: 100%;
+        min-width: 0;
+      }
+
+      .contact h2 {
+        font-size: 28px;
+      }
+
+      .contact p {
+        font-size: 15px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header>
+
+    <div class="navbar">
+
+      <a href="index.html" class="logo">
+        APPLE BAKERY
+      </a>
+
+      <nav>
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="#products">
+          Products
+        </a>
+
+        <a href="#distributorship">
+          Distributorship
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="hero-tag">
+        APPLE BAKERY
+      </div>
+
+      <h1>
+        Freshness in
+        <span>Every Bite</span>
+      </h1>
+
+      <p>
+        Discover delicious bakery products made to bring
+        quality, taste and happiness to every moment.
+      </p>
+
+      <a href="#products" class="btn">
+        Explore Products
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       PRODUCTS
+  ========================= -->
+
+  <section class="products" id="products">
+
+    <div class="container">
+
+      <div class="section-tag">
+        OUR PRODUCTS
+      </div>
+
+      <h2 class="section-title">
+        Made With Taste & Quality
+      </h2>
+
+      <p class="section-text">
+        Explore our delicious range of bakery products.
+        More exciting products will be added soon.
+      </p>
+
+
+      <div class="product-grid">
+
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=800&q=80"
+            alt="Apple Kesar Elaichi Rusk"
+          >
+
+          <div class="product-content">
+
+            <h3>
+              Apple Kesar Elaichi Rusk
+            </h3>
+
+            <p>
+              Crispy and delicious rusk with the rich
+              flavour of kesar and elaichi.
+            </p>
+
+            <div class="product-status">
+              Available Now
+            </div>
+
+            <br>
+
+            <a
+              href="https://wa.me/918770434255?text=Hello%2C%20I%20want%20to%20order%20Apple%20Kesar%20Elaichi%20Rusk."
+              class="btn"
+              target="_blank"
+              rel="noopener"
+            >
+              Order Now
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80"
+            alt="Apple Atta Toast"
+          >
+
+          <div class="product-content">
+
+            <h3>
+              Apple Atta Toast
+            </h3>
+
+            <p>
+              Fresh, crispy and delicious toast
+              for everyday tea-time moments.
+            </p>
+
+            <div class="product-status">
+              Coming Soon
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&w=800&q=80"
+            alt="Apple Bakery Products"
+          >
+
+          <div class="product-content">
+
+            <h3>
+              More Products
+            </h3>
+
+            <p>
+              More delicious Apple Bakery products
+              are coming soon.
+            </p>
+
+            <div class="product-status">
+              Coming Soon
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       BENEFITS
+  ========================= -->
+
+  <section class="benefits">
+
+    <div class="container">
+
+      <div class="section-tag">
+        GROW WITH APPLE BAKERY
+      </div>
+
+      <h2 class="section-title">
+        Why Partner With Us?
+      </h2>
+
+      <p class="section-text">
+        Join Apple Bakery and explore an exciting opportunity
+        to grow your business with quality bakery products.
+      </p>
+
+
+      <div class="benefit-grid">
+
+        <div class="benefit-card">
+
+          <div class="benefit-icon">
+            🏆
+          </div>
+
+          <h3>
+            Quality Products
+          </h3>
+
+          <p>
+            Products focused on taste and consistent quality.
+          </p>
+
+        </div>
+
+
+        <div class="benefit-card">
+
+          <div class="benefit-icon">
+            📈
+          </div>
+
+          <h3>
+            Business Growth
+          </h3>
+
+          <p>
+            Opportunity to expand your local market and business.
+          </p>
+
+        </div>
+
+
+        <div class="benefit-card">
+
+          <div class="benefit-icon">
+            🤝
+          </div>
+
+          <h3>
+            Trusted Partnership
+          </h3>
+
+          <p>
+            Build a long-term business relationship with our team.
+          </p>
+
+        </div>
+
+
+        <div class="benefit-card">
+
+          <div class="benefit-icon">
+            🚚
+          </div>
+
+          <h3>
+            Growing Network
+          </h3>
+
+          <p>
+            Be part of the expanding Apple Bakery network.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       DISTRIBUTORSHIP FORM
+  ========================= -->
+
+  <section
+    class="distributorship"
+    id="distributorship"
+  >
+
+    <div class="container">
+
+      <div class="section-tag">
+        BUSINESS OPPORTUNITY
+      </div>
+
+      <h2 class="section-title">
+        Apply for Distributorship
+      </h2>
+
+      <p class="section-text">
+        Interested in becoming an Apple Bakery distributor?
+        Fill in the form below and our team will contact you.
+      </p>
+
+
+      <div class="form-box">
+
+        <form
+          action="https://formsubmit.co/applegroupofficial@gmail.com"
+          method="POST"
+        >
+
+          <!-- SETTINGS -->
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="New Apple Bakery Distributorship Application"
+          >
+
+          <input
+            type="hidden"
+            name="_captcha"
+            value="false"
+          >
+
+          <input
+            type="hidden"
+            name="_template"
+            value="table"
+          >
+
+
+          <div class="form-grid">
+
+
+            <div class="form-group">
+
+              <label>
+                Full Name *
+              </label>
+
+              <input
+                type="text"
+                name="Full Name"
+                placeholder="Enter your full name"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>
+                Mobile Number *
+              </label>
+
+              <input
+                type="tel"
+                name="Mobile Number"
+                placeholder="Enter mobile number"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>
+                Email Address
+              </label>
+
+              <input
+                type="email"
+                name="Email"
+                placeholder="Enter email address"
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>
+                City *
+              </label>
+
+              <input
+                type="text"
+                name="City"
+                placeholder="Enter your city"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>
+                State *
+              </label>
+
+              <input
+                type="text"
+                name="State"
+                placeholder="Enter your state"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>
+                Business Name
+              </label>
+
+              <input
+                type="text"
+                name="Business Name"
+                placeholder="Your shop or business name"
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>
+                Business Experience
+              </label>
+
+              <select name="Business Experience">
+
+                <option value="">
+                  Select Experience
+                </option>
+
+                <option>
+                  No Previous Experience
+                </option>
+
+                <option>
+                  Less Than 1 Year
+                </option>
+
+                <option>
+                  1 - 3 Years
+                </option>
+
+                <option>
+                  More Than 3 Years
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>
+                Investment Capacity
+              </label>
+
+              <select name="Investment Capacity">
+
+                <option value="">
+                  Select Range
+                </option>
+
+                <option>
+                  Below ₹50,000
+                </option>
+
+                <option>
+                  ₹50,000 - ₹1 Lakh
+                </option>
+
+                <option>
+                  ₹1 Lakh - ₹3 Lakh
+                </option>
+
+                <option>
+                  Above ₹3 Lakh
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div class="form-group full">
+
+              <label>
+                Message / Additional Information
+              </label>
+
+              <textarea
+                name="Message"
+                placeholder="Tell us about your business and distributorship requirements..."
+              ></textarea>
+
+            </div>
+
+
+          </div>
+
+
+          <div class="form-submit">
+
+            <button
+              type="submit"
+              class="btn"
+            >
+              Submit Application
+            </button>
+
+          </div>
+
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       CONTACT
+  ========================= -->
+
+  <section class="contact" id="contact">
+
+    <div class="container">
+
+      <h2>
+        Let's Grow Together
+      </h2>
+
+      <p>
+        For Product Orders & Distributorship Enquiries
+      </p>
+
+      <p>
+        📞
+        <a href="tel:+918770434255">
+          8770434255
+        </a>
+      </p>
+
+      <p>
+        🌐
+        <a href="https://www.applegroup.info">
+          www.applegroup.info
+        </a>
+      </p>
+
+      <br>
+
+      <a
+        href="https://wa.me/918770434255?text=Hello%2C%20I%20am%20interested%20in%20Apple%20Bakery%20distributorship."
+        class="btn"
+        target="_blank"
+        rel="noopener"
+      >
+        WhatsApp Us
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <p>
+      <strong>
+        APPLE BAKERY
+      </strong>
+    </p>
+
+    <p>
+      A Part of Apple Group
+    </p>
+
+    <p>
+      © 2026 Apple Group. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+
+  <!-- =========================
+       FLOATING WHATSAPP
+  ========================= -->
+
+  <a
+    href="https://wa.me/918770434255?text=Hello%2C%20I%20want%20to%20know%20more%20about%20Apple%20Bakery."
+    class="floating-whatsapp"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat on WhatsApp"
+  >
+    ☎
+  </a>
+
+
+</body>
+
+</html>
