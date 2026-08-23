@@ -100,6 +100,7 @@
 
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
 
       display: flex;
       align-items: center;
@@ -265,6 +266,45 @@
 
 
     /* =========================
+       BENEFITS
+    ========================= */
+
+    .benefits {
+      background: #f8f6f1;
+    }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .benefit-card {
+      background: white;
+      padding: 25px 20px;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+    }
+
+    .benefit-icon {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .benefit-card h3 {
+      color: #1d3328;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .benefit-card p {
+      color: #666;
+      font-size: 14px;
+    }
+
+
+    /* =========================
        DISTRIBUTORSHIP
     ========================= */
 
@@ -275,6 +315,7 @@
           rgba(29, 51, 40, 0.96),
           rgba(16, 35, 27, 0.96)
         );
+
       color: white;
     }
 
@@ -357,45 +398,6 @@
 
 
     /* =========================
-       WHY DISTRIBUTOR
-    ========================= */
-
-    .benefits {
-      background: #f8f6f1;
-    }
-
-    .benefit-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .benefit-card {
-      background: white;
-      padding: 25px 20px;
-      border-radius: 14px;
-      text-align: center;
-      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
-    }
-
-    .benefit-icon {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-
-    .benefit-card h3 {
-      color: #1d3328;
-      margin-bottom: 8px;
-      font-size: 18px;
-    }
-
-    .benefit-card p {
-      color: #666;
-      font-size: 14px;
-    }
-
-
-    /* =========================
        CONTACT
     ========================= */
 
@@ -440,7 +442,7 @@
 
 
     /* =========================
-       WHATSAPP
+       WHATSAPP BUTTON
     ========================= */
 
     .floating-whatsapp {
@@ -499,8 +501,8 @@
       }
 
       .hero {
-        min-height: 470px;
-        padding: 60px 6%;
+        min-height: 420px;
+        padding: 55px 6%;
         background-position: center;
       }
 
@@ -510,7 +512,7 @@
       }
 
       .hero h1 {
-        font-size: 42px;
+        font-size: 40px;
       }
 
       .hero p {
@@ -635,9 +637,7 @@
 <body>
 
 
-  <!-- =========================
-       HEADER
-  ========================= -->
+  <!-- HEADER -->
 
   <header>
 
@@ -673,9 +673,7 @@
 
 
 
-  <!-- =========================
-       HERO
-  ========================= -->
+  <!-- HERO -->
 
   <section class="hero">
 
@@ -705,9 +703,7 @@
 
 
 
-  <!-- =========================
-       PRODUCTS
-  ========================= -->
+  <!-- PRODUCTS -->
 
   <section class="products" id="products">
 
@@ -838,9 +834,7 @@
 
 
 
-  <!-- =========================
-       BENEFITS
-  ========================= -->
+  <!-- BENEFITS -->
 
   <section class="benefits">
 
@@ -864,13 +858,9 @@
 
         <div class="benefit-card">
 
-          <div class="benefit-icon">
-            🏆
-          </div>
+          <div class="benefit-icon">🏆</div>
 
-          <h3>
-            Quality Products
-          </h3>
+          <h3>Quality Products</h3>
 
           <p>
             Products focused on taste and consistent quality.
@@ -881,13 +871,9 @@
 
         <div class="benefit-card">
 
-          <div class="benefit-icon">
-            📈
-          </div>
+          <div class="benefit-icon">📈</div>
 
-          <h3>
-            Business Growth
-          </h3>
+          <h3>Business Growth</h3>
 
           <p>
             Opportunity to expand your local market and business.
@@ -898,13 +884,9 @@
 
         <div class="benefit-card">
 
-          <div class="benefit-icon">
-            🤝
-          </div>
+          <div class="benefit-icon">🤝</div>
 
-          <h3>
-            Trusted Partnership
-          </h3>
+          <h3>Trusted Partnership</h3>
 
           <p>
             Build a long-term business relationship with our team.
@@ -915,13 +897,9 @@
 
         <div class="benefit-card">
 
-          <div class="benefit-icon">
-            🚚
-          </div>
+          <div class="benefit-icon">🚚</div>
 
-          <h3>
-            Growing Network
-          </h3>
+          <h3>Growing Network</h3>
 
           <p>
             Be part of the expanding Apple Bakery network.
@@ -937,9 +915,7 @@
 
 
 
-  <!-- =========================
-       DISTRIBUTORSHIP FORM
-  ========================= -->
+  <!-- DISTRIBUTORSHIP FORM -->
 
   <section
     class="distributorship"
@@ -965,11 +941,11 @@
       <div class="form-box">
 
         <form
-          action="https://formsubmit.co/applegroupofficial@gmail.com"
+          action="https://formsubmit.co/applebakeryujn@gmail.com"
           method="POST"
         >
 
-          <!-- SETTINGS -->
+          <!-- FORM SETTINGS -->
 
           <input
             type="hidden"
@@ -1192,9 +1168,7 @@
 
 
 
-  <!-- =========================
-       CONTACT
-  ========================= -->
+  <!-- CONTACT -->
 
   <section class="contact" id="contact">
 
@@ -1217,7 +1191,7 @@
 
       <p>
         🌐
-        <a href="https://www.applegroup.info">
+        <a href="index.html">
           www.applegroup.info
         </a>
       </p>
@@ -1239,9 +1213,7 @@
 
 
 
-  <!-- =========================
-       FOOTER
-  ========================= -->
+  <!-- FOOTER -->
 
   <footer>
 
@@ -1263,9 +1235,7 @@
 
 
 
-  <!-- =========================
-       FLOATING WHATSAPP
-  ========================= -->
+  <!-- FLOATING WHATSAPP -->
 
   <a
     href="https://wa.me/918770434255?text=Hello%2C%20I%20want%20to%20know%20more%20about%20Apple%20Bakery."
