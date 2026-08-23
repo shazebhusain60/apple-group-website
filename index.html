@@ -15,6 +15,10 @@
 
   <style>
 
+    /* =========================
+       RESET
+    ========================= */
+
     * {
       margin: 0;
       padding: 0;
@@ -54,12 +58,12 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 16px;
+      gap: 14px;
     }
 
 
     /* =========================
-       CENTER LOGO
+       LOGO
     ========================= */
 
     .logo {
@@ -96,7 +100,7 @@
       color: white;
       text-decoration: none;
       font-weight: 600;
-      font-size: 17px;
+      font-size: 16px;
       transition: 0.3s ease;
     }
 
@@ -174,13 +178,18 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+
       padding: 14px 26px;
+
       background: #d4af37;
       color: #1d3328;
+
       text-decoration: none;
       font-weight: bold;
+
       border-radius: 8px;
       border: 1px solid #d4af37;
+
       transition: 0.3s ease;
     }
 
@@ -199,7 +208,6 @@
     .hero-buttons .btn-outline:hover {
       background: #d4af37;
       color: #1d3328;
-      border-color: #d4af37;
     }
 
 
@@ -209,13 +217,19 @@
 
     .btn {
       display: inline-block;
+
       padding: 14px 26px;
+
       background: #d4af37;
       color: #1d3328;
+
       text-decoration: none;
       font-weight: bold;
+
       border-radius: 6px;
+
       margin-top: 10px;
+
       transition: 0.3s ease;
     }
 
@@ -272,7 +286,9 @@
       background: white;
       border-radius: 12px;
       overflow: hidden;
+
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
       transition: 0.3s ease;
     }
 
@@ -446,50 +462,64 @@
 
 
     /* =========================
-       MOBILE
+       MOBILE - COMPACT DESIGN
     ========================= */
 
     @media (max-width: 700px) {
 
+
+      /* HEADER */
+
       header {
-        padding: 16px 5% 18px;
+        padding: 10px 4% 12px;
       }
 
       .navbar {
-        gap: 18px;
+        gap: 10px;
       }
 
       .logo img {
-        max-width: 200px;
-        max-height: 75px;
+        max-width: 145px;
+        max-height: 55px;
       }
 
       nav {
         flex-wrap: nowrap;
         justify-content: space-between;
-        gap: 0;
+        gap: 5px;
+        overflow-x: auto;
       }
 
       nav a {
-        font-size: 14px;
+        font-size: 11px;
         white-space: nowrap;
       }
 
+
+      /* HERO */
+
       .hero {
-        min-height: 1115px;
-        padding: 110px 6% 80px;
+        min-height: 620px;
+        padding: 55px 6% 50px;
         align-items: flex-start;
         background-position: center center;
       }
 
       .hero-content {
         width: 100%;
+        max-width: 100%;
+      }
+
+      .hero p {
+        font-size: 11px;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
       }
 
       .hero h1 {
-        font-size: 58px;
-        line-height: 1.1;
-        margin-bottom: 35px;
+        font-size: 38px;
+        line-height: 1.08;
+        margin-bottom: 18px;
       }
 
       .hero h1 span {
@@ -497,26 +527,18 @@
       }
 
       .hero h2 {
-        font-size: 20px;
-        line-height: 1.7;
-        margin-bottom: 65px;
-      }
-
-      .hero p {
         font-size: 15px;
-        letter-spacing: 4px;
-        margin-bottom: 25px;
+        line-height: 1.5;
+        margin-bottom: 28px;
       }
 
 
-      /* MOBILE HERO BUTTONS - LEFT & RIGHT */
+      /* HERO BUTTONS */
 
       .hero-buttons {
         display: flex;
         flex-direction: row;
-        align-items: stretch;
-        justify-content: space-between;
-        gap: 10px;
+        gap: 8px;
         width: 100%;
         flex-wrap: nowrap;
       }
@@ -524,53 +546,157 @@
       .hero-buttons .btn {
         flex: 1;
         min-width: 0;
-        padding: 14px 8px;
-        font-size: 14px;
-        border-radius: 10px;
+        padding: 11px 5px;
+        font-size: 12px;
+        border-radius: 8px;
         white-space: nowrap;
-        text-align: center;
         margin: 0;
       }
 
 
+      /* SECTIONS */
+
       section {
-        padding: 60px 5%;
+        padding: 38px 5%;
+      }
+
+      .section-tag {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+        margin-bottom: 6px;
       }
 
       .section-title {
-        font-size: 32px;
+        font-size: 26px;
+        margin-bottom: 10px;
       }
 
       .section-text {
-        font-size: 16px;
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 22px;
       }
 
-      .hotel-grid,
-      .bakery-grid {
+
+      /* HOTEL CARDS */
+
+      .hotel-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .card {
+        border-radius: 10px;
       }
 
       .card img {
-        height: 230px;
+        height: 180px;
       }
 
+      .card-content {
+        padding: 16px;
+      }
+
+      .card h3 {
+        font-size: 20px;
+        margin-bottom: 6px;
+      }
+
+      .card p {
+        font-size: 13px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+      }
+
+      .card-link {
+        font-size: 13px;
+      }
+
+
+      /* BAKERY */
+
+      .bakery-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .product-card {
+        padding: 16px;
+        border-radius: 10px;
+      }
+
+      .product-card img {
+        height: 160px;
+        margin-bottom: 10px;
+      }
+
+      .product-card h3 {
+        font-size: 19px;
+        margin-bottom: 5px;
+      }
+
+      .product-card p {
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .price {
+        font-size: 16px;
+        margin: 7px 0;
+      }
+
+
+      /* NORMAL BUTTONS */
+
+      .product-card .btn,
+      .contact-box .btn {
+        padding: 11px 18px;
+        font-size: 13px;
+        border-radius: 8px;
+      }
+
+
+      /* ABOUT */
+
+      .about {
+        padding: 40px 5%;
+      }
+
+
+      /* CONTACT */
+
       .contact-box {
-        padding: 30px 20px;
+        padding: 24px 15px;
+        border-radius: 12px;
       }
 
       .contact-box h2 {
-        font-size: 28px;
+        font-size: 24px;
+        margin-bottom: 10px;
       }
 
       .contact-box p {
-        font-size: 16px;
+        font-size: 14px;
+        margin-bottom: 7px;
       }
 
+
+      /* FOOTER */
+
+      footer {
+        padding: 20px 5%;
+        font-size: 13px;
+      }
+
+
+      /* WHATSAPP */
+
       .floating-whatsapp {
-        width: 55px;
-        height: 55px;
-        right: 15px;
-        bottom: 15px;
+        width: 48px;
+        height: 48px;
+        right: 12px;
+        bottom: 12px;
+        font-size: 22px;
       }
 
     }
@@ -603,25 +729,15 @@
 
       <nav>
 
-        <a href="#home">
-          Home
-        </a>
+        <a href="#home">Home</a>
 
-        <a href="#hotels">
-          Our Hotels
-        </a>
+        <a href="#hotels">Our Hotels</a>
 
-        <a href="#bakery">
-          Apple Bakery
-        </a>
+        <a href="#bakery">Apple Bakery</a>
 
-        <a href="#about">
-          About
-        </a>
+        <a href="#about">About</a>
 
-        <a href="#contact">
-          Contact
-        </a>
+        <a href="#contact">Contact</a>
 
       </nav>
 
@@ -639,9 +755,7 @@
 
     <div class="hero-content">
 
-      <p>
-        WELCOME TO
-      </p>
+      <p>WELCOME TO</p>
 
       <h1>
         Experience
@@ -654,8 +768,6 @@
         with Apple Group.
       </h2>
 
-
-      <!-- HERO BUTTONS -->
 
       <div class="hero-buttons">
 
@@ -711,9 +823,7 @@
 
           <div class="card-content">
 
-            <h3>
-              Hotel Nexa
-            </h3>
+            <h3>Hotel Nexa</h3>
 
             <p>
               Modern luxury, premium comfort and a memorable stay
@@ -732,7 +842,6 @@
         </div>
 
 
-
         <!-- HOTEL APPLE PALACE -->
 
         <div class="card">
@@ -744,9 +853,7 @@
 
           <div class="card-content">
 
-            <h3>
-              Hotel Apple Palace
-            </h3>
+            <h3>Hotel Apple Palace</h3>
 
             <p>
               Comfortable rooms, quality service and warm hospitality
@@ -765,7 +872,6 @@
         </div>
 
 
-
         <!-- HOTEL APPLE GRAND -->
 
         <div class="card">
@@ -777,9 +883,7 @@
 
           <div class="card-content">
 
-            <h3>
-              Hotel Apple Grand
-            </h3>
+            <h3>Hotel Apple Grand</h3>
 
             <p>
               Experience a comfortable stay with modern amenities
@@ -798,7 +902,6 @@
         </div>
 
 
-
         <!-- HOTEL APPLE PRIME -->
 
         <div class="card">
@@ -810,9 +913,7 @@
 
           <div class="card-content">
 
-            <h3>
-              Hotel Apple Prime
-            </h3>
+            <h3>Hotel Apple Prime</h3>
 
             <p>
               A welcoming stay with comfort, convenience and excellent
@@ -898,7 +999,6 @@
         </div>
 
 
-
         <!-- ATTA TOAST -->
 
         <div class="product-card">
@@ -921,8 +1021,7 @@
             Coming Soon
           </div>
 
-        </div>
-
+        </div
 
 
         <!-- MORE PRODUCTS -->
@@ -996,9 +1095,7 @@
 
       <div class="contact-box">
 
-        <h2>
-          Get in Touch
-        </h2>
+        <h2>Get in Touch</h2>
 
         <p>
           For Hotel Bookings & Apple Bakery Orders
