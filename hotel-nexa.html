@@ -35,6 +35,7 @@
 
 html{
     scroll-behavior:smooth;
+    scroll-padding-top:80px;
 }
 
 body{
@@ -118,6 +119,34 @@ nav a:hover{
 .mobile-menu{
     display:none;
     font-size:27px;
+    background:none;
+    border:none;
+    color:var(--text);
+    cursor:pointer;
+    padding:5px;
+}
+
+.mobile-nav{
+    display:none;
+    background:#fff;
+    border-top:1px solid var(--line);
+    padding:8px 5%;
+}
+
+.mobile-nav.active{
+    display:block;
+}
+
+.mobile-nav a{
+    display:block;
+    padding:13px 0;
+    border-bottom:1px solid var(--line);
+    font-weight:bold;
+    font-size:14px;
+}
+
+.mobile-nav a:last-child{
+    border-bottom:none;
 }
 
 
@@ -179,7 +208,7 @@ nav a:hover{
     padding:90px 0;
 }
 
-.hero .kicker{
+.kicker{
     color:var(--gold);
     letter-spacing:4px;
     font-size:12px;
@@ -349,45 +378,16 @@ section{
     background-position:center;
 }
 
-.room1{
-    background-image:url('Nexa-room-1.jpg');
-}
-
-.room2{
-    background-image:url('Nexa-room-2.jpg');
-}
-
-.room3{
-    background-image:url('Nexa-room-3.jpg');
-}
-
-.room4{
-    background-image:url('Nexa-room-4.jpg');
-}
-
-.room5{
-    background-image:url('Nexa-room-5.jpg');
-}
-
-.room6{
-    background-image:url('Nexa-room-6.jpg');
-}
-
-.room7{
-    background-image:url('Nexa-room-7.jpg');
-}
-
-.room8{
-    background-image:url('Nexa-room-8.jpg');
-}
-
-.room9{
-    background-image:url('Nexa-room-9.jpg');
-}
-
-.room10{
-    background-image:url('Nexa-room-10.jpg');
-}
+.room1{background-image:url('Nexa-room-1.jpg');}
+.room2{background-image:url('Nexa-room-2.jpg');}
+.room3{background-image:url('Nexa-room-3.jpg');}
+.room4{background-image:url('Nexa-room-4.jpg');}
+.room5{background-image:url('Nexa-room-5.jpg');}
+.room6{background-image:url('Nexa-room-6.jpg');}
+.room7{background-image:url('Nexa-room-7.jpg');}
+.room8{background-image:url('Nexa-room-8.jpg');}
+.room9{background-image:url('Nexa-room-9.jpg');}
+.room10{background-image:url('Nexa-room-10.jpg');}
 
 .room-body{
     padding:23px;
@@ -566,6 +566,60 @@ section{
 
 
 /* =====================================================
+   REVIEWS
+===================================================== */
+
+.reviews{
+    background:var(--bg);
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.review-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:22px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(50,40,25,.05);
+    transition:.3s;
+}
+
+.review-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(50,40,25,.10);
+}
+
+.stars{
+    color:var(--gold);
+    font-size:22px;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+.review-card p{
+    color:var(--muted);
+    font-size:15px;
+    line-height:1.8;
+}
+
+.review-name{
+    margin-top:18px;
+    font-weight:bold;
+    color:var(--text);
+}
+
+.review-button{
+    text-align:center;
+    margin-top:25px;
+}
+
+
+/* =====================================================
    BOOKING
 ===================================================== */
 
@@ -664,6 +718,41 @@ textarea{
 .whatsapp-link{
     color:#7c602f;
     font-weight:bold;
+}
+
+
+/* =====================================================
+   GOOGLE MAP
+===================================================== */
+
+.map-box{
+    margin-top:25px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:22px;
+    padding:30px;
+    overflow:hidden;
+}
+
+.map-box h3{
+    font-family:Georgia,serif;
+    font-size:27px;
+    margin-bottom:5px;
+}
+
+.map-box p{
+    color:var(--muted);
+    margin-bottom:18px;
+}
+
+.map-frame{
+    border-radius:16px;
+    overflow:hidden;
+    border:1px solid var(--line);
+}
+
+.map-frame iframe{
+    display:block;
 }
 
 
@@ -788,6 +877,10 @@ footer span{
         grid-template-columns:1fr;
     }
 
+    .review-grid{
+        grid-template-columns:1fr;
+    }
+
 }
 
 
@@ -899,6 +992,14 @@ footer span{
         display:none;
     }
 
+    .map-box{
+        padding:20px;
+    }
+
+    .map-frame iframe{
+        height:300px;
+    }
+
 }
 
 
@@ -951,15 +1052,37 @@ HOTEL • UJJAIN
 <a href="#about">About</a>
 <a href="#rooms">Rooms</a>
 <a href="#gallery">Gallery</a>
+<a href="#reviews">Reviews</a>
 <a href="#booking">Booking</a>
 <a href="#contact">Contact</a>
 
 </nav>
 
 
-<div class="mobile-menu">
+<button
+class="mobile-menu"
+type="button"
+onclick="toggleMobileMenu()"
+aria-label="Open menu">
+
 ☰
+
+</button>
+
 </div>
+
+
+<!-- MOBILE NAV -->
+
+<div class="mobile-nav" id="mobileNav">
+
+<a href="#home" onclick="closeMobileMenu()">Home</a>
+<a href="#about" onclick="closeMobileMenu()">About</a>
+<a href="#rooms" onclick="closeMobileMenu()">Rooms</a>
+<a href="#gallery" onclick="closeMobileMenu()">Gallery</a>
+<a href="#reviews" onclick="closeMobileMenu()">Reviews</a>
+<a href="#booking" onclick="closeMobileMenu()">Booking</a>
+<a href="#contact" onclick="closeMobileMenu()">Contact</a>
 
 </div>
 
@@ -1613,6 +1736,108 @@ onclick="nextImage()">
 
 
 <!-- =====================================================
+     REVIEWS
+===================================================== -->
+
+<section class="reviews" id="reviews">
+
+<div class="container">
+
+<div class="section-head">
+
+<h2>
+Guest Reviews
+</h2>
+
+<p>
+A few words from our valued guests.
+</p>
+
+</div>
+
+
+<div class="review-grid">
+
+
+<div class="review-card">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+“Beautiful hotel, comfortable rooms and
+very helpful staff. A great choice for
+staying in Ujjain.”
+</p>
+
+<div class="review-name">
+— Our Guest
+</div>
+
+</div>
+
+
+<div class="review-card">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+“Very clean and peaceful property.
+The rooms were comfortable and the
+overall experience was excellent.”
+</p>
+
+<div class="review-name">
+— Our Guest
+</div>
+
+</div>
+
+
+<div class="review-card">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+“Perfect place for a family stay in Ujjain.
+Good hospitality and a premium atmosphere.”
+</p>
+
+<div class="review-name">
+— Our Guest
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="review-button">
+
+<a
+href="#"
+class="btn"
+onclick="openWhatsApp(); return false;">
+
+Share Your Experience
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
      BOOKING
 ===================================================== -->
 
@@ -1858,6 +2083,15 @@ onclick="openWhatsApp(); return false;">
 
 </p>
 
+<button
+class="btn"
+type="button"
+onclick="openWhatsApp()">
+
+Chat on WhatsApp
+
+</button>
+
 </div>
 
 
@@ -1885,6 +2119,36 @@ Chat on WhatsApp
 
 
 </div>
+
+
+<!-- GOOGLE MAP -->
+
+<div class="map-box">
+
+<h3>
+Find Hotel Nexa
+</h3>
+
+<p>
+Ujjain, Madhya Pradesh
+</p>
+
+<div class="map-frame">
+
+<iframe
+src="https://www.google.com/maps?q=Hotel%20Nexa%20Ujjain&output=embed"
+width="100%"
+height="400"
+style="border:0;"
+allowfullscreen=""
+loading="lazy"
+referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+</div>
+
+</div>
+
 
 </div>
 
@@ -1944,12 +2208,37 @@ Ujjain
 
 
 /* =====================================================
+   MOBILE MENU
+===================================================== */
+
+function toggleMobileMenu(){
+
+    const menu =
+        document.getElementById("mobileNav");
+
+    menu.classList.toggle("active");
+
+}
+
+
+function closeMobileMenu(){
+
+    const menu =
+        document.getElementById("mobileNav");
+
+    menu.classList.remove("active");
+
+}
+
+
+/* =====================================================
    WHATSAPP
 ===================================================== */
 
 function openWhatsApp(){
 
-    const number = "918770434255";
+    const number =
+        "918770434255";
 
     const message =
         "Hello Hotel Nexa, I would like to enquire about a room.";
@@ -1960,10 +2249,17 @@ function openWhatsApp(){
         "?text=" +
         encodeURIComponent(message);
 
-    window.open(url,"_blank");
+    window.open(
+        url,
+        "_blank"
+    );
 
 }
 
+
+/* =====================================================
+   WHATSAPP BOOKING
+===================================================== */
 
 function sendWhatsAppBooking(){
 
@@ -2121,19 +2417,26 @@ function openLightbox(image){
         galleryImages.indexOf(image);
 
     if(index >= 0){
+
         currentImage = index;
+
     }else{
+
         currentImage = 0;
+
     }
+
 
     document.getElementById(
         "lightboxImage"
     ).src =
         galleryImages[currentImage];
 
+
     document.getElementById(
         "lightbox"
     ).classList.add("active");
+
 
     document.body.style.overflow =
         "hidden";
@@ -2147,6 +2450,7 @@ function closeLightbox(){
         "lightbox"
     ).classList.remove("active");
 
+
     document.body.style.overflow =
         "";
 
@@ -2157,6 +2461,7 @@ function nextImage(){
 
     currentImage++;
 
+
     if(
         currentImage >=
         galleryImages.length
@@ -2165,6 +2470,7 @@ function nextImage(){
         currentImage = 0;
 
     }
+
 
     document.getElementById(
         "lightboxImage"
@@ -2178,12 +2484,16 @@ function previousImage(){
 
     currentImage--;
 
-    if(currentImage < 0){
+
+    if(
+        currentImage < 0
+    ){
 
         currentImage =
             galleryImages.length - 1;
 
     }
+
 
     document.getElementById(
         "lightboxImage"
@@ -2193,7 +2503,9 @@ function previousImage(){
 }
 
 
-/* CLOSE OUTSIDE */
+/* =====================================================
+   CLOSE LIGHTBOX OUTSIDE IMAGE
+===================================================== */
 
 document.getElementById(
     "lightbox"
@@ -2213,33 +2525,75 @@ document.getElementById(
 );
 
 
-/* KEYBOARD */
+/* =====================================================
+   KEYBOARD CONTROLS
+===================================================== */
 
 document.addEventListener(
     "keydown",
     function(event){
 
         const lightbox =
-            document.getElementById("lightbox");
+            document.getElementById(
+                "lightbox"
+            );
+
 
         if(
-            !lightbox.classList.contains("active")
+            !lightbox.classList.contains(
+                "active"
+            )
         ){
 
             return;
 
         }
 
-        if(event.key === "Escape"){
+
+        if(
+            event.key === "Escape"
+        ){
+
             closeLightbox();
+
         }
 
-        if(event.key === "ArrowRight"){
+
+        if(
+            event.key === "ArrowRight"
+        ){
+
             nextImage();
+
         }
 
-        if(event.key === "ArrowLeft"){
+
+        if(
+            event.key === "ArrowLeft"
+        ){
+
             previousImage();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   CLOSE MOBILE MENU AFTER RESIZE
+===================================================== */
+
+window.addEventListener(
+    "resize",
+    function(){
+
+        if(
+            window.innerWidth > 900
+        ){
+
+            closeMobileMenu();
+
         }
 
     }
