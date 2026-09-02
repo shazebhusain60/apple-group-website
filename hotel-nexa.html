@@ -11,9 +11,9 @@
 
 <style>
 
-/* =========================
-   BASIC
-========================= */
+/* =====================================================
+   GLOBAL
+===================================================== */
 
 :root{
     --bg:#fbfaf7;
@@ -44,14 +44,16 @@ body{
     line-height:1.6;
 }
 
-img{
-    width:100%;
-    display:block;
-}
-
 a{
     text-decoration:none;
     color:inherit;
+}
+
+button,
+input,
+select,
+textarea{
+    font-family:inherit;
 }
 
 .container{
@@ -59,14 +61,15 @@ a{
     margin:auto;
 }
 
-/* =========================
+
+/* =====================================================
    HEADER
-========================= */
+===================================================== */
 
 header{
     position:sticky;
     top:0;
-    z-index:100;
+    z-index:1000;
     background:rgba(255,255,255,.97);
     backdrop-filter:blur(12px);
     border-bottom:1px solid var(--line);
@@ -117,9 +120,10 @@ nav a:hover{
     font-size:27px;
 }
 
-/* =========================
-   BUTTON
-========================= */
+
+/* =====================================================
+   BUTTONS
+===================================================== */
 
 .btn{
     display:inline-block;
@@ -127,7 +131,7 @@ nav a:hover{
     padding:14px 25px;
     border-radius:30px;
     background:var(--gold);
-    color:white;
+    color:#fff;
     border:1px solid var(--gold);
     font-weight:bold;
     cursor:pointer;
@@ -139,15 +143,21 @@ nav a:hover{
     transform:translateY(-2px);
 }
 
-.btn.light{
-    background:white;
+.btn-light{
+    background:#fff;
     color:var(--gold);
     margin-left:8px;
 }
 
-/* =========================
+.btn-light:hover{
+    background:#fff;
+    color:var(--gold-dark);
+}
+
+
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero{
     min-height:680px;
@@ -159,7 +169,7 @@ nav a:hover{
         90deg,
         rgba(255,255,255,.98) 0%,
         rgba(255,255,255,.88) 40%,
-        rgba(255,255,255,.18) 100%
+        rgba(255,255,255,.20) 100%
     ),
     url('Hotel_nexa.png') center/cover no-repeat;
 }
@@ -191,9 +201,10 @@ nav a:hover{
     max-width:540px;
 }
 
-/* =========================
+
+/* =====================================================
    SECTIONS
-========================= */
+===================================================== */
 
 section{
     padding:85px 0;
@@ -214,9 +225,10 @@ section{
     margin-top:8px;
 }
 
-/* =========================
+
+/* =====================================================
    ABOUT
-========================= */
+===================================================== */
 
 .about{
     display:grid;
@@ -248,9 +260,10 @@ section{
     margin-bottom:15px;
 }
 
-/* =========================
+
+/* =====================================================
    FEATURES
-========================= */
+===================================================== */
 
 .features{
     display:grid;
@@ -259,7 +272,7 @@ section{
 }
 
 .feature{
-    background:white;
+    background:#fff;
     border:1px solid var(--line);
     border-radius:20px;
     padding:30px 20px;
@@ -273,7 +286,7 @@ section{
 }
 
 .icon{
-    font-size:31px;
+    font-size:30px;
     margin-bottom:10px;
 }
 
@@ -287,9 +300,10 @@ section{
     font-size:13px;
 }
 
-/* =========================
+
+/* =====================================================
    ROOMS
-========================= */
+===================================================== */
 
 .rooms{
     background:var(--cream);
@@ -302,7 +316,7 @@ section{
 }
 
 .room{
-    background:white;
+    background:#fff;
     border-radius:22px;
     overflow:hidden;
     border:1px solid var(--line);
@@ -385,12 +399,21 @@ section{
     margin-top:7px;
 }
 
-/* =========================
+
+/* =====================================================
    GALLERY
-========================= */
+===================================================== */
 
 .gallery-section{
     background:#fff;
+}
+
+.gallery-title{
+    margin-top:50px;
+    margin-bottom:20px;
+    font-family:Georgia,serif;
+    font-size:28px;
+    color:var(--text);
 }
 
 .gallery{
@@ -401,20 +424,43 @@ section{
 
 .gallery-item{
     height:230px;
-    border-radius:17px;
+    border-radius:18px;
     overflow:hidden;
-    border:4px solid white;
-    box-shadow:0 7px 25px rgba(0,0,0,.08);
+    border:4px solid #fff;
+    box-shadow:0 8px 25px rgba(0,0,0,.10);
+    cursor:pointer;
+    position:relative;
     background-size:cover;
     background-position:center;
     transition:.3s;
 }
 
 .gallery-item:hover{
-    transform:scale(1.02);
+    transform:scale(1.025);
+    box-shadow:0 14px 35px rgba(0,0,0,.16);
 }
 
-/* ROOM GALLERY */
+.gallery-item::after{
+    content:"🔍";
+    position:absolute;
+    right:12px;
+    bottom:12px;
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:rgba(255,255,255,.92);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:17px;
+}
+
+
+/* =====================================================
+   GALLERY IMAGES
+===================================================== */
+
+/* ROOMS */
 
 .g-room1{
     background-image:url('Nexa-room-1.jpg');
@@ -456,6 +502,7 @@ section{
     background-image:url('Nexa-room-10.jpg');
 }
 
+
 /* BATHROOM */
 
 .g-bath1{
@@ -465,6 +512,7 @@ section{
 .g-bath2{
     background-image:url('Nexa-bathroom-2.jpg');
 }
+
 
 /* LOBBY */
 
@@ -480,6 +528,7 @@ section{
     background-image:url('Nexa-lobby-3.jpg');
 }
 
+
 /* RECEPTION */
 
 .g-reception1{
@@ -494,9 +543,83 @@ section{
     background-image:url('Nexa-reception-3.jpg');
 }
 
-/* =========================
+
+/* =====================================================
+   LIGHTBOX
+===================================================== */
+
+.lightbox{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    background:rgba(0,0,0,.94);
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+}
+
+.lightbox.active{
+    display:flex;
+}
+
+.lightbox-image{
+    max-width:90%;
+    max-height:84vh;
+    object-fit:contain;
+    border-radius:8px;
+    box-shadow:0 10px 50px rgba(0,0,0,.5);
+}
+
+.lightbox-close{
+    position:absolute;
+    top:18px;
+    right:28px;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:rgba(255,255,255,.12);
+    color:#fff;
+    font-size:36px;
+    line-height:41px;
+    text-align:center;
+    cursor:pointer;
+    z-index:3;
+}
+
+.lightbox-prev,
+.lightbox-next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    border:none;
+    background:rgba(255,255,255,.92);
+    color:#333;
+    font-size:30px;
+    cursor:pointer;
+    z-index:3;
+}
+
+.lightbox-prev{
+    left:25px;
+}
+
+.lightbox-next{
+    right:25px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover{
+    background:#fff;
+}
+
+
+/* =====================================================
    BOOKING
-========================= */
+===================================================== */
 
 .booking{
     background:
@@ -508,7 +631,7 @@ section{
 }
 
 .booking-box{
-    background:white;
+    background:#fff;
     border:1px solid var(--line);
     border-radius:25px;
     padding:38px;
@@ -536,7 +659,6 @@ textarea{
     border:1px solid #ddd2c2;
     border-radius:11px;
     background:#fff;
-    font:inherit;
     color:var(--text);
     outline:none;
 }
@@ -562,9 +684,10 @@ textarea{
     font-size:13px;
 }
 
-/* =========================
+
+/* =====================================================
    CONTACT
-========================= */
+===================================================== */
 
 .contact{
     display:grid;
@@ -573,7 +696,7 @@ textarea{
 }
 
 .contact-card{
-    background:white;
+    background:#fff;
     border:1px solid var(--line);
     border-radius:22px;
     padding:32px;
@@ -595,9 +718,10 @@ textarea{
     font-weight:bold;
 }
 
-/* =========================
+
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer{
     background:#29241f;
@@ -610,9 +734,10 @@ footer span{
     color:var(--gold-light);
 }
 
-/* =========================
-   MOBILE
-========================= */
+
+/* =====================================================
+   TABLET
+===================================================== */
 
 @media(max-width:900px){
 
@@ -657,6 +782,11 @@ footer span{
     }
 }
 
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
 @media(max-width:600px){
 
     section{
@@ -675,7 +805,7 @@ footer span{
         font-size:16px;
     }
 
-    .btn.light{
+    .btn-light{
         margin-left:0;
     }
 
@@ -693,7 +823,11 @@ footer span{
     }
 
     .gallery-item{
-        height:170px;
+        height:175px;
+    }
+
+    .booking-box{
+        padding:22px;
     }
 
     .form-grid{
@@ -704,10 +838,6 @@ footer span{
         grid-column:auto;
     }
 
-    .booking-box{
-        padding:22px;
-    }
-
     .about-img{
         min-height:330px;
     }
@@ -716,30 +846,65 @@ footer span{
         font-size:34px;
     }
 
+    .lightbox{
+        padding:15px;
+    }
+
+    .lightbox-image{
+        max-width:94%;
+        max-height:78vh;
+    }
+
+    .lightbox-prev,
+    .lightbox-next{
+        width:42px;
+        height:42px;
+        font-size:22px;
+    }
+
+    .lightbox-prev{
+        left:8px;
+    }
+
+    .lightbox-next{
+        right:8px;
+    }
+
+    .lightbox-close{
+        top:10px;
+        right:12px;
+    }
+
 }
 
-/* =========================
-   GALLERY TITLES
-========================= */
 
-.gallery-title{
-    margin-top:50px;
-    margin-bottom:20px;
-    font-family:Georgia,serif;
-    font-size:28px;
-    text-align:left;
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:380px){
+
+    .gallery-item{
+        height:145px;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
 }
 
 </style>
 
 </head>
 
+
 <body>
 
 
-<!-- =========================
+<!-- =====================================================
      HEADER
-========================= -->
+===================================================== -->
 
 <header>
 
@@ -778,14 +943,16 @@ HOTEL • UJJAIN
 
 
 
-<!-- =========================
+<!-- =====================================================
      MAIN
-========================= -->
+===================================================== -->
 
 <main>
 
 
-<!-- HERO -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero" id="home">
 
@@ -810,7 +977,7 @@ families and travellers visiting the city of Mahakal.
 Book Your Stay
 </a>
 
-<a href="#rooms" class="btn light">
+<a href="#rooms" class="btn btn-light">
 Explore Rooms
 </a>
 
@@ -820,9 +987,9 @@ Explore Rooms
 
 
 
-<!-- =========================
+<!-- =====================================================
      ABOUT
-========================= -->
+===================================================== -->
 
 <section id="about">
 
@@ -867,9 +1034,9 @@ Check Availability
 
 
 
-<!-- =========================
+<!-- =====================================================
      FEATURES
-========================= -->
+===================================================== -->
 
 <section>
 
@@ -967,9 +1134,9 @@ Convenient for your Ujjain visit and temple trip.
 
 
 
-<!-- =========================
+<!-- =====================================================
      ROOMS
-========================= -->
+===================================================== -->
 
 <section class="rooms" id="rooms">
 
@@ -1241,7 +1408,8 @@ Family Room
 </h3>
 
 <p>
-Comfortable accommodation for families travelling together.
+Comfortable accommodation for families
+travelling together.
 </p>
 
 <a href="#booking" class="btn">
@@ -1290,9 +1458,9 @@ Book Now
 
 
 
-<!-- =========================
+<!-- =====================================================
      GALLERY
-========================= -->
+===================================================== -->
 
 <section class="gallery-section" id="gallery">
 
@@ -1305,11 +1473,13 @@ Hotel Gallery
 </h2>
 
 <p>
-Take a glimpse inside Hotel Nexa.
+Explore Hotel Nexa — rooms, bathrooms, lobby and reception.
 </p>
 
 </div>
 
+
+<!-- ROOMS -->
 
 <h3 class="gallery-title">
 Rooms
@@ -1317,20 +1487,62 @@ Rooms
 
 <div class="gallery">
 
-<div class="gallery-item g-room1"></div>
-<div class="gallery-item g-room2"></div>
-<div class="gallery-item g-room3"></div>
-<div class="gallery-item g-room4"></div>
-<div class="gallery-item g-room5"></div>
-<div class="gallery-item g-room6"></div>
-<div class="gallery-item g-room7"></div>
-<div class="gallery-item g-room8"></div>
-<div class="gallery-item g-room9"></div>
-<div class="gallery-item g-room10"></div>
+
+<div class="gallery-item g-room1"
+onclick="openLightbox('Nexa-room-1.jpg')">
+</div>
+
+
+<div class="gallery-item g-room2"
+onclick="openLightbox('Nexa-room-2.jpg')">
+</div>
+
+
+<div class="gallery-item g-room3"
+onclick="openLightbox('Nexa-room-3.jpg')">
+</div>
+
+
+<div class="gallery-item g-room4"
+onclick="openLightbox('Nexa-room-4.jpg')">
+</div>
+
+
+<div class="gallery-item g-room5"
+onclick="openLightbox('Nexa-room-5.jpg')">
+</div>
+
+
+<div class="gallery-item g-room6"
+onclick="openLightbox('Nexa-room-6.jpg')">
+</div>
+
+
+<div class="gallery-item g-room7"
+onclick="openLightbox('Nexa-room-7.jpg')">
+</div>
+
+
+<div class="gallery-item g-room8"
+onclick="openLightbox('Nexa-room-8.jpg')">
+</div>
+
+
+<div class="gallery-item g-room9"
+onclick="openLightbox('Nexa-room-9.jpg')">
+</div>
+
+
+<div class="gallery-item g-room10"
+onclick="openLightbox('Nexa-room-10.jpg')">
+</div>
+
 
 </div>
 
 
+
+<!-- BATHROOMS -->
 
 <h3 class="gallery-title">
 Bathrooms
@@ -1338,12 +1550,22 @@ Bathrooms
 
 <div class="gallery">
 
-<div class="gallery-item g-bath1"></div>
-<div class="gallery-item g-bath2"></div>
+
+<div class="gallery-item g-bath1"
+onclick="openLightbox('Nexa-bathroom-1.jpg')">
+</div>
+
+
+<div class="gallery-item g-bath2"
+onclick="openLightbox('Nexa-bathroom-2.jpg')">
+</div>
+
 
 </div>
 
 
+
+<!-- LOBBY -->
 
 <h3 class="gallery-title">
 Lobby
@@ -1351,13 +1573,27 @@ Lobby
 
 <div class="gallery">
 
-<div class="gallery-item g-lobby1"></div>
-<div class="gallery-item g-lobby2"></div>
-<div class="gallery-item g-lobby3"></div>
+
+<div class="gallery-item g-lobby1"
+onclick="openLightbox('Nexa-lobby-1.jpg')">
+</div>
+
+
+<div class="gallery-item g-lobby2"
+onclick="openLightbox('Nexa-lobby-2.jpg')">
+</div>
+
+
+<div class="gallery-item g-lobby3"
+onclick="openLightbox('Nexa-lobby-3.jpg')">
+</div>
+
 
 </div>
 
 
+
+<!-- RECEPTION -->
 
 <h3 class="gallery-title">
 Reception
@@ -1365,9 +1601,21 @@ Reception
 
 <div class="gallery">
 
-<div class="gallery-item g-reception1"></div>
-<div class="gallery-item g-reception2"></div>
-<div class="gallery-item g-reception3"></div>
+
+<div class="gallery-item g-reception1"
+onclick="openLightbox('Nexa-reception-1.jpg')">
+</div>
+
+
+<div class="gallery-item g-reception2"
+onclick="openLightbox('Nexa-reception-2.jpg')">
+</div>
+
+
+<div class="gallery-item g-reception3"
+onclick="openLightbox('Nexa-reception-3.jpg')">
+</div>
+
 
 </div>
 
@@ -1377,9 +1625,50 @@ Reception
 
 
 
-<!-- =========================
+<!-- =====================================================
+     LIGHTBOX
+===================================================== -->
+
+<div class="lightbox" id="lightbox">
+
+
+<div
+class="lightbox-close"
+onclick="closeLightbox()">
+×
+</div>
+
+
+<button
+class="lightbox-prev"
+type="button"
+onclick="previousImage()">
+‹
+</button>
+
+
+<img
+id="lightboxImage"
+class="lightbox-image"
+src=""
+alt="Hotel Nexa Gallery Photo">
+
+
+<button
+class="lightbox-next"
+type="button"
+onclick="nextImage()">
+›
+</button>
+
+
+</div>
+
+
+
+<!-- =====================================================
      BOOKING
-========================= -->
+===================================================== -->
 
 <section class="booking" id="booking">
 
@@ -1404,6 +1693,8 @@ Send your booking request directly to Hotel Nexa on WhatsApp.
 <div class="form-grid">
 
 
+<!-- NAME -->
+
 <div>
 
 <label for="guestName">
@@ -1414,11 +1705,12 @@ Guest Name *
 id="guestName"
 type="text"
 placeholder="Enter guest name"
->
+autocomplete="name">
 
 </div>
 
 
+<!-- MOBILE -->
 
 <div>
 
@@ -1430,11 +1722,12 @@ Mobile Number *
 id="mobile"
 type="tel"
 placeholder="Enter mobile number"
->
+autocomplete="tel">
 
 </div>
 
 
+<!-- CHECK IN -->
 
 <div>
 
@@ -1444,12 +1737,12 @@ Check-in *
 
 <input
 id="checkIn"
-type="date"
->
+type="date">
 
 </div>
 
 
+<!-- CHECK OUT -->
 
 <div>
 
@@ -1459,12 +1752,12 @@ Check-out *
 
 <input
 id="checkOut"
-type="date"
->
+type="date">
 
 </div>
 
 
+<!-- ADULTS -->
 
 <div>
 
@@ -1474,18 +1767,36 @@ Adults
 
 <select id="adults">
 
-<option>1</option>
-<option selected>2</option>
-<option>3</option>
-<option>4</option>
-<option>5</option>
-<option>6</option>
+<option value="1">
+1
+</option>
+
+<option value="2" selected>
+2
+</option>
+
+<option value="3">
+3
+</option>
+
+<option value="4">
+4
+</option>
+
+<option value="5">
+5
+</option>
+
+<option value="6">
+6
+</option>
 
 </select>
 
 </div>
 
 
+<!-- CHILDREN -->
 
 <div>
 
@@ -1495,17 +1806,32 @@ Children
 
 <select id="children">
 
-<option selected>0</option>
-<option>1</option>
-<option>2</option>
-<option>3</option>
-<option>4</option>
+<option value="0" selected>
+0
+</option>
+
+<option value="1">
+1
+</option>
+
+<option value="2">
+2
+</option>
+
+<option value="3">
+3
+</option>
+
+<option value="4">
+4
+</option>
 
 </select>
 
 </div>
 
 
+<!-- ROOM -->
 
 <div class="full">
 
@@ -1515,19 +1841,19 @@ Room Preference
 
 <select id="roomPreference">
 
-<option>
+<option value="Any Available Room">
 Any Available Room
 </option>
 
-<option>
+<option value="Deluxe Room">
 Deluxe Room
 </option>
 
-<option>
+<option value="Premium Room">
 Premium Room
 </option>
 
-<option>
+<option value="Family Room">
 Family Room
 </option>
 
@@ -1536,6 +1862,7 @@ Family Room
 </div>
 
 
+<!-- SPECIAL REQUEST -->
 
 <div class="full">
 
@@ -1545,21 +1872,22 @@ Special Request
 
 <textarea
 id="specialRequest"
-placeholder="Any special request?"
-></textarea>
+placeholder="Any special request?"></textarea>
 
 </div>
 
 
+<!-- SUBMIT -->
 
 <div class="full">
 
 <button
 class="btn"
 type="button"
-onclick="sendWhatsAppBooking()"
->
-📲 Send Booking Request on WhatsApp
+onclick="sendWhatsAppBooking()">
+
+Send Booking Request on WhatsApp
+
 </button>
 
 </div>
@@ -1584,9 +1912,9 @@ with all booking details filled in.
 
 
 
-<!-- =========================
+<!-- =====================================================
      CONTACT
-========================= -->
+===================================================== -->
 
 <section id="contact">
 
@@ -1624,13 +1952,14 @@ Hotel Nexa, Ujjain
 
 <p>
 📱 WhatsApp Booking:
+
 <a
 class="whatsapp-link"
 href="#"
-onclick="openWhatsApp()"
->
+onclick="openWhatsApp(); return false;">
 87704 34255
 </a>
+
 </p>
 
 </div>
@@ -1651,9 +1980,10 @@ will confirm availability and booking information.
 <button
 class="btn"
 type="button"
-onclick="openWhatsApp()"
->
+onclick="openWhatsApp()">
+
 Chat on WhatsApp
+
 </button>
 
 </div>
@@ -1670,9 +2000,9 @@ Chat on WhatsApp
 
 
 
-<!-- =========================
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
 
@@ -1691,11 +2021,16 @@ Ujjain
 
 
 
-<!-- =========================
-     WHATSAPP SCRIPT
-========================= -->
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
 <script>
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
 
 function openWhatsApp(){
 
@@ -1705,8 +2040,7 @@ function openWhatsApp(){
         "Hello Hotel Nexa, I would like to enquire about a room.";
 
     const url =
-        "https://" +
-        "wa.me/" +
+        "https://wa.me/" +
         number +
         "?text=" +
         encodeURIComponent(message);
@@ -1714,7 +2048,6 @@ function openWhatsApp(){
     window.open(url,"_blank");
 
 }
-
 
 
 function sendWhatsAppBooking(){
@@ -1744,6 +2077,8 @@ function sendWhatsAppBooking(){
         document.getElementById("specialRequest").value.trim();
 
 
+    /* REQUIRED FIELDS */
+
     if(
         !guestName ||
         !mobile ||
@@ -1760,6 +2095,8 @@ function sendWhatsAppBooking(){
     }
 
 
+    /* DATE CHECK */
+
     if(checkOut <= checkIn){
 
         alert(
@@ -1771,6 +2108,8 @@ function sendWhatsAppBooking(){
     }
 
 
+    /* DATE FORMAT */
+
     function formatDate(date){
 
         if(!date){
@@ -1780,12 +2119,18 @@ function sendWhatsAppBooking(){
         const parts =
             date.split("-");
 
-        return parts[2] + "/" +
-               parts[1] + "/" +
-               parts[0];
+        return (
+            parts[2] +
+            "/" +
+            parts[1] +
+            "/" +
+            parts[0]
+        );
 
     }
 
+
+    /* WHATSAPP MESSAGE */
 
     const message =
 `HOTEL NEXA - BOOKING REQUEST
@@ -1815,8 +2160,7 @@ Thank you.`;
 
 
     const whatsappURL =
-        "https://" +
-        "wa.me/" +
+        "https://wa.me/" +
         whatsappNumber +
         "?text=" +
         encodeURIComponent(message);
@@ -1828,6 +2172,199 @@ Thank you.`;
     );
 
 }
+
+
+/* =====================================================
+   GALLERY LIGHTBOX
+===================================================== */
+
+const galleryImages = [
+
+    "Nexa-room-1.jpg",
+    "Nexa-room-2.jpg",
+    "Nexa-room-3.jpg",
+    "Nexa-room-4.jpg",
+    "Nexa-room-5.jpg",
+    "Nexa-room-6.jpg",
+    "Nexa-room-7.jpg",
+    "Nexa-room-8.jpg",
+    "Nexa-room-9.jpg",
+    "Nexa-room-10.jpg",
+
+    "Nexa-bathroom-1.jpg",
+    "Nexa-bathroom-2.jpg",
+
+    "Nexa-lobby-1.jpg",
+    "Nexa-lobby-2.jpg",
+    "Nexa-lobby-3.jpg",
+
+    "Nexa-reception-1.jpg",
+    "Nexa-reception-2.jpg",
+    "Nexa-reception-3.jpg"
+
+];
+
+
+let currentImage = 0;
+
+
+/* OPEN */
+
+function openLightbox(image){
+
+    const index =
+        galleryImages.indexOf(image);
+
+    if(index >= 0){
+
+        currentImage = index;
+
+    }else{
+
+        currentImage = 0;
+
+    }
+
+
+    document.getElementById(
+        "lightboxImage"
+    ).src =
+        galleryImages[currentImage];
+
+
+    document.getElementById(
+        "lightbox"
+    ).classList.add("active");
+
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+
+/* CLOSE */
+
+function closeLightbox(){
+
+    document.getElementById(
+        "lightbox"
+    ).classList.remove("active");
+
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+/* NEXT */
+
+function nextImage(){
+
+    currentImage++;
+
+    if(
+        currentImage >=
+        galleryImages.length
+    ){
+
+        currentImage = 0;
+
+    }
+
+
+    document.getElementById(
+        "lightboxImage"
+    ).src =
+        galleryImages[currentImage];
+
+}
+
+
+/* PREVIOUS */
+
+function previousImage(){
+
+    currentImage--;
+
+    if(currentImage < 0){
+
+        currentImage =
+            galleryImages.length - 1;
+
+    }
+
+
+    document.getElementById(
+        "lightboxImage"
+    ).src =
+        galleryImages[currentImage];
+
+}
+
+
+/* CLICK OUTSIDE IMAGE */
+
+document.getElementById(
+    "lightbox"
+).addEventListener(
+    "click",
+    function(event){
+
+        if(
+            event.target === this
+        ){
+
+            closeLightbox();
+
+        }
+
+    }
+);
+
+
+/* KEYBOARD */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        const lightbox =
+            document.getElementById("lightbox");
+
+
+        if(
+            !lightbox.classList.contains("active")
+        ){
+
+            return;
+
+        }
+
+
+        if(event.key === "Escape"){
+
+            closeLightbox();
+
+        }
+
+
+        if(event.key === "ArrowRight"){
+
+            nextImage();
+
+        }
+
+
+        if(event.key === "ArrowLeft"){
+
+            previousImage();
+
+        }
+
+    }
+);
 
 </script>
 
