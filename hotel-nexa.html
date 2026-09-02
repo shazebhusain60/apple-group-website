@@ -169,36 +169,50 @@ nav a:hover{
         90deg,
         rgba(255,255,255,.98) 0%,
         rgba(255,255,255,.88) 40%,
-        rgba(255,255,255,.20) 100%
+        rgba(255,255,255,.18) 100%
     ),
     url('Hotel_nexa.png') center/cover no-repeat;
 }
 
 .hero-content{
-    max-width:610px;
+    max-width:650px;
     padding:90px 0;
 }
 
-.kicker{
+.hero .kicker{
     color:var(--gold);
     letter-spacing:4px;
     font-size:12px;
     font-weight:bold;
     text-transform:uppercase;
-    margin-bottom:14px;
+    margin-bottom:15px;
 }
 
 .hero h1{
     font-family:Georgia,serif;
     font-size:clamp(50px,8vw,82px);
     line-height:1;
-    margin-bottom:22px;
+    margin-bottom:18px;
+}
+
+.hero-tagline{
+    font-family:Georgia,serif;
+    font-size:25px;
+    font-style:italic;
+    color:var(--gold-dark);
+    margin-bottom:18px;
 }
 
 .hero p{
     color:var(--muted);
     font-size:18px;
-    max-width:540px;
+    max-width:550px;
+}
+
+.hero-location{
+    margin-top:18px;
+    font-size:14px;
+    color:#665d54;
 }
 
 
@@ -460,88 +474,27 @@ section{
    GALLERY IMAGES
 ===================================================== */
 
-/* ROOMS */
+.g-room1{background-image:url('Nexa-room-1.jpg');}
+.g-room2{background-image:url('Nexa-room-2.jpg');}
+.g-room3{background-image:url('Nexa-room-3.jpg');}
+.g-room4{background-image:url('Nexa-room-4.jpg');}
+.g-room5{background-image:url('Nexa-room-5.jpg');}
+.g-room6{background-image:url('Nexa-room-6.jpg');}
+.g-room7{background-image:url('Nexa-room-7.jpg');}
+.g-room8{background-image:url('Nexa-room-8.jpg');}
+.g-room9{background-image:url('Nexa-room-9.jpg');}
+.g-room10{background-image:url('Nexa-room-10.jpg');}
 
-.g-room1{
-    background-image:url('Nexa-room-1.jpg');
-}
+.g-bath1{background-image:url('Nexa-bathroom-1.jpg');}
+.g-bath2{background-image:url('Nexa-bathroom-2.jpg');}
 
-.g-room2{
-    background-image:url('Nexa-room-2.jpg');
-}
+.g-lobby1{background-image:url('Nexa-lobby-1.jpg');}
+.g-lobby2{background-image:url('Nexa-lobby-2.jpg');}
+.g-lobby3{background-image:url('Nexa-lobby-3.jpg');}
 
-.g-room3{
-    background-image:url('Nexa-room-3.jpg');
-}
-
-.g-room4{
-    background-image:url('Nexa-room-4.jpg');
-}
-
-.g-room5{
-    background-image:url('Nexa-room-5.jpg');
-}
-
-.g-room6{
-    background-image:url('Nexa-room-6.jpg');
-}
-
-.g-room7{
-    background-image:url('Nexa-room-7.jpg');
-}
-
-.g-room8{
-    background-image:url('Nexa-room-8.jpg');
-}
-
-.g-room9{
-    background-image:url('Nexa-room-9.jpg');
-}
-
-.g-room10{
-    background-image:url('Nexa-room-10.jpg');
-}
-
-
-/* BATHROOM */
-
-.g-bath1{
-    background-image:url('Nexa-bathroom-1.jpg');
-}
-
-.g-bath2{
-    background-image:url('Nexa-bathroom-2.jpg');
-}
-
-
-/* LOBBY */
-
-.g-lobby1{
-    background-image:url('Nexa-lobby-1.jpg');
-}
-
-.g-lobby2{
-    background-image:url('Nexa-lobby-2.jpg');
-}
-
-.g-lobby3{
-    background-image:url('Nexa-lobby-3.jpg');
-}
-
-
-/* RECEPTION */
-
-.g-reception1{
-    background-image:url('Nexa-reception-1.jpg');
-}
-
-.g-reception2{
-    background-image:url('Nexa-reception-2.jpg');
-}
-
-.g-reception3{
-    background-image:url('Nexa-reception-3.jpg');
-}
+.g-reception1{background-image:url('Nexa-reception-1.jpg');}
+.g-reception2{background-image:url('Nexa-reception-2.jpg');}
+.g-reception3{background-image:url('Nexa-reception-3.jpg');}
 
 
 /* =====================================================
@@ -609,11 +562,6 @@ section{
 
 .lightbox-next{
     right:25px;
-}
-
-.lightbox-prev:hover,
-.lightbox-next:hover{
-    background:#fff;
 }
 
 
@@ -720,6 +668,65 @@ textarea{
 
 
 /* =====================================================
+   WHATSAPP FLOATING BUTTON
+===================================================== */
+
+.whatsapp-float{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    z-index:9998;
+
+    width:62px;
+    height:62px;
+
+    border-radius:50%;
+
+    background:#25D366;
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:31px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.22);
+
+    transition:.25s;
+}
+
+.whatsapp-float:hover{
+    transform:scale(1.08);
+}
+
+.whatsapp-label{
+    position:absolute;
+    right:72px;
+    white-space:nowrap;
+
+    background:#29241f;
+    color:#fff;
+
+    padding:8px 13px;
+    border-radius:8px;
+
+    font-size:12px;
+    font-weight:bold;
+
+    opacity:0;
+    pointer-events:none;
+
+    transition:.25s;
+}
+
+.whatsapp-float:hover .whatsapp-label{
+    opacity:1;
+}
+
+
+/* =====================================================
    FOOTER
 ===================================================== */
 
@@ -780,6 +787,7 @@ footer span{
     .contact{
         grid-template-columns:1fr;
     }
+
 }
 
 
@@ -799,6 +807,10 @@ footer span{
 
     .hero h1{
         font-size:52px;
+    }
+
+    .hero-tagline{
+        font-size:21px;
     }
 
     .hero p{
@@ -873,6 +885,18 @@ footer span{
     .lightbox-close{
         top:10px;
         right:12px;
+    }
+
+    .whatsapp-float{
+        width:56px;
+        height:56px;
+        right:16px;
+        bottom:16px;
+        font-size:28px;
+    }
+
+    .whatsapp-label{
+        display:none;
     }
 
 }
@@ -966,11 +990,19 @@ Apple Group of Hotels
 Hotel Nexa
 </h1>
 
+<div class="hero-tagline">
+Experience the art of luxury.
+</div>
+
 <p>
-Experience the art of luxury in Ujjain.
 A refined stay designed for comfort,
-families and travellers visiting the city of Mahakal.
+families and travellers visiting the sacred
+city of Ujjain.
 </p>
+
+<div class="hero-location">
+📍 Ujjain, Madhya Pradesh &nbsp; • &nbsp; 🛕 Near Mahakal Temple
+</div>
 
 
 <a href="#booking" class="btn">
@@ -1161,9 +1193,7 @@ Explore the rooms at Hotel Nexa.
 <!-- ROOM 1 -->
 
 <div class="room">
-
 <div class="room-img room1"></div>
-
 <div class="room-body">
 
 <div class="room-number">
@@ -1184,16 +1214,13 @@ Book Now
 </a>
 
 </div>
-
 </div>
 
 
 <!-- ROOM 2 -->
 
 <div class="room">
-
 <div class="room-img room2"></div>
-
 <div class="room-body">
 
 <div class="room-number">
@@ -1213,16 +1240,13 @@ Book Now
 </a>
 
 </div>
-
 </div>
 
 
 <!-- ROOM 3 -->
 
 <div class="room">
-
 <div class="room-img room3"></div>
-
 <div class="room-body">
 
 <div class="room-number">
@@ -1242,16 +1266,13 @@ Book Now
 </a>
 
 </div>
-
 </div>
 
 
 <!-- ROOM 4 -->
 
 <div class="room">
-
 <div class="room-img room4"></div>
-
 <div class="room-body">
 
 <div class="room-number">
@@ -1271,16 +1292,13 @@ Book Now
 </a>
 
 </div>
-
 </div>
 
 
 <!-- ROOM 5 -->
 
 <div class="room">
-
 <div class="room-img room5"></div>
-
 <div class="room-body">
 
 <div class="room-number">
@@ -1300,16 +1318,13 @@ Book Now
 </a>
 
 </div>
-
 </div>
 
 
 <!-- ROOM 6 -->
 
 <div class="room">
-
 <div class="room-img room6"></div>
-
 <div class="room-body">
 
 <div class="room-number">
@@ -1329,16 +1344,13 @@ Book Now
 </a>
 
 </div>
-
 </div>
 
 
 <!-- ROOM 7 -->
 
 <div class="room">
-
 <div class="room-img room7"></div>
-
 <div class="room-body">
 
 <div class="room-number">
@@ -1358,16 +1370,13 @@ Book Now
 </a>
 
 </div>
-
 </div>
 
 
 <!-- ROOM 8 -->
 
 <div class="room">
-
 <div class="room-img room8"></div>
-
 <div class="room-body">
 
 <div class="room-number">
@@ -1387,16 +1396,13 @@ Book Now
 </a>
 
 </div>
-
 </div>
 
 
 <!-- ROOM 9 -->
 
 <div class="room">
-
 <div class="room-img room9"></div>
-
 <div class="room-body">
 
 <div class="room-number">
@@ -1417,16 +1423,13 @@ Book Now
 </a>
 
 </div>
-
 </div>
 
 
 <!-- ROOM 10 -->
 
 <div class="room">
-
 <div class="room-img room10"></div>
-
 <div class="room-body">
 
 <div class="room-number">
@@ -1446,7 +1449,6 @@ Book Now
 </a>
 
 </div>
-
 </div>
 
 
@@ -1479,70 +1481,44 @@ Explore Hotel Nexa — rooms, bathrooms, lobby and reception.
 </div>
 
 
-<!-- ROOMS -->
-
 <h3 class="gallery-title">
 Rooms
 </h3>
 
 <div class="gallery">
 
-
 <div class="gallery-item g-room1"
-onclick="openLightbox('Nexa-room-1.jpg')">
-</div>
-
+onclick="openLightbox('Nexa-room-1.jpg')"></div>
 
 <div class="gallery-item g-room2"
-onclick="openLightbox('Nexa-room-2.jpg')">
-</div>
-
+onclick="openLightbox('Nexa-room-2.jpg')"></div>
 
 <div class="gallery-item g-room3"
-onclick="openLightbox('Nexa-room-3.jpg')">
-</div>
-
+onclick="openLightbox('Nexa-room-3.jpg')"></div>
 
 <div class="gallery-item g-room4"
-onclick="openLightbox('Nexa-room-4.jpg')">
-</div>
-
+onclick="openLightbox('Nexa-room-4.jpg')"></div>
 
 <div class="gallery-item g-room5"
-onclick="openLightbox('Nexa-room-5.jpg')">
-</div>
-
+onclick="openLightbox('Nexa-room-5.jpg')"></div>
 
 <div class="gallery-item g-room6"
-onclick="openLightbox('Nexa-room-6.jpg')">
-</div>
-
+onclick="openLightbox('Nexa-room-6.jpg')"></div>
 
 <div class="gallery-item g-room7"
-onclick="openLightbox('Nexa-room-7.jpg')">
-</div>
-
+onclick="openLightbox('Nexa-room-7.jpg')"></div>
 
 <div class="gallery-item g-room8"
-onclick="openLightbox('Nexa-room-8.jpg')">
-</div>
-
+onclick="openLightbox('Nexa-room-8.jpg')"></div>
 
 <div class="gallery-item g-room9"
-onclick="openLightbox('Nexa-room-9.jpg')">
-</div>
-
+onclick="openLightbox('Nexa-room-9.jpg')"></div>
 
 <div class="gallery-item g-room10"
-onclick="openLightbox('Nexa-room-10.jpg')">
-</div>
-
+onclick="openLightbox('Nexa-room-10.jpg')"></div>
 
 </div>
 
-
-
-<!-- BATHROOMS -->
 
 <h3 class="gallery-title">
 Bathrooms
@@ -1550,22 +1526,14 @@ Bathrooms
 
 <div class="gallery">
 
-
 <div class="gallery-item g-bath1"
-onclick="openLightbox('Nexa-bathroom-1.jpg')">
-</div>
-
+onclick="openLightbox('Nexa-bathroom-1.jpg')"></div>
 
 <div class="gallery-item g-bath2"
-onclick="openLightbox('Nexa-bathroom-2.jpg')">
-</div>
-
+onclick="openLightbox('Nexa-bathroom-2.jpg')"></div>
 
 </div>
 
-
-
-<!-- LOBBY -->
 
 <h3 class="gallery-title">
 Lobby
@@ -1573,27 +1541,17 @@ Lobby
 
 <div class="gallery">
 
-
 <div class="gallery-item g-lobby1"
-onclick="openLightbox('Nexa-lobby-1.jpg')">
-</div>
-
+onclick="openLightbox('Nexa-lobby-1.jpg')"></div>
 
 <div class="gallery-item g-lobby2"
-onclick="openLightbox('Nexa-lobby-2.jpg')">
-</div>
-
+onclick="openLightbox('Nexa-lobby-2.jpg')"></div>
 
 <div class="gallery-item g-lobby3"
-onclick="openLightbox('Nexa-lobby-3.jpg')">
-</div>
-
+onclick="openLightbox('Nexa-lobby-3.jpg')"></div>
 
 </div>
 
-
-
-<!-- RECEPTION -->
 
 <h3 class="gallery-title">
 Reception
@@ -1601,21 +1559,14 @@ Reception
 
 <div class="gallery">
 
-
 <div class="gallery-item g-reception1"
-onclick="openLightbox('Nexa-reception-1.jpg')">
-</div>
-
+onclick="openLightbox('Nexa-reception-1.jpg')"></div>
 
 <div class="gallery-item g-reception2"
-onclick="openLightbox('Nexa-reception-2.jpg')">
-</div>
-
+onclick="openLightbox('Nexa-reception-2.jpg')"></div>
 
 <div class="gallery-item g-reception3"
-onclick="openLightbox('Nexa-reception-3.jpg')">
-</div>
-
+onclick="openLightbox('Nexa-reception-3.jpg')"></div>
 
 </div>
 
@@ -1631,13 +1582,11 @@ onclick="openLightbox('Nexa-reception-3.jpg')">
 
 <div class="lightbox" id="lightbox">
 
-
 <div
 class="lightbox-close"
 onclick="closeLightbox()">
 ×
 </div>
-
 
 <button
 class="lightbox-prev"
@@ -1646,13 +1595,11 @@ onclick="previousImage()">
 ‹
 </button>
 
-
 <img
 id="lightboxImage"
 class="lightbox-image"
 src=""
 alt="Hotel Nexa Gallery Photo">
-
 
 <button
 class="lightbox-next"
@@ -1660,7 +1607,6 @@ type="button"
 onclick="nextImage()">
 ›
 </button>
-
 
 </div>
 
@@ -1689,11 +1635,8 @@ Send your booking request directly to Hotel Nexa on WhatsApp.
 
 <div class="booking-box">
 
-
 <div class="form-grid">
 
-
-<!-- NAME -->
 
 <div>
 
@@ -1710,8 +1653,6 @@ autocomplete="name">
 </div>
 
 
-<!-- MOBILE -->
-
 <div>
 
 <label for="mobile">
@@ -1727,8 +1668,6 @@ autocomplete="tel">
 </div>
 
 
-<!-- CHECK IN -->
-
 <div>
 
 <label for="checkIn">
@@ -1741,8 +1680,6 @@ type="date">
 
 </div>
 
-
-<!-- CHECK OUT -->
 
 <div>
 
@@ -1757,8 +1694,6 @@ type="date">
 </div>
 
 
-<!-- ADULTS -->
-
 <div>
 
 <label for="adults">
@@ -1767,36 +1702,17 @@ Adults
 
 <select id="adults">
 
-<option value="1">
-1
-</option>
-
-<option value="2" selected>
-2
-</option>
-
-<option value="3">
-3
-</option>
-
-<option value="4">
-4
-</option>
-
-<option value="5">
-5
-</option>
-
-<option value="6">
-6
-</option>
+<option value="1">1</option>
+<option value="2" selected>2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
 
 </select>
 
 </div>
 
-
-<!-- CHILDREN -->
 
 <div>
 
@@ -1806,32 +1722,16 @@ Children
 
 <select id="children">
 
-<option value="0" selected>
-0
-</option>
-
-<option value="1">
-1
-</option>
-
-<option value="2">
-2
-</option>
-
-<option value="3">
-3
-</option>
-
-<option value="4">
-4
-</option>
+<option value="0" selected>0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
 
 </select>
 
 </div>
 
-
-<!-- ROOM -->
 
 <div class="full">
 
@@ -1862,8 +1762,6 @@ Family Room
 </div>
 
 
-<!-- SPECIAL REQUEST -->
-
 <div class="full">
 
 <label for="specialRequest">
@@ -1876,8 +1774,6 @@ placeholder="Any special request?"></textarea>
 
 </div>
 
-
-<!-- SUBMIT -->
 
 <div class="full">
 
@@ -1965,7 +1861,6 @@ onclick="openWhatsApp(); return false;">
 </div>
 
 
-
 <div class="contact-card">
 
 <h3>
@@ -1997,6 +1892,26 @@ Chat on WhatsApp
 
 
 </main>
+
+
+
+<!-- =====================================================
+     FLOATING WHATSAPP
+===================================================== -->
+
+<a
+href="#"
+class="whatsapp-float"
+onclick="openWhatsApp(); return false;"
+aria-label="Chat with Hotel Nexa on WhatsApp">
+
+<span class="whatsapp-label">
+Chat with Hotel Nexa
+</span>
+
+💬
+
+</a>
 
 
 
@@ -2077,8 +1992,6 @@ function sendWhatsAppBooking(){
         document.getElementById("specialRequest").value.trim();
 
 
-    /* REQUIRED FIELDS */
-
     if(
         !guestName ||
         !mobile ||
@@ -2095,8 +2008,6 @@ function sendWhatsAppBooking(){
     }
 
 
-    /* DATE CHECK */
-
     if(checkOut <= checkIn){
 
         alert(
@@ -2107,8 +2018,6 @@ function sendWhatsAppBooking(){
 
     }
 
-
-    /* DATE FORMAT */
 
     function formatDate(date){
 
@@ -2129,8 +2038,6 @@ function sendWhatsAppBooking(){
 
     }
 
-
-    /* WHATSAPP MESSAGE */
 
     const message =
 `HOTEL NEXA - BOOKING REQUEST
@@ -2208,34 +2115,25 @@ const galleryImages = [
 let currentImage = 0;
 
 
-/* OPEN */
-
 function openLightbox(image){
 
     const index =
         galleryImages.indexOf(image);
 
     if(index >= 0){
-
         currentImage = index;
-
     }else{
-
         currentImage = 0;
-
     }
-
 
     document.getElementById(
         "lightboxImage"
     ).src =
         galleryImages[currentImage];
 
-
     document.getElementById(
         "lightbox"
     ).classList.add("active");
-
 
     document.body.style.overflow =
         "hidden";
@@ -2243,22 +2141,17 @@ function openLightbox(image){
 }
 
 
-/* CLOSE */
-
 function closeLightbox(){
 
     document.getElementById(
         "lightbox"
     ).classList.remove("active");
 
-
     document.body.style.overflow =
         "";
 
 }
 
-
-/* NEXT */
 
 function nextImage(){
 
@@ -2273,7 +2166,6 @@ function nextImage(){
 
     }
 
-
     document.getElementById(
         "lightboxImage"
     ).src =
@@ -2281,8 +2173,6 @@ function nextImage(){
 
 }
 
-
-/* PREVIOUS */
 
 function previousImage(){
 
@@ -2295,7 +2185,6 @@ function previousImage(){
 
     }
 
-
     document.getElementById(
         "lightboxImage"
     ).src =
@@ -2304,7 +2193,7 @@ function previousImage(){
 }
 
 
-/* CLICK OUTSIDE IMAGE */
+/* CLOSE OUTSIDE */
 
 document.getElementById(
     "lightbox"
@@ -2333,7 +2222,6 @@ document.addEventListener(
         const lightbox =
             document.getElementById("lightbox");
 
-
         if(
             !lightbox.classList.contains("active")
         ){
@@ -2342,25 +2230,16 @@ document.addEventListener(
 
         }
 
-
         if(event.key === "Escape"){
-
             closeLightbox();
-
         }
-
 
         if(event.key === "ArrowRight"){
-
             nextImage();
-
         }
 
-
         if(event.key === "ArrowLeft"){
-
             previousImage();
-
         }
 
     }
