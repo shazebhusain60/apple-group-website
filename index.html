@@ -1,904 +1,857 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0">
 
-<title>Apple Group of Hotels | Luxury Hotels in Ujjain</title>
+<title>Apple Group | Hotels & Bakery in Ujjain</title>
 
 <meta name="description"
-content="Apple Group of Hotels offers refined luxury stays in Ujjain near Mahakaleshwar Temple. Explore Hotel Nexa, Hotel Apple Palace, Hotel Apple Grand and Hotel Apple Prime.">
+      content="Apple Group of Hotels and Apple Bakery in Ujjain. Luxury stays, fresh rusk, toast and roasted bread under one trusted name.">
 
 <meta name="keywords"
-content="Apple Group of Hotels, hotels in Ujjain, luxury hotels Ujjain, hotels near Mahakal Temple, Mahakaleshwar hotel, Hotel Nexa Ujjain, Apple Palace Ujjain, Apple Grand Ujjain, Apple Prime Ujjain">
+      content="Apple Group Ujjain, Apple Group Hotels, Hotel Nexa Ujjain, Apple Bakery Ujjain, Rusk, Toast, Roasted Bread">
 
 <meta name="author"
-content="Apple Group of Hotels">
-
-<meta name="robots"
-content="index, follow">
-
-<link rel="canonical"
-      href="https://www.applegroup.info/">
-
-<meta property="og:title"
-      content="Apple Group of Hotels | Refined Luxury in Ujjain">
-
-<meta property="og:description"
-      content="Discover refined luxury and comfortable stays in Ujjain near Mahakaleshwar Temple.">
-
-<meta property="og:type"
-      content="website">
-
-<meta property="og:url"
-      content="https://www.applegroup.info/">
-
-<meta name="theme-color"
-      content="#b38a45">
-
+      content="Apple Group">
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#fffdf9;
-    color:#292929;
-    line-height:1.6;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: #ffffff;
+    line-height: 1.6;
 }
 
-a{
-    text-decoration:none;
-    color:inherit;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-img{
-    width:100%;
-    display:block;
+img {
+    max-width: 100%;
+    display: block;
 }
 
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-
-/* ================= HEADER ================= */
-
-header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(255,253,249,.97);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid #eee4d4;
-}
-
-.navbar{
-    height:78px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.logo{
-    display:flex;
-    flex-direction:column;
-}
-
-.logo-main{
-    color:#a57938;
-    font-size:25px;
-    font-weight:bold;
-    letter-spacing:3px;
-}
-
-.logo-sub{
-    color:#777;
-    font-size:9px;
-    letter-spacing:2px;
-}
-
-.nav{
-    display:flex;
-    gap:28px;
-    align-items:center;
-}
-
-.nav a{
-    font-size:14px;
-    color:#444;
-    transition:.3s;
-}
-
-.nav a:hover{
-    color:#b38a45;
-}
-
-.nav-book{
-    border:1px solid #b38a45;
-    padding:10px 18px;
-    color:#a57938 !important;
-}
-
-.nav-book:hover{
-    background:#b38a45;
-    color:white !important;
-}
-
-.menu-btn{
-    display:none;
-    background:none;
-    border:0;
-    font-size:30px;
-    color:#a57938;
-    cursor:pointer;
-}
-
-.mobile-nav{
-    display:none;
-    background:#fffdf9;
-    border-top:1px solid #eee4d4;
-}
-
-.mobile-nav.active{
-    display:block;
-}
-
-.mobile-nav a{
-    display:block;
-    padding:15px 5%;
-    border-bottom:1px solid #eee4d4;
+.container {
+    width: 90%;
+    max-width: 1250px;
+    margin: auto;
 }
 
 
-/* ================= HERO ================= */
+/* =========================
+   NAVBAR
+========================= */
 
-.hero{
-    min-height:calc(100vh - 78px);
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: rgba(5, 5, 5, 0.94);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212, 164, 61, 0.25);
+}
+
+.navbar {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-area img {
+    width: 72px;
+    height: 58px;
+    object-fit: contain;
+}
+
+.logo-text {
+    line-height: 1.1;
+}
+
+.logo-text h2 {
+    color: #e5b94d;
+    font-family: Georgia, serif;
+    font-size: 23px;
+    letter-spacing: 1px;
+}
+
+.logo-text span {
+    font-size: 11px;
+    color: #ddd;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #eee;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e5b94d;
+}
+
+.book-btn {
+    border: 1px solid #e5b94d;
+    padding: 10px 18px;
+    border-radius: 5px;
+    color: #f3c85b !important;
+}
+
+.book-btn:hover {
+    background: #e5b94d;
+    color: #111 !important;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    padding-top: 82px;
 
     background:
         linear-gradient(
-            rgba(30,25,18,.48),
-            rgba(30,25,18,.52)
+            90deg,
+            rgba(0,0,0,0.30),
+            rgba(0,0,0,0.15),
+            rgba(0,0,0,0.30)
         ),
-        url("Hero-image-back.jpg") center/cover no-repeat;
+        url("apple-group-hero.png");
 
-    display:flex;
-    align-items:center;
-    text-align:center;
-    color:white;
-}
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-.hero-content{
-    width:90%;
-    max-width:900px;
-    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.kicker{
-    text-transform:uppercase;
-    letter-spacing:4px;
-    font-size:12px;
-    margin-bottom:18px;
-}
+.hero-overlay {
+    width: 100%;
+    min-height: calc(100vh - 82px);
 
-.hero h1{
-    font-family:Georgia,serif;
-    font-size:clamp(45px,8vw,90px);
-    font-weight:500;
-    margin-bottom:10px;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-.hero h2{
-    font-family:Georgia,serif;
-    font-size:clamp(22px,4vw,34px);
-    font-style:italic;
-    font-weight:400;
-    margin-bottom:15px;
+    text-align: center;
 }
 
-.hero p{
-    font-size:16px;
-    margin-bottom:30px;
-}
+.hero-content {
+    max-width: 760px;
+    padding: 30px;
+    margin-top: 30px;
 
-.hero-buttons{
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    flex-wrap:wrap;
+    text-shadow:
+        0 3px 10px rgba(0,0,0,0.9);
 }
 
-.btn{
-    display:inline-flex;
-    justify-content:center;
-    align-items:center;
-    padding:14px 24px;
-    min-width:155px;
-    border-radius:3px;
-    font-size:14px;
-    transition:.3s;
+.hero-small {
+    color: #e8bd52;
+    font-size: 16px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 
-.btn-gold{
-    background:#b38a45;
-    color:white;
-    border:1px solid #b38a45;
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 6vw, 78px);
+    line-height: 1.05;
+    margin-bottom: 22px;
 }
 
-.btn-gold:hover{
-    background:#967034;
+.hero h1 span {
+    color: #e8bd52;
 }
 
-.btn-white{
-    border:1px solid white;
-    color:white;
+.hero p {
+    font-size: 19px;
+    color: #f5f5f5;
+    margin-bottom: 30px;
 }
 
-.btn-white:hover{
-    background:white;
-    color:#795a2f;
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
 }
-
 
-/* ================= SECTION ================= */
-
-section{
-    padding:90px 0;
+.btn {
+    display: inline-block;
+    padding: 13px 26px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.heading{
-    text-align:center;
-    margin-bottom:50px;
+.btn-gold {
+    background: #d9a934;
+    color: #111;
 }
 
-.heading .kicker{
-    color:#b38a45;
-    margin-bottom:10px;
+.btn-gold:hover {
+    background: #f0c75e;
+    transform: translateY(-2px);
 }
 
-.heading h2{
-    font-family:Georgia,serif;
-    font-size:42px;
-    font-weight:500;
+.btn-outline {
+    border: 1px solid #e6ba4c;
+    color: #fff;
 }
 
-.heading p{
-    max-width:680px;
-    margin:12px auto 0;
-    color:#777;
+.btn-outline:hover {
+    background: #e6ba4c;
+    color: #111;
 }
 
 
-/* ================= ABOUT ================= */
+/* =========================
+   SECTION COMMON
+========================= */
 
-.about{
-    background:white;
+section {
+    padding: 90px 0;
 }
 
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-.about-image{
-    height:500px;
-    overflow:hidden;
+.section-title .small {
+    color: #dcb34d;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
 }
 
-.about-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+.section-title h2 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    margin-top: 8px;
 }
 
-.about-text .small{
-    color:#b38a45;
-    text-transform:uppercase;
-    letter-spacing:3px;
-    font-size:12px;
+.section-title p {
+    max-width: 700px;
+    margin: 15px auto 0;
+    color: #bbb;
 }
+
+
+/* =========================
+   ABOUT
+========================= */
 
-.about-text h2{
-    font-family:Georgia,serif;
-    font-size:40px;
-    font-weight:500;
-    margin:12px 0 20px;
+.about {
+    background: #111;
 }
 
-.about-text p{
-    color:#666;
-    margin-bottom:15px;
+.about-box {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
 }
 
-.address{
-    background:#faf7f0;
-    border-left:3px solid #b38a45;
-    padding:18px;
-    margin-top:20px;
+.about-box p {
+    color: #ccc;
+    font-size: 17px;
+    margin-bottom: 18px;
 }
 
 
-/* ================= HOTELS ================= */
+/* =========================
+   TWO EXPERIENCES
+========================= */
 
-.hotels{
-    background:#f8f4ec;
+.business-section {
+    background: #090909;
 }
 
-.hotel-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:30px;
+.business-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
 }
 
-.hotel-card{
-    background:white;
-    border:1px solid #e9e0d2;
-    overflow:hidden;
-    transition:.3s;
+.business-card {
+    min-height: 420px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(224,177,65,0.5);
+    background: #151515;
 }
 
-.hotel-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
+.business-card.hotel {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.88),
+            rgba(0,0,0,0.40)
+        ),
+        url("Hotel_nexa.png") center/cover;
 }
 
-.hotel-image{
-    height:330px;
-    overflow:hidden;
+.business-card.bakery {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.85),
+            rgba(0,0,0,0.35)
+        ),
+        url("apple-group-hero.png") center/cover;
 }
 
-.hotel-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:.5s;
+.business-content {
+    padding: 45px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
 }
 
-.hotel-card:hover .hotel-image img{
-    transform:scale(1.04);
+.business-content .icon {
+    font-size: 38px;
+    margin-bottom: 12px;
 }
 
-.hotel-content{
-    padding:28px;
+.business-content h3 {
+    color: #e6b94d;
+    font-family: Georgia, serif;
+    font-size: 31px;
+    margin-bottom: 12px;
 }
 
-.hotel-content .number{
-    color:#b38a45;
-    font-size:12px;
-    letter-spacing:2px;
+.business-content p {
+    color: #eee;
+    margin-bottom: 20px;
 }
 
-.hotel-content h3{
-    font-family:Georgia,serif;
-    font-size:29px;
-    font-weight:500;
-    margin:5px 0 10px;
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
 }
 
-.hotel-content p{
-    color:#777;
-    font-size:14px;
-    margin-bottom:20px;
+.product-list span {
+    border: 1px solid rgba(231,188,75,0.6);
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    color: #f1ca66;
 }
 
-.hotel-btn{
-    display:inline-block;
-    border:1px solid #b38a45;
-    padding:10px 20px;
-    color:#a57938;
-    font-size:13px;
-}
 
-.hotel-btn:hover{
-    background:#b38a45;
-    color:white;
+/* =========================
+   HOTELS
+========================= */
+
+.hotels {
+    background: #111;
 }
 
+.hotel-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
 
-/* ================= EXPERIENCE ================= */
+.hotel-item {
+    background: #181818;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #292929;
+    transition: 0.3s;
+}
 
-.experience{
-    background:white;
+.hotel-item:hover {
+    transform: translateY(-6px);
+    border-color: #d8ae42;
 }
 
-.experience-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
+.hotel-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
 }
 
-.experience-card{
-    text-align:center;
-    padding:30px 20px;
-    background:#faf7f0;
-    border:1px solid #eee5d8;
+.hotel-info {
+    padding: 20px;
 }
 
-.experience-icon{
-    font-size:30px;
-    color:#b38a45;
-    margin-bottom:12px;
+.hotel-info h3 {
+    color: #e3b84d;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    margin-bottom: 8px;
 }
 
-.experience-card h3{
-    font-family:Georgia,serif;
-    font-size:21px;
-    margin-bottom:8px;
+.hotel-info p {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 15px;
 }
 
-.experience-card p{
-    color:#777;
-    font-size:14px;
+.hotel-link {
+    color: #e5bb51;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 
-/* ================= DESTINATION ================= */
+/* =========================
+   BAKERY
+========================= */
 
-.destination{
-    background:#2e2922;
-    color:white;
-    text-align:center;
+.bakery-section {
+    background: #f1e2c5;
+    color: #241710;
 }
 
-.destination h2{
-    font-family:Georgia,serif;
-    font-size:44px;
-    font-weight:500;
-    margin-bottom:15px;
+.bakery-section .section-title p {
+    color: #604d3e;
 }
 
-.destination p{
-    max-width:760px;
-    margin:auto;
-    color:#d7d0c4;
+.bakery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
+.bakery-card {
+    background: #fffaf0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border: 1px solid #d7b878;
+}
 
-/* ================= BOOKING ================= */
+.bakery-image {
+    height: 240px;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 
-.booking{
-    background:#f8f4ec;
+.bakery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.booking-box{
-    max-width:900px;
-    margin:auto;
-    background:white;
-    padding:40px;
-    border:1px solid #e8dece;
+.bakery-info {
+    padding: 24px;
+    text-align: center;
 }
 
-.form-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
+.bakery-info h3 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    color: #6b271e;
+    margin-bottom: 8px;
 }
 
-.form-group{
-    display:flex;
-    flex-direction:column;
+.bakery-info p {
+    color: #665248;
+    font-size: 14px;
 }
+
+
+/* =========================
+   EXPERIENCE / VALUES
+========================= */
 
-.form-group.full{
-    grid-column:1/-1;
+.experience {
+    background: #080808;
 }
 
-.form-group label{
-    font-size:13px;
-    color:#555;
-    margin-bottom:7px;
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea{
-    padding:13px;
-    border:1px solid #ddd4c7;
-    background:#fffdfa;
-    font-size:14px;
-    outline:none;
+.value {
+    text-align: center;
+    padding: 25px 15px;
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus{
-    border-color:#b38a45;
+.value-icon {
+    font-size: 35px;
+    margin-bottom: 12px;
 }
 
-.form-group textarea{
-    min-height:100px;
-    resize:vertical;
+.value h3 {
+    color: #e5b94d;
+    font-family: Georgia, serif;
+    margin-bottom: 8px;
 }
 
-.submit-btn{
-    margin-top:25px;
-    width:100%;
-    border:0;
-    cursor:pointer;
+.value p {
+    color: #aaa;
+    font-size: 14px;
 }
 
 
-/* ================= CONTACT ================= */
+/* =========================
+   CTA
+========================= */
 
-.contact{
-    background:white;
+.cta {
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.72),
+            rgba(0,0,0,0.72)
+        ),
+        url("apple-group-hero.png") center/cover;
+    text-align: center;
 }
 
-.contact-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
+.cta h2 {
+    font-family: Georgia, serif;
+    font-size: 45px;
+    margin-bottom: 15px;
 }
 
-.contact-card{
-    background:#faf7f0;
-    border:1px solid #eee5d8;
-    padding:35px;
+.cta p {
+    color: #ddd;
+    margin-bottom: 25px;
+    font-size: 18px;
 }
 
-.contact-card h3{
-    font-family:Georgia,serif;
-    font-size:30px;
-    font-weight:500;
-    margin-bottom:20px;
-}
 
-.contact-item{
-    margin-bottom:18px;
-}
+/* =========================
+   CONTACT
+========================= */
 
-.contact-item strong{
-    display:block;
-    color:#a57938;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    font-size:11px;
-    margin-bottom:4px;
+.contact {
+    background: #121212;
 }
 
-.contact-item span{
-    color:#666;
+.contact-box {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
 }
 
-.contact-actions{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-top:25px;
+.contact-box h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    color: #e3b84c;
+    margin-bottom: 15px;
 }
 
-.map iframe{
-    width:100%;
-    min-height:420px;
-    height:100%;
-    border:0;
+.contact-box p {
+    color: #bbb;
+    margin-bottom: 25px;
 }
 
+.whatsapp {
+    display: inline-block;
+    background: #25D366;
+    color: #fff;
+    padding: 14px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+}
 
-/* ================= FOOTER ================= */
 
-footer{
-    background:#201d18;
-    color:#ccc;
-    padding:45px 0 20px;
-}
+/* =========================
+   FOOTER
+========================= */
 
-.footer-grid{
-    display:grid;
-    grid-template-columns:1.5fr 1fr 1fr;
-    gap:40px;
-    margin-bottom:35px;
+footer {
+    background: #050505;
+    border-top: 1px solid #292929;
+    padding: 45px 0 20px;
 }
 
-.footer-logo{
-    color:#c29a57;
-    font-size:28px;
-    letter-spacing:4px;
-    margin-bottom:10px;
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 35px;
 }
 
-.footer-about p{
-    color:#aaa;
-    font-size:14px;
+.footer-brand h2 {
+    color: #e4b94e;
+    font-family: Georgia, serif;
+    margin-bottom: 8px;
 }
 
-footer h4{
-    color:white;
-    margin-bottom:15px;
+.footer-brand p {
+    color: #999;
+    font-size: 14px;
 }
 
-.footer-links a{
-    display:block;
-    color:#aaa;
-    font-size:14px;
-    margin-bottom:8px;
+.footer-column h3 {
+    color: #e4b94e;
+    margin-bottom: 15px;
 }
 
-.footer-links a:hover{
-    color:#c29a57;
+.footer-column a {
+    display: block;
+    color: #aaa;
+    margin-bottom: 8px;
+    font-size: 14px;
 }
 
-.footer-bottom{
-    border-top:1px solid #3c3831;
-    padding-top:20px;
-    text-align:center;
-    color:#888;
-    font-size:12px;
+.footer-column a:hover {
+    color: #e4b94e;
 }
-
-
-/* ================= WHATSAPP ================= */
 
-.whatsapp{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    background:#25D366;
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:27px;
-    z-index:1500;
-    box-shadow:0 5px 20px rgba(0,0,0,.25);
+.copyright {
+    border-top: 1px solid #222;
+    padding-top: 18px;
+    text-align: center;
+    color: #777;
+    font-size: 13px;
 }
 
 
-/* ================= MOBILE ================= */
+/* =========================
+   MOBILE
+========================= */
 
-@media(max-width:900px){
+@media (max-width: 1000px) {
 
-    .nav{
-        display:none;
+    .nav-links {
+        gap: 15px;
     }
 
-    .menu-btn{
-        display:block;
+    .hotel-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .about-grid,
-    .contact-grid{
-        grid-template-columns:1fr;
-    }
-
-    .hotel-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .experience-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr 1fr;
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 
-@media(max-width:600px){
+@media (max-width: 750px) {
 
-    section{
-        padding:65px 0;
+    .navbar {
+        min-height: 72px;
     }
 
-    .container{
-        width:92%;
+    .logo-area img {
+        width: 55px;
+        height: 48px;
     }
 
-    .navbar{
-        height:70px;
+    .logo-text h2 {
+        font-size: 17px;
     }
 
-    .hero{
-        min-height:calc(100vh - 70px);
+    .logo-text span {
+        font-size: 8px;
     }
 
-    .hero h1{
-        font-size:52px;
+    .nav-links {
+        display: none;
     }
 
-    .hero-buttons{
-        flex-direction:column;
-        align-items:center;
+    .hero {
+        min-height: 90vh;
+        background-position: center;
     }
 
-    .btn{
-        width:220px;
+    .hero-overlay {
+        min-height: calc(90vh - 72px);
     }
 
-    .heading h2,
-    .about-text h2{
-        font-size:34px;
+    .hero-content {
+        padding: 20px;
     }
 
-    .about-image{
-        height:380px;
+    .hero h1 {
+        font-size: 43px;
     }
 
-    .hotel-grid,
-    .experience-grid{
-        grid-template-columns:1fr;
+    .hero p {
+        font-size: 16px;
     }
 
-    .hotel-image{
-        height:280px;
+    .business-grid,
+    .bakery-grid,
+    .footer-main {
+        grid-template-columns: 1fr;
     }
 
-    .booking-box{
-        padding:25px 18px;
+    .hotel-grid {
+        grid-template-columns: 1fr;
     }
 
-    .form-grid{
-        grid-template-columns:1fr;
+    .values-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
-    .form-group.full{
-        grid-column:auto;
+    .business-content {
+        padding: 30px;
     }
 
-    .footer-grid{
-        grid-template-columns:1fr;
+    .business-content h3 {
+        font-size: 27px;
     }
 
-    .destination h2{
-        font-size:34px;
+    .section-title h2 {
+        font-size: 34px;
     }
 
+    .cta h2 {
+        font-size: 34px;
+    }
 }
 
 </style>
-
-
-<!-- ================= SEO STRUCTURED DATA ================= -->
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"Apple Group of Hotels",
-  "url":"https://www.applegroup.info/",
-  "telephone":"+91 8770434255",
-  "address":{
-    "@type":"PostalAddress",
-    "addressLocality":"Ujjain",
-    "addressRegion":"Madhya Pradesh",
-    "addressCountry":"IN"
-  }
-}
-</script>
-
 </head>
 
 
 <body>
 
 
-<!-- ================= HEADER ================= -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <header>
 
 <div class="container navbar">
 
-<a href="#home" class="logo">
+    <a href="index.html" class="logo-area">
 
-<span class="logo-main">
-APPLE GROUP
-</span>
+        <img src="apple-logo.png"
+             alt="Apple Group Logo">
 
-<span class="logo-sub">
-OF HOTELS • UJJAIN
-</span>
+        <div class="logo-text">
 
-</a>
+            <h2>APPLE GROUP</h2>
 
+            <span>
+                HOTELS • BAKERY • UJJAIN
+            </span>
 
-<nav class="nav">
+        </div>
 
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#hotels">Our Hotels</a>
-<a href="#experience">Experience</a>
-<a href="#booking">Booking</a>
-<a href="#contact">Contact</a>
-
-<a href="#booking" class="nav-book">
-Book Now
-</a>
-
-</nav>
+    </a>
 
 
-<button
-class="menu-btn"
-onclick="toggleMenu()"
-aria-label="Menu">
+    <nav class="nav-links">
 
-☰
+        <a href="index.html">Home</a>
 
-</button>
+        <a href="#about">About</a>
+
+        <a href="#hotels">Our Hotels</a>
+
+        <a href="#bakery">Bakery</a>
+
+        <a href="#experience">Experience</a>
+
+        <a href="#contact">Contact</a>
+
+        <a
+          href="https://wa.me/918770434255"
+          class="book-btn"
+          target="_blank">
+          Book Now
+        </a>
+
+    </nav>
 
 </div>
-
-
-<nav id="mobileNav" class="mobile-nav">
-
-<a href="#home" onclick="closeMenu()">Home</a>
-
-<a href="#about" onclick="closeMenu()">About</a>
-
-<a href="#hotels" onclick="closeMenu()">Our Hotels</a>
-
-<a href="#experience" onclick="closeMenu()">Experience</a>
-
-<a href="#booking" onclick="closeMenu()">Booking</a>
-
-<a href="#contact" onclick="closeMenu()">Contact</a>
-
-</nav>
 
 </header>
 
 
 
-<!-- ================= HERO ================= -->
+<!-- =========================
+     HERO
+========================= -->
 
-<section class="hero" id="home">
+<section class="hero">
 
-<div class="hero-content">
+<div class="hero-overlay">
 
-<div class="kicker">
-Apple Group of Hotels
-</div>
+    <div class="hero-content">
 
-<h1>
-Refined Luxury in Ujjain
-</h1>
+        <div class="hero-small">
+            Apple Group • Ujjain
+        </div>
 
-<h2>
-Stay. Experience. Discover.
-</h2>
+        <h1>
+            One Group.
+            <br>
+            <span>Two Experiences.</span>
+        </h1>
 
-<p>
-Premium hospitality near the spiritual heart of Ujjain
-and Mahakaleshwar Temple.
-</p>
+        <p>
+            Luxury Stays. Fresh Bakes. Warm Hospitality.
+            <br>
+            All under one name — Apple Group.
+        </p>
 
-<div class="hero-buttons">
+        <div class="hero-buttons">
 
-<a href="#hotels" class="btn btn-gold">
-Explore Our Hotels
-</a>
+            <a href="#hotels"
+               class="btn btn-gold">
+                Explore Our Hotels
+            </a>
 
-<a href="#booking" class="btn btn-white">
-Book Your Stay
-</a>
+            <a href="#bakery"
+               class="btn btn-outline">
+                Explore Our Bakery
+            </a>
 
-<a href="tel:+918770434255"
-   class="btn btn-white">
-Call Now
-</a>
+        </div>
 
-</div>
+    </div>
 
 </div>
 
@@ -906,85 +859,42 @@ Call Now
 
 
 
-<!-- ================= ABOUT ================= -->
+<!-- =========================
+     ABOUT
+========================= -->
 
-<section class="about" id="about">
+<section id="about" class="about">
 
 <div class="container">
 
-<div class="heading">
+    <div class="section-title">
 
-<div class="kicker">
-Welcome
-</div>
+        <div class="small">
+            About Apple Group
+        </div>
 
-<h2>
-The Apple Group Experience
-</h2>
+        <h2>
+            More Than A Name
+        </h2>
 
-<p>
-A collection of thoughtfully designed hotels
-bringing comfort, elegance and warm hospitality
-to Ujjain.
-</p>
-
-</div>
+    </div>
 
 
-<div class="about-grid">
+    <div class="about-box">
 
-<div class="about-image">
+        <p>
+            Apple Group brings together premium hospitality
+            and quality bakery products under one trusted name
+            in Ujjain.
+        </p>
 
-<img
-src="Hotel_nexa.png"
-alt="Apple Group of Hotels Ujjain">
+        <p>
+            From comfortable stays for travellers and families
+            to delicious bakery favourites for everyday moments,
+            our focus is simple — quality, service and trust.
+        </p>
 
-</div>
-
-
-<div class="about-text">
-
-<div class="small">
-About Apple Group of Hotels
-</div>
-
-<h2>
-Your Stay in Ujjain, Elevated.
-</h2>
-
-<p>
-Apple Group of Hotels brings together a collection
-of carefully designed stays in Ujjain, created for
-families, tourists and travellers.
-</p>
-
-<p>
-Our hotels combine modern comfort with the spiritual
-charm of Ujjain, keeping guests conveniently connected
-to Mahakaleshwar Temple and the city's important
-attractions.
-</p>
-
-<p>
-From a peaceful family stay to a refined premium
-experience, choose the hotel that matches your journey.
-</p>
-
-<div class="address">
-
-<strong>
-Our City
-</strong>
-
-Ujjain, Madhya Pradesh, India
-<br>
-Near Mahakaleshwar Temple
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </div>
 
@@ -992,201 +902,107 @@ Near Mahakaleshwar Temple
 
 
 
-<!-- ================= HOTELS ================= -->
+<!-- =========================
+     TWO BUSINESSES
+========================= -->
 
-<section class="hotels" id="hotels">
+<section class="business-section">
 
 <div class="container">
 
-<div class="heading">
+    <div class="section-title">
 
-<div class="kicker">
-Our Collection
-</div>
+        <div class="small">
+            Our Businesses
+        </div>
 
-<h2>
-Our Hotels
-</h2>
+        <h2>
+            Two Experiences
+        </h2>
 
-<p>
-Discover the Apple Group collection of hotels
-in Ujjain.
-</p>
+        <p>
+            Hospitality for your stay. Bakery goodness for your day.
+        </p>
 
-</div>
+    </div>
 
 
-<div class="hotel-grid">
+    <div class="business-grid">
 
 
-<!-- NEXA -->
+        <!-- HOTEL -->
 
-<div class="hotel-card">
+        <div class="business-card hotel">
 
-<div class="hotel-image">
+            <div class="business-content">
 
-<img
-src="Hotel_nexa.png"
-alt="Hotel Nexa Ujjain">
+                <div class="icon">
+                    🏨
+                </div>
 
-</div>
+                <h3>
+                    Apple Group of Hotels
+                </h3>
 
-<div class="hotel-content">
+                <p>
+                    Premium hotels in Ujjain offering
+                    comfortable stays, quality service
+                    and convenient locations.
+                </p>
 
-<div class="number">
-01 • APPLE GROUP
-</div>
+                <a href="#hotels"
+                   class="btn btn-gold">
+                    Explore Hotels
+                </a>
 
-<h3>
-Hotel Nexa
-</h3>
+            </div>
 
-<p>
-A serene retreat near Mahakaleshwar Temple,
-offering refined comfort for families and
-travellers seeking a premium Ujjain stay.
-</p>
+        </div>
 
-<a
-href="https://www.applegroup.info/blank-12"
-class="hotel-btn">
 
-View Hotel
 
-</a>
+        <!-- BAKERY -->
 
-</div>
+        <div class="business-card bakery">
 
-</div>
+            <div class="business-content">
 
+                <div class="icon">
+                    🥐
+                </div>
 
+                <h3>
+                    Apple Bakery
+                </h3>
 
-<!-- APPLE PALACE -->
+                <p>
+                    Quality bakery favourites made for
+                    tea time, breakfast and everyday
+                    moments.
+                </p>
 
-<div class="hotel-card">
 
-<div class="hotel-image">
+                <div class="product-list">
 
-<img
-src="apple-palace.jpg"
-alt="Hotel Apple Palace Ujjain">
+                    <span>Rusk</span>
 
-</div>
+                    <span>Toast</span>
 
-<div class="hotel-content">
+                    <span>Roasted Bread</span>
 
-<div class="number">
-02 • APPLE GROUP
-</div>
+                </div>
 
-<h3>
-Hotel Apple Palace
-</h3>
 
-<p>
-Premium comfort with spacious rooms and
-thoughtful hospitality, designed for a
-comfortable family getaway.
-</p>
+                <a href="apple-bakery.html"
+                   class="btn btn-gold">
+                    Explore Bakery
+                </a>
 
-<a
-href="https://www.applegroup.info/blank-12-1"
-class="hotel-btn">
+            </div>
 
-View Hotel
+        </div>
 
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- APPLE GRAND -->
-
-<div class="hotel-card">
-
-<div class="hotel-image">
-
-<img
-src="apple-grand.jpg"
-alt="Hotel Apple Grand Ujjain">
-
-</div>
-
-<div class="hotel-content">
-
-<div class="number">
-03 • APPLE GROUP
-</div>
-
-<h3>
-Hotel Apple Grand
-</h3>
-
-<p>
-A peaceful sanctuary for families and
-travellers looking for comfort and a
-relaxed Ujjain experience.
-</p>
-
-<a
-href="https://www.applegroup.info/blank-12-2"
-class="hotel-btn">
-
-View Hotel
-
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- APPLE PRIME -->
-
-<div class="hotel-card">
-
-<div class="hotel-image">
-
-<img
-src="apple-prime.jpg"
-alt="Hotel Apple Prime Ujjain">
-
-</div>
-
-<div class="hotel-content">
-
-<div class="number">
-04 • APPLE GROUP
-</div>
-
-<h3>
-Hotel Apple Prime
-</h3>
-
-<p>
-A boutique sanctuary blending Ujjain's
-heritage with contemporary comfort and
-refined hospitality.
-</p>
-
-<a
-href="https://www.applegroup.info/blank-12-3"
-class="hotel-btn">
-
-View Hotel
-
-</a>
-
-</div>
-
-</div>
-
-
-</div>
+    </div>
 
 </div>
 
@@ -1194,101 +1010,180 @@ View Hotel
 
 
 
-<!-- ================= EXPERIENCE ================= -->
+<!-- =========================
+     HOTELS
+========================= -->
 
-<section class="experience" id="experience">
+<section id="hotels" class="hotels">
 
 <div class="container">
 
-<div class="heading">
+    <div class="section-title">
 
-<div class="kicker">
-Why Apple Group
-</div>
+        <div class="small">
+            Stay With Us
+        </div>
 
-<h2>
-More Than Just a Stay
-</h2>
+        <h2>
+            Our Hotels
+        </h2>
 
-</div>
+        <p>
+            Discover comfortable and memorable stays
+            in Ujjain.
+        </p>
 
-
-<div class="experience-grid">
-
-
-<div class="experience-card">
-
-<div class="experience-icon">
-✦
-</div>
-
-<h3>
-Refined Comfort
-</h3>
-
-<p>
-Beautiful spaces designed around
-your comfort.
-</p>
-
-</div>
+    </div>
 
 
-<div class="experience-card">
-
-<div class="experience-icon">
-⌂
-</div>
-
-<h3>
-Prime Location
-</h3>
-
-<p>
-Convenient access to Mahakaleshwar
-Temple and Ujjain.
-</p>
-
-</div>
+    <div class="hotel-grid">
 
 
-<div class="experience-card">
+        <!-- HOTEL NEXA -->
 
-<div class="experience-icon">
-♡
-</div>
+        <div class="hotel-item">
 
-<h3>
-Family Friendly
-</h3>
+            <img
+              src="Hotel_nexa.png"
+              alt="Hotel Nexa Ujjain">
 
-<p>
-Comfortable stays designed for
-families and tourists.
-</p>
+            <div class="hotel-info">
 
-</div>
+                <h3>
+                    Hotel Nexa
+                </h3>
 
+                <p>
+                    A premium stay in Ujjain
+                    by Apple Group of Hotels.
+                </p>
 
-<div class="experience-card">
+                <a
+                  href="hotel-nexa.html"
+                  class="hotel-link">
+                  Explore Hotel →
+                </a>
 
-<div class="experience-icon">
-★
-</div>
+            </div>
 
-<h3>
-Warm Hospitality
-</h3>
-
-<p>
-Thoughtful service throughout
-your stay.
-</p>
-
-</div>
+        </div>
 
 
-</div>
+
+        <!-- APPLE PALACE -->
+
+        <div class="hotel-item">
+
+            <div
+              style="
+              height:220px;
+              display:flex;
+              align-items:center;
+              justify-content:center;
+              background:#202020;
+              font-size:55px;">
+              🏨
+            </div>
+
+            <div class="hotel-info">
+
+                <h3>
+                    Hotel Apple Palace
+                </h3>
+
+                <p>
+                    Premium hospitality from
+                    Apple Group.
+                </p>
+
+                <a
+                  href="hotel-apple-palace.html"
+                  class="hotel-link">
+                  Explore Hotel →
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- APPLE GRAND -->
+
+        <div class="hotel-item">
+
+            <div
+              style="
+              height:220px;
+              display:flex;
+              align-items:center;
+              justify-content:center;
+              background:#202020;
+              font-size:55px;">
+              🏨
+            </div>
+
+            <div class="hotel-info">
+
+                <h3>
+                    Hotel Apple Grand
+                </h3>
+
+                <p>
+                    Elegant stays with
+                    Apple Group hospitality.
+                </p>
+
+                <a
+                  href="hotel-apple-grand.html"
+                  class="hotel-link">
+                  Explore Hotel →
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- APPLE PRIME -->
+
+        <div class="hotel-item">
+
+            <div
+              style="
+              height:220px;
+              display:flex;
+              align-items:center;
+              justify-content:center;
+              background:#202020;
+              font-size:55px;">
+              🏨
+            </div>
+
+            <div class="hotel-info">
+
+                <h3>
+                    Hotel Apple Prime
+                </h3>
+
+                <p>
+                    Comfortable stays and
+                    quality service.
+                </p>
+
+                <a
+                  href="hotel-apple-prime.html"
+                  class="hotel-link">
+                  Explore Hotel →
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
 
 </div>
 
@@ -1296,27 +1191,136 @@ your stay.
 
 
 
-<!-- ================= DESTINATION ================= -->
+<!-- =========================
+     BAKERY
+========================= -->
 
-<section class="destination">
+<section id="bakery" class="bakery-section">
 
 <div class="container">
 
-<div class="kicker">
-Discover Ujjain
-</div>
+    <div class="section-title">
 
-<h2>
-The Spiritual Heart of Madhya Pradesh
-</h2>
+        <div class="small">
+            Apple Bakery
+        </div>
 
-<p>
-Experience the profound spiritual energy of Ujjain,
-home to the revered Mahakaleshwar Temple and one of
-India's most important pilgrimage destinations.
-Stay close to the temple while enjoying the comfort
-and hospitality of Apple Group of Hotels.
-</p>
+        <h2>
+            Fresh. Crispy. Delicious.
+        </h2>
+
+        <p>
+            Our bakery range focuses on three favourites:
+            Rusk, Toast and Roasted Bread.
+        </p>
+
+    </div>
+
+
+    <div class="bakery-grid">
+
+
+        <!-- RUSK -->
+
+        <div class="bakery-card">
+
+            <div class="bakery-image">
+
+                <img
+                  src="36354.jpg"
+                  alt="Apple Kesar Elaichi Rusk">
+
+            </div>
+
+            <div class="bakery-info">
+
+                <h3>
+                    Kesar Elaichi Rusk
+                </h3>
+
+                <p>
+                    Crispy, aromatic and perfect
+                    with your favourite cup of tea.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- TOAST -->
+
+        <div class="bakery-card">
+
+            <div class="bakery-image">
+
+                <img
+                  src="26315.png"
+                  alt="Apple Mama Roasted Toast">
+
+            </div>
+
+            <div class="bakery-info">
+
+                <h3>
+                    Toast
+                </h3>
+
+                <p>
+                    A delicious everyday favourite
+                    for breakfast and tea time.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ROASTED BREAD -->
+
+        <div class="bakery-card">
+
+            <div class="bakery-image">
+
+                <img
+                  src="26171.jpg"
+                  alt="Apple Makkhan Roasted Bread">
+
+            </div>
+
+            <div class="bakery-info">
+
+                <h3>
+                    Roasted Bread
+                </h3>
+
+                <p>
+                    Golden roasted goodness with
+                    a rich and satisfying taste.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div style="text-align:center; margin-top:40px;">
+
+        <a
+          href="apple-bakery.html"
+          class="btn"
+          style="
+          background:#6d281f;
+          color:#fff;">
+          Explore Apple Bakery
+        </a>
+
+    </div>
 
 </div>
 
@@ -1324,229 +1328,106 @@ and hospitality of Apple Group of Hotels.
 
 
 
-<!-- ================= BOOKING ================= -->
+<!-- =========================
+     EXPERIENCE
+========================= -->
 
-<section class="booking" id="booking">
+<section id="experience" class="experience">
 
 <div class="container">
 
-<div class="heading">
+    <div class="section-title">
 
-<div class="kicker">
-Reservations
-</div>
+        <div class="small">
+            Why Apple Group
+        </div>
 
-<h2>
-Plan Your Stay
-</h2>
+        <h2>
+            Built On Trust
+        </h2>
 
-<p>
-Send your booking enquiry directly to
-Apple Group of Hotels on WhatsApp.
-</p>
+    </div>
 
-</div>
 
+    <div class="values-grid">
 
-<div class="booking-box">
 
-<form onsubmit="sendBooking(event)">
+        <div class="value">
 
-<div class="form-grid">
+            <div class="value-icon">
+                👑
+            </div>
 
+            <h3>
+                Legacy of Trust
+            </h3>
 
-<div class="form-group">
+            <p>
+                Built on trust and driven
+                by a passion for excellence.
+            </p>
 
-<label>
-Guest Name *
-</label>
+        </div>
 
-<input
-type="text"
-id="guestName"
-placeholder="Enter your name"
-required>
 
-</div>
 
+        <div class="value">
 
-<div class="form-group">
+            <div class="value-icon">
+                📍
+            </div>
 
-<label>
-Mobile Number *
-</label>
+            <h3>
+                Rooted in Ujjain
+            </h3>
 
-<input
-type="tel"
-id="mobile"
-placeholder="Enter mobile number"
-required>
+            <p>
+                Proudly serving guests and
+                communities in Ujjain.
+            </p>
 
-</div>
+        </div>
 
 
-<div class="form-group">
 
-<label>
-Check-in *
-</label>
+        <div class="value">
 
-<input
-type="date"
-id="checkIn"
-required>
+            <div class="value-icon">
+                ⭐
+            </div>
 
-</div>
+            <h3>
+                Quality Assured
+            </h3>
 
+            <p>
+                Quality hospitality and
+                quality bakery products.
+            </p>
 
-<div class="form-group">
+        </div>
 
-<label>
-Check-out *
-</label>
 
-<input
-type="date"
-id="checkOut"
-required>
 
-</div>
+        <div class="value">
 
+            <div class="value-icon">
+                🤝
+            </div>
 
-<div class="form-group">
+            <h3>
+                Guests & Community
+            </h3>
 
-<label>
-Adults *
-</label>
+            <p>
+                Creating memorable experiences
+                for every guest and customer.
+            </p>
 
-<select id="adults" required>
+        </div>
 
-<option value="">
-Select
-</option>
 
-<option value="1">
-1 Adult
-</option>
-
-<option value="2">
-2 Adults
-</option>
-
-<option value="3">
-3 Adults
-</option>
-
-<option value="4">
-4 Adults
-</option>
-
-<option value="5">
-5 Adults
-</option>
-
-<option value="6">
-6 Adults
-</option>
-
-</select>
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-Children
-</label>
-
-<select id="children">
-
-<option value="0">
-0
-</option>
-
-<option value="1">
-1 Child
-</option>
-
-<option value="2">
-2 Children
-</option>
-
-<option value="3">
-3 Children
-</option>
-
-<option value="4">
-4 Children
-</option>
-
-</select>
-
-</div>
-
-
-<div class="form-group full">
-
-<label>
-Preferred Hotel
-</label>
-
-<select id="hotel">
-
-<option value="Any Available Hotel">
-Any Available Hotel
-</option>
-
-<option value="Hotel Nexa">
-Hotel Nexa
-</option>
-
-<option value="Hotel Apple Palace">
-Hotel Apple Palace
-</option>
-
-<option value="Hotel Apple Grand">
-Hotel Apple Grand
-</option>
-
-<option value="Hotel Apple Prime">
-Hotel Apple Prime
-</option>
-
-</select>
-
-</div>
-
-
-<div class="form-group full">
-
-<label>
-Special Request
-</label>
-
-<textarea
-id="request"
-placeholder="Any special request?"></textarea>
-
-</div>
-
-
-</div>
-
-
-<button
-type="submit"
-class="btn btn-gold submit-btn">
-
-Send Booking Enquiry on WhatsApp
-
-</button>
-
-</form>
-
-</div>
+    </div>
 
 </div>
 
@@ -1554,113 +1435,37 @@ Send Booking Enquiry on WhatsApp
 
 
 
-<!-- ================= CONTACT ================= -->
+<!-- =========================
+     CTA
+========================= -->
 
-<section class="contact" id="contact">
+<section class="cta">
 
 <div class="container">
 
-<div class="heading">
+    <h2>
+        One Group. Two Experiences.
+    </h2>
 
-<div class="kicker">
-Contact
-</div>
+    <p>
+        Luxury stays, fresh bakes and warm hospitality.
+    </p>
 
-<h2>
-Connect With Apple Group
-</h2>
+    <div class="hero-buttons">
 
-</div>
+        <a
+          href="#hotels"
+          class="btn btn-gold">
+          Explore Hotels
+        </a>
 
+        <a
+          href="apple-bakery.html"
+          class="btn btn-outline">
+          Visit Bakery
+        </a>
 
-<div class="contact-grid">
-
-
-<div class="contact-card">
-
-<h3>
-Apple Group of Hotels
-</h3>
-
-
-<div class="contact-item">
-
-<strong>
-Location
-</strong>
-
-<span>
-Ujjain, Madhya Pradesh, India
-<br>
-Near Mahakaleshwar Temple
-</span>
-
-</div>
-
-
-<div class="contact-item">
-
-<strong>
-Phone / WhatsApp
-</strong>
-
-<span>
-+91 87704 34255
-</span>
-
-</div>
-
-
-<div class="contact-item">
-
-<strong>
-Email
-</strong>
-
-<span>
-applegroup.hotels0@gmail.com
-</span>
-
-</div>
-
-
-<div class="contact-actions">
-
-<a
-href="tel:+918770434255"
-class="btn btn-gold">
-
-Call Now
-
-</a>
-
-
-<a
-href="https://wa.me/918770434255"
-target="_blank"
-class="btn btn-gold">
-
-WhatsApp
-
-</a>
-
-</div>
-
-</div>
-
-
-<div class="map">
-
-<iframe
-src="https://www.google.com/maps?q=Mahakaleshwar%20Temple%2C%20Ujjain%2C%20Madhya%20Pradesh&output=embed"
-loading="lazy"
-allowfullscreen>
-</iframe>
-
-</div>
-
-
-</div>
+    </div>
 
 </div>
 
@@ -1668,269 +1473,137 @@ allowfullscreen>
 
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="contact">
+
+<div class="container">
+
+    <div class="contact-box">
+
+        <h2>
+            Connect With Apple Group
+        </h2>
+
+        <p>
+            For hotel bookings, bakery enquiries
+            and business information, contact us.
+        </p>
+
+        <a
+          href="https://wa.me/918770434255"
+          target="_blank"
+          class="whatsapp">
+
+          WhatsApp Us
+          <br>
+          +91 87704 34255
+
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
 <div class="container">
 
-<div class="footer-grid">
+    <div class="footer-main">
 
 
-<div class="footer-about">
+        <div class="footer-brand">
 
-<div class="footer-logo">
-APPLE GROUP
-</div>
+            <h2>
+                APPLE GROUP
+            </h2>
 
-<p>
-Apple Group of Hotels — crafting refined,
-comfortable and memorable stays in Ujjain,
-Madhya Pradesh.
-</p>
+            <p>
+                Hotels • Bakery • Ujjain
+            </p>
 
-</div>
+            <p style="margin-top:12px;">
+                One Group. Two Experiences.
+                Endless Memories.
+            </p>
 
-
-<div class="footer-links">
-
-<h4>
-Hotels
-</h4>
-
-<a href="https://www.applegroup.info/blank-12">
-Hotel Nexa
-</a>
-
-<a href="https://www.applegroup.info/blank-12-1">
-Hotel Apple Palace
-</a>
-
-<a href="https://www.applegroup.info/blank-12-2">
-Hotel Apple Grand
-</a>
-
-<a href="https://www.applegroup.info/blank-12-3">
-Hotel Apple Prime
-</a>
-
-</div>
+        </div>
 
 
-<div class="footer-links">
 
-<h4>
-Contact
-</h4>
+        <div class="footer-column">
 
-<a href="tel:+918770434255">
-+91 87704 34255
-</a>
+            <h3>
+                Hotels
+            </h3>
 
-<a href="https://wa.me/918770434255"
-target="_blank">
-WhatsApp
-</a>
+            <a href="hotel-nexa.html">
+                Hotel Nexa
+            </a>
 
-<a href="mailto:applegroup.hotels0@gmail.com">
-Email Us
-</a>
+            <a href="hotel-apple-palace.html">
+                Hotel Apple Palace
+            </a>
 
-</div>
+            <a href="hotel-apple-grand.html">
+                Hotel Apple Grand
+            </a>
+
+            <a href="hotel-apple-prime.html">
+                Hotel Apple Prime
+            </a>
+
+        </div>
 
 
-</div>
+
+        <div class="footer-column">
+
+            <h3>
+                Apple Bakery
+            </h3>
+
+            <a href="apple-bakery.html">
+                Bakery
+            </a>
+
+            <a href="#bakery">
+                Rusk
+            </a>
+
+            <a href="#bakery">
+                Toast
+            </a>
+
+            <a href="#bakery">
+                Roasted Bread
+            </a>
+
+        </div>
 
 
-<div class="footer-bottom">
+    </div>
 
-© 2026 Apple Group of Hotels.
-All Rights Reserved.
 
-</div>
+    <div class="copyright">
+
+        © 2026 Apple Group. All Rights Reserved.
+
+    </div>
 
 </div>
 
 </footer>
-
-
-
-<!-- ================= WHATSAPP ================= -->
-
-<a
-href="https://wa.me/918770434255"
-target="_blank"
-class="whatsapp"
-aria-label="WhatsApp">
-
-☏
-
-</a>
-
-
-
-<script>
-
-/* MOBILE MENU */
-
-function toggleMenu(){
-
-    document
-        .getElementById("mobileNav")
-        .classList.toggle("active");
-
-}
-
-function closeMenu(){
-
-    document
-        .getElementById("mobileNav")
-        .classList.remove("active");
-
-}
-
-
-/* BOOKING */
-
-function sendBooking(event){
-
-    event.preventDefault();
-
-    const name =
-        document.getElementById("guestName").value.trim();
-
-    const mobile =
-        document.getElementById("mobile").value.trim();
-
-    const checkIn =
-        document.getElementById("checkIn").value;
-
-    const checkOut =
-        document.getElementById("checkOut").value;
-
-    const adults =
-        document.getElementById("adults").value;
-
-    const children =
-        document.getElementById("children").value;
-
-    const hotel =
-        document.getElementById("hotel").value;
-
-    const request =
-        document.getElementById("request").value.trim()
-        || "None";
-
-
-    if(!name ||
-       !mobile ||
-       !checkIn ||
-       !checkOut ||
-       !adults){
-
-        alert("Please fill all required fields.");
-
-        return;
-
-    }
-
-
-    if(new Date(checkOut) <= new Date(checkIn)){
-
-        alert("Check-out date must be after check-in date.");
-
-        return;
-
-    }
-
-
-    function formatDate(date){
-
-        const parts =
-            date.split("-");
-
-        return parts[2] +
-               "/" +
-               parts[1] +
-               "/" +
-               parts[0];
-
-    }
-
-
-    const message =
-
-`🏨 *APPLE GROUP OF HOTELS*
-
-Hello Apple Group of Hotels,
-
-I would like to make a booking enquiry.
-
-👤 *Guest Name:* ${name}
-
-📱 *Mobile:* ${mobile}
-
-📅 *Check-in:* ${formatDate(checkIn)}
-
-📅 *Check-out:* ${formatDate(checkOut)}
-
-👨 *Adults:* ${adults}
-
-👶 *Children:* ${children}
-
-🏨 *Preferred Hotel:* ${hotel}
-
-📝 *Special Request:* ${request}
-
-Please confirm availability and tariff.
-
-Thank you.`;
-
-
-    const number =
-        "918770434255";
-
-
-    const url =
-        "https://wa.me/" +
-        number +
-        "?text=" +
-        encodeURIComponent(message);
-
-
-    window.open(url,"_blank");
-
-}
-
-
-/* DATE */
-
-const today =
-    new Date().toISOString().split("T")[0];
-
-document
-    .getElementById("checkIn")
-    .min = today;
-
-document
-    .getElementById("checkOut")
-    .min = today;
-
-
-document
-    .getElementById("checkIn")
-    .addEventListener(
-        "change",
-        function(){
-
-            document
-                .getElementById("checkOut")
-                .min = this.value;
-
-        }
-    );
-
-</script>
 
 
 </body>
