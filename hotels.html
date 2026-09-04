@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Our Hotels | Apple Group Ujjain</title>
+
+<meta name="description"
+      content="Explore Apple Group of Hotels in Ujjain. Discover Hotel Nexa, Hotel Apple Palace, Hotel Apple Grand and Hotel Apple Prime.">
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: #fff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1250px;
+    margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+    background: rgba(5,5,5,0.95);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(212,164,61,0.25);
+}
+
+.navbar {
+    min-height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-area img {
+    width: 72px;
+    height: 58px;
+    object-fit: contain;
+}
+
+.logo-text {
+    line-height: 1.1;
+}
+
+.logo-text h2 {
+    color: #e5b94d;
+
+    font-family: Georgia, serif;
+
+    font-size: 23px;
+
+    letter-spacing: 1px;
+}
+
+.logo-text span {
+    font-size: 11px;
+
+    color: #ddd;
+
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #eee;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e5b94d;
+}
+
+.book-btn {
+    border: 1px solid #e5b94d;
+
+    padding: 10px 18px;
+
+    border-radius: 5px;
+
+    color: #f3c85b !important;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.page-hero {
+
+    min-height: 55vh;
+
+    padding-top: 82px;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.65),
+            rgba(0,0,0,0.75)
+        ),
+        url("Hero-image-orignal.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+.page-hero-content {
+    max-width: 800px;
+
+    padding: 30px;
+}
+
+.page-small {
+    color: #e5b94d;
+
+    letter-spacing: 5px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.page-hero h1 {
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(45px, 7vw, 75px);
+
+    margin-bottom: 15px;
+}
+
+.page-hero p {
+
+    color: #ddd;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   HOTELS
+========================= */
+
+.hotels-section {
+
+    background: #0b0b0b;
+
+    padding: 90px 0;
+}
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 55px;
+}
+
+.section-title .small {
+
+    color: #dcb34d;
+
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+
+    font-size: 13px;
+}
+
+.section-title h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 44px;
+
+    margin-top: 8px;
+}
+
+.section-title p {
+
+    max-width: 700px;
+
+    margin: 15px auto 0;
+
+    color: #aaa;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   HOTEL GRID
+========================= */
+
+.hotel-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+.hotel-card {
+
+    background: #151515;
+
+    border: 1px solid rgba(224,177,65,0.45);
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    transition: 0.35s;
+
+    position: relative;
+}
+
+.hotel-card:hover {
+
+    transform: translateY(-7px);
+
+    border-color: #e5b94d;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.45);
+}
+
+.hotel-image {
+
+    height: 330px;
+
+    background: #202020;
+
+    overflow: hidden;
+}
+
+.hotel-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.4s;
+}
+
+.hotel-card:hover .hotel-image img {
+
+    transform: scale(1.04);
+}
+
+.hotel-placeholder {
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family: Georgia, serif;
+
+    color: #e5b94d;
+
+    font-size: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #181818,
+            #292929
+        );
+}
+
+.hotel-info {
+
+    padding: 28px;
+}
+
+.hotel-info h3 {
+
+    color: #e5b94d;
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+.hotel-info p {
+
+    color: #aaa;
+
+    font-size: 15px;
+
+    margin-bottom: 22px;
+}
+
+.hotel-btn {
+
+    display: inline-block;
+
+    background: #d9a934;
+
+    color: #111;
+
+    padding: 12px 22px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.hotel-btn:hover {
+
+    background: #f0c75e;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   BACK HOME
+========================= */
+
+.back-home {
+
+    text-align: center;
+
+    margin-top: 55px;
+}
+
+.back-home a {
+
+    border: 1px solid #e5b94d;
+
+    color: #e5b94d;
+
+    padding: 12px 25px;
+
+    border-radius: 5px;
+
+    display: inline-block;
+}
+
+.back-home a:hover {
+
+    background: #e5b94d;
+
+    color: #111;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #050505;
+
+    border-top: 1px solid #292929;
+
+    padding: 35px 0 20px;
+
+    text-align: center;
+}
+
+footer h2 {
+
+    color: #e4b94e;
+
+    font-family: Georgia, serif;
+
+    margin-bottom: 5px;
+}
+
+footer p {
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+.copyright {
+
+    margin-top: 20px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #222;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 750px) {
+
+    .navbar {
+        min-height: 72px;
+    }
+
+    .logo-area {
+        gap: 8px;
+    }
+
+    .logo-area img {
+        width: 55px;
+        height: 48px;
+    }
+
+    .logo-text h2 {
+        font-size: 17px;
+    }
+
+    .logo-text span {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .page-hero {
+
+        min-height: 48vh;
+
+        padding-top: 72px;
+
+        background-position: center;
+    }
+
+    .page-hero-content {
+        padding: 25px 15px;
+    }
+
+    .page-small {
+        font-size: 10px;
+
+        letter-spacing: 3px;
+    }
+
+    .page-hero h1 {
+        font-size: 43px;
+    }
+
+    .page-hero p {
+        font-size: 15px;
+    }
+
+    .hotels-section {
+        padding: 65px 0;
+    }
+
+    .section-title {
+        margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+        font-size: 35px;
+    }
+
+    .section-title p {
+        font-size: 15px;
+    }
+
+    .hotel-grid {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .hotel-image {
+        height: 260px;
+    }
+
+    .hotel-info {
+        padding: 23px;
+    }
+
+    .hotel-info h3 {
+        font-size: 27px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 420px) {
+
+    .page-hero h1 {
+        font-size: 38px;
+    }
+
+    .hotel-image {
+        height: 230px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<div class="container navbar">
+
+    <a href="index.html" class="logo-area">
+
+        <img
+          src="Apple-logo.png"
+          alt="Apple Group Logo">
+
+        <div class="logo-text">
+
+            <h2>
+                APPLE GROUP
+            </h2>
+
+            <span>
+                HOTELS • BAKERY • UJJAIN
+            </span>
+
+        </div>
+
+    </a>
+
+
+    <nav class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="index.html#about">
+            About
+        </a>
+
+        <a href="hotels.html">
+            Our Hotels
+        </a>
+
+        <a href="index.html#experience">
+            Experience
+        </a>
+
+        <a href="index.html#contact">
+            Contact
+        </a>
+
+        <a
+          href="https://wa.me/918770434255"
+          class="book-btn"
+          target="_blank">
+
+          Book Now
+
+        </a>
+
+    </nav>
+
+</div>
+
+</header>
+
+
+
+<!-- =========================
+     PAGE HERO
+========================= -->
+
+<section class="page-hero">
+
+<div class="page-hero-content">
+
+    <div class="page-small">
+        APPLE GROUP • UJJAIN
+    </div>
+
+    <h1>
+        Our Hotels
+    </h1>
+
+    <p>
+        Discover comfortable stays,
+        warm hospitality and memorable experiences.
+    </p>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     HOTEL SECTION
+========================= -->
+
+<section class="hotels-section">
+
+<div class="container">
+
+
+    <div class="section-title">
+
+        <div class="small">
+            Stay With Us
+        </div>
+
+        <h2>
+            Choose Your Stay
+        </h2>
+
+        <p>
+            Explore our hotels and find the stay
+            that suits your journey.
+        </p>
+
+    </div>
+
+
+
+    <div class="hotel-grid">
+
+
+        <!-- =====================
+             HOTEL NEXA
+        ====================== -->
+
+        <div class="hotel-card">
+
+            <div class="hotel-image">
+
+                <img
+                  src="Hotel_nexa.png"
+                  alt="Hotel Nexa Ujjain">
+
+            </div>
+
+            <div class="hotel-info">
+
+                <h3>
+                    Hotel Nexa
+                </h3>
+
+                <p>
+                    A premium stay in Ujjain by
+                    Apple Group of Hotels.
+                    Comfortable rooms, quality service
+                    and warm hospitality.
+                </p>
+
+                <a
+                  href="hotel-nexa.html"
+                  class="hotel-btn">
+
+                  Explore Hotel →
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             APPLE PALACE
+        ====================== -->
+
+        <div class="hotel-card">
+
+            <div class="hotel-image">
+
+                <div class="hotel-placeholder">
+                    HOTEL APPLE PALACE
+                </div>
+
+            </div>
+
+            <div class="hotel-info">
+
+                <h3>
+                    Hotel Apple Palace
+                </h3>
+
+                <p>
+                    Premium hospitality from
+                    Apple Group with comfortable
+                    stays and quality service.
+                </p>
+
+                <a
+                  href="hotel-apple-palace.html"
+                  class="hotel-btn">
+
+                  Explore Hotel →
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             APPLE GRAND
+        ====================== -->
+
+        <div class="hotel-card">
+
+            <div class="hotel-image">
+
+                <div class="hotel-placeholder">
+                    HOTEL APPLE GRAND
+                </div>
+
+            </div>
+
+            <div class="hotel-info">
+
+                <h3>
+                    Hotel Apple Grand
+                </h3>
+
+                <p>
+                    Elegant stays with the warm
+                    hospitality of Apple Group.
+                </p>
+
+                <a
+                  href="hotel-apple-grand.html"
+                  class="hotel-btn">
+
+                  Explore Hotel →
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             APPLE PRIME
+        ====================== -->
+
+        <div class="hotel-card">
+
+            <div class="hotel-image">
+
+                <div class="hotel-placeholder">
+                    HOTEL APPLE PRIME
+                </div>
+
+            </div>
+
+            <div class="hotel-info">
+
+                <h3>
+                    Hotel Apple Prime
+                </h3>
+
+                <p>
+                    Comfortable stays, convenient
+                    hospitality and a trusted
+                    Apple Group experience.
+                </p>
+
+                <a
+                  href="hotel-apple-prime.html"
+                  class="hotel-btn">
+
+                  Explore Hotel →
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- BACK -->
+
+    <div class="back-home">
+
+        <a href="index.html">
+            ← Back to Apple Group
+        </a>
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="container">
+
+    <h2>
+        APPLE GROUP
+    </h2>
+
+    <p>
+        HOTELS • BAKERY • UJJAIN
+    </p>
+
+    <div class="copyright">
+
+        © 2026 Apple Group. All Rights Reserved.
+
+    </div>
+
+</div>
+
+</footer>
+
+
+</body>
+</html>
