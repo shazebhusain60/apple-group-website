@@ -392,123 +392,6 @@ section {
 
 
 /* =========================
-   HOTELS
-========================= */
-
-.hotels {
-    background: #111;
-}
-
-.hotel-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-}
-
-.hotel-item {
-    background: #181818;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 1px solid #292929;
-    transition: 0.3s;
-}
-
-.hotel-item:hover {
-    transform: translateY(-6px);
-    border-color: #d8ae42;
-}
-
-.hotel-item img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
-
-.hotel-info {
-    padding: 20px;
-}
-
-.hotel-info h3 {
-    color: #e3b84d;
-    font-family: Georgia, serif;
-    font-size: 21px;
-    margin-bottom: 8px;
-}
-
-.hotel-info p {
-    color: #aaa;
-    font-size: 14px;
-    margin-bottom: 15px;
-}
-
-.hotel-link {
-    color: #e5bb51;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-
-/* =========================
-   BAKERY
-========================= */
-
-.bakery-section {
-    background: #f1e2c5;
-    color: #241710;
-}
-
-.bakery-section .section-title p {
-    color: #604d3e;
-}
-
-.bakery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.bakery-card {
-    background: #fffaf0;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    border: 1px solid #d7b878;
-}
-
-.bakery-image {
-    height: 240px;
-    background: #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.bakery-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.bakery-info {
-    padding: 24px;
-    text-align: center;
-}
-
-.bakery-info h3 {
-    font-family: Georgia, serif;
-    font-size: 25px;
-    color: #6b271e;
-    margin-bottom: 8px;
-}
-
-.bakery-info p {
-    color: #665248;
-    font-size: 14px;
-}
-
-
-/* =========================
    EXPERIENCE / VALUES
 ========================= */
 
@@ -671,10 +554,6 @@ footer {
         gap: 15px;
     }
 
-    .hotel-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .values-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -724,8 +603,6 @@ footer {
         padding-top: 72px;
 
         background-size: cover;
-
-        /* Image ke important hotel/product area ko preserve karta hai */
         background-position: center center;
 
         align-items: flex-start;
@@ -796,12 +673,7 @@ footer {
     /* OTHER SECTIONS */
 
     .business-grid,
-    .bakery-grid,
     .footer-main {
-        grid-template-columns: 1fr;
-    }
-
-    .hotel-grid {
         grid-template-columns: 1fr;
     }
 
@@ -899,10 +771,6 @@ footer {
 
         <a href="#about">About</a>
 
-        <a href="#hotels">Our Hotels</a>
-
-        <a href="#bakery">Bakery</a>
-
         <a href="#experience">Experience</a>
 
         <a href="#contact">Contact</a>
@@ -950,12 +818,12 @@ footer {
 
         <div class="hero-buttons">
 
-            <a href="#hotels"
+            <a href="hotel-nexa.html"
                class="btn btn-gold">
                 Explore Our Hotels
             </a>
 
-            <a href="#bakery"
+            <a href="apple-bakery.html"
                class="btn btn-outline">
                 Explore Our Bakery
             </a>
@@ -1014,7 +882,7 @@ footer {
 
 
 <!-- =========================
-     TWO BUSINESSES
+     TWO EXPERIENCES
 ========================= -->
 
 <section class="business-section">
@@ -1061,7 +929,7 @@ footer {
                     and convenient locations.
                 </p>
 
-                <a href="#hotels"
+                <a href="hotel-nexa.html"
                    class="btn btn-gold">
                     Explore Hotels
                 </a>
@@ -1112,324 +980,6 @@ footer {
             </div>
 
         </div>
-
-    </div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     HOTELS
-========================= -->
-
-<section id="hotels" class="hotels">
-
-<div class="container">
-
-    <div class="section-title">
-
-        <div class="small">
-            Stay With Us
-        </div>
-
-        <h2>
-            Our Hotels
-        </h2>
-
-        <p>
-            Discover comfortable and memorable stays
-            in Ujjain.
-        </p>
-
-    </div>
-
-
-    <div class="hotel-grid">
-
-
-        <!-- HOTEL NEXA -->
-
-        <div class="hotel-item">
-
-            <img
-              src="Hotel_nexa.png"
-              alt="Hotel Nexa Ujjain">
-
-            <div class="hotel-info">
-
-                <h3>
-                    Hotel Nexa
-                </h3>
-
-                <p>
-                    A premium stay in Ujjain
-                    by Apple Group of Hotels.
-                </p>
-
-                <a
-                  href="hotel-nexa.html"
-                  class="hotel-link">
-                  Explore Hotel →
-                </a>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- APPLE PALACE -->
-
-        <div class="hotel-item">
-
-            <div
-              style="
-              height:220px;
-              display:flex;
-              align-items:center;
-              justify-content:center;
-              background:#202020;
-              font-size:55px;">
-              🏨
-            </div>
-
-            <div class="hotel-info">
-
-                <h3>
-                    Hotel Apple Palace
-                </h3>
-
-                <p>
-                    Premium hospitality from
-                    Apple Group.
-                </p>
-
-                <a
-                  href="hotel-apple-palace.html"
-                  class="hotel-link">
-                  Explore Hotel →
-                </a>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- APPLE GRAND -->
-
-        <div class="hotel-item">
-
-            <div
-              style="
-              height:220px;
-              display:flex;
-              align-items:center;
-              justify-content:center;
-              background:#202020;
-              font-size:55px;">
-              🏨
-            </div>
-
-            <div class="hotel-info">
-
-                <h3>
-                    Hotel Apple Grand
-                </h3>
-
-                <p>
-                    Elegant stays with
-                    Apple Group hospitality.
-                </p>
-
-                <a
-                  href="hotel-apple-grand.html"
-                  class="hotel-link">
-                  Explore Hotel →
-                </a>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- APPLE PRIME -->
-
-        <div class="hotel-item">
-
-            <div
-              style="
-              height:220px;
-              display:flex;
-              align-items:center;
-              justify-content:center;
-              background:#202020;
-              font-size:55px;">
-              🏨
-            </div>
-
-            <div class="hotel-info">
-
-                <h3>
-                    Hotel Apple Prime
-                </h3>
-
-                <p>
-                    Comfortable stays and
-                    quality service.
-                </p>
-
-                <a
-                  href="hotel-apple-prime.html"
-                  class="hotel-link">
-                  Explore Hotel →
-                </a>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     BAKERY
-========================= -->
-
-<section id="bakery" class="bakery-section">
-
-<div class="container">
-
-    <div class="section-title">
-
-        <div class="small">
-            Apple Bakery
-        </div>
-
-        <h2>
-            Fresh. Crispy. Delicious.
-        </h2>
-
-        <p>
-            Our bakery range focuses on three favourites:
-            Rusk, Toast and Roasted Bread.
-        </p>
-
-    </div>
-
-
-    <div class="bakery-grid">
-
-
-        <!-- RUSK -->
-
-        <div class="bakery-card">
-
-            <div class="bakery-image">
-
-                <img
-                  src="36354.jpg"
-                  alt="Apple Kesar Elaichi Rusk">
-
-            </div>
-
-            <div class="bakery-info">
-
-                <h3>
-                    Kesar Elaichi Rusk
-                </h3>
-
-                <p>
-                    Crispy, aromatic and perfect
-                    with your favourite cup of tea.
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- TOAST -->
-
-        <div class="bakery-card">
-
-            <div class="bakery-image">
-
-                <img
-                  src="26315.png"
-                  alt="Apple Mama Roasted Toast">
-
-            </div>
-
-            <div class="bakery-info">
-
-                <h3>
-                    Toast
-                </h3>
-
-                <p>
-                    A delicious everyday favourite
-                    for breakfast and tea time.
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- ROASTED BREAD -->
-
-        <div class="bakery-card">
-
-            <div class="bakery-image">
-
-                <img
-                  src="26171.jpg"
-                  alt="Apple Makkhan Roasted Bread">
-
-            </div>
-
-            <div class="bakery-info">
-
-                <h3>
-                    Roasted Bread
-                </h3>
-
-                <p>
-                    Golden roasted goodness with
-                    a rich and satisfying taste.
-                </p>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-
-    <div style="text-align:center; margin-top:40px;">
-
-        <a
-          href="apple-bakery.html"
-          class="btn"
-          style="
-          background:#6d281f;
-          color:#fff;">
-          Explore Apple Bakery
-        </a>
 
     </div>
 
@@ -1565,7 +1115,7 @@ footer {
     <div class="hero-buttons">
 
         <a
-          href="#hotels"
+          href="hotel-nexa.html"
           class="btn btn-gold">
           Explore Hotels
         </a>
@@ -1688,15 +1238,15 @@ footer {
                 Bakery
             </a>
 
-            <a href="#bakery">
+            <a href="apple-bakery.html">
                 Rusk
             </a>
 
-            <a href="#bakery">
+            <a href="apple-bakery.html">
                 Toast
             </a>
 
-            <a href="#bakery">
+            <a href="apple-bakery.html">
                 Roasted Bread
             </a>
 
