@@ -170,8 +170,6 @@ header {
     width: 100%;
     min-height: calc(100vh - 82px);
 
-    position: relative;
-
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -321,7 +319,7 @@ section {
 }
 
 .business-card {
-    min-height: 420px;
+    min-height: 500px;
     border-radius: 15px;
     overflow: hidden;
     position: relative;
@@ -333,8 +331,8 @@ section {
     background:
         linear-gradient(
             90deg,
-            rgba(0,0,0,0.88),
-            rgba(0,0,0,0.40)
+            rgba(0,0,0,0.78),
+            rgba(0,0,0,0.28)
         ),
         url("Hotel_nexa.png") center/cover;
 }
@@ -343,8 +341,8 @@ section {
     background:
         linear-gradient(
             90deg,
-            rgba(0,0,0,0.85),
-            rgba(0,0,0,0.35)
+            rgba(0,0,0,0.78),
+            rgba(0,0,0,0.28)
         ),
         url("Hero-image-orignal.png") center/cover;
 }
@@ -358,9 +356,12 @@ section {
     max-width: 600px;
 }
 
-.business-content .icon {
-    font-size: 38px;
-    margin-bottom: 12px;
+.business-content .logo-icon {
+    width: 85px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 18px;
+    filter: drop-shadow(0 3px 8px rgba(0,0,0,0.8));
 }
 
 .business-content h3 {
@@ -373,6 +374,7 @@ section {
 .business-content p {
     color: #eee;
     margin-bottom: 20px;
+    font-size: 16px;
 }
 
 .product-list {
@@ -383,16 +385,17 @@ section {
 }
 
 .product-list span {
-    border: 1px solid rgba(231,188,75,0.6);
+    border: 1px solid rgba(231,188,75,0.7);
     padding: 8px 14px;
     border-radius: 30px;
     font-size: 13px;
     color: #f1ca66;
+    background: rgba(0,0,0,0.25);
 }
 
 
 /* =========================
-   EXPERIENCE / VALUES
+   EXPERIENCE
 ========================= */
 
 .experience {
@@ -613,14 +616,12 @@ footer {
         height: calc(100vh - 72px);
 
         display: block;
-
         position: relative;
     }
 
     .hero-content {
 
         width: 58%;
-
         max-width: 430px;
 
         padding: 12px 8px;
@@ -670,23 +671,43 @@ footer {
     }
 
 
-    /* OTHER SECTIONS */
+    /* BUSINESS CARDS */
 
-    .business-grid,
-    .footer-main {
+    .business-grid {
         grid-template-columns: 1fr;
     }
 
-    .values-grid {
-        grid-template-columns: 1fr 1fr;
+    .business-card {
+        min-height: 480px;
     }
 
     .business-content {
         padding: 30px;
     }
 
+    .business-content .logo-icon {
+        width: 75px;
+        height: 62px;
+        margin-bottom: 14px;
+    }
+
     .business-content h3 {
         font-size: 27px;
+    }
+
+    .business-content p {
+        font-size: 14px;
+    }
+
+
+    /* OTHER SECTIONS */
+
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
     .section-title h2 {
@@ -730,6 +751,10 @@ footer {
         padding: 8px 11px;
     }
 
+    .business-card {
+        min-height: 450px;
+    }
+
 }
 
 </style>
@@ -767,13 +792,21 @@ footer {
 
     <nav class="nav-links">
 
-        <a href="index.html">Home</a>
+        <a href="index.html">
+            Home
+        </a>
 
-        <a href="#about">About</a>
+        <a href="#about">
+            About
+        </a>
 
-        <a href="#experience">Experience</a>
+        <a href="#experience">
+            Experience
+        </a>
 
-        <a href="#contact">Contact</a>
+        <a href="#contact">
+            Contact
+        </a>
 
         <a
           href="https://wa.me/918770434255"
@@ -818,14 +851,16 @@ footer {
 
         <div class="hero-buttons">
 
-            <a href="hotel-nexa.html"
-               class="btn btn-gold">
-                Explore Our Hotels
+            <a
+              href="hotel-nexa.html"
+              class="btn btn-gold">
+              Explore Our Hotels
             </a>
 
-            <a href="apple-bakery.html"
-               class="btn btn-outline">
-                Explore Our Bakery
+            <a
+              href="apple-bakery.html"
+              class="btn btn-outline">
+              Explore Our Bakery
             </a>
 
         </div>
@@ -909,15 +944,18 @@ footer {
     <div class="business-grid">
 
 
-        <!-- HOTEL -->
+        <!-- =====================
+             HOTEL CARD
+        ====================== -->
 
         <div class="business-card hotel">
 
             <div class="business-content">
 
-                <div class="icon">
-                    🏨
-                </div>
+                <img
+                  src="Apple-logo.png"
+                  alt="Apple Group Logo"
+                  class="logo-icon">
 
                 <h3>
                     Apple Group of Hotels
@@ -929,9 +967,10 @@ footer {
                     and convenient locations.
                 </p>
 
-                <a href="hotel-nexa.html"
-                   class="btn btn-gold">
-                    Explore Hotels
+                <a
+                  href="hotel-nexa.html"
+                  class="btn btn-gold">
+                  Explore Hotels
                 </a>
 
             </div>
@@ -940,15 +979,18 @@ footer {
 
 
 
-        <!-- BAKERY -->
+        <!-- =====================
+             BAKERY CARD
+        ====================== -->
 
         <div class="business-card bakery">
 
             <div class="business-content">
 
-                <div class="icon">
-                    🥐
-                </div>
+                <img
+                  src="Apple-logo.png"
+                  alt="Apple Bakery Logo"
+                  class="logo-icon">
 
                 <h3>
                     Apple Bakery
@@ -963,18 +1005,25 @@ footer {
 
                 <div class="product-list">
 
-                    <span>Rusk</span>
+                    <span>
+                        Rusk
+                    </span>
 
-                    <span>Toast</span>
+                    <span>
+                        Toast
+                    </span>
 
-                    <span>Roasted Bread</span>
+                    <span>
+                        Roasted Bread
+                    </span>
 
                 </div>
 
 
-                <a href="apple-bakery.html"
-                   class="btn btn-gold">
-                    Explore Bakery
+                <a
+                  href="apple-bakery.html"
+                  class="btn btn-gold">
+                  Explore Bakery
                 </a>
 
             </div>
