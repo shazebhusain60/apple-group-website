@@ -1,1713 +1,1742 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+  <title>Apple Group of Hotels & Bakery</title>
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Apple Group of Hotels & Bakery - Luxury hospitality and premium bakery products."
+  >
 
-<title>Apple Group | Hotels & Bakery in Ujjain</title>
+  <style>
 
-<meta name="description"
-      content="Apple Group of Hotels and Apple Bakery in Ujjain. Luxury stays, fresh bakery products and warm hospitality under one trusted name.">
+    /* =====================================================
+       GLOBAL
+    ===================================================== */
 
-<meta name="keywords"
-      content="Apple Group Ujjain, Apple Group Hotels, Hotel Nexa Ujjain, Apple Bakery Ujjain, Rusk, Toast, Roasted Bread">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<meta name="author"
-      content="Apple Group">
+    html {
+      scroll-behavior: smooth;
+    }
 
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8f5ef;
+      color: #292725;
+      line-height: 1.6;
+    }
 
-<style>
+    img {
+      max-width: 100%;
+    }
 
-/* =====================================================
-   GLOBAL
-===================================================== */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0b0b0b;
-    color: #ffffff;
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-.container {
-    width: 90%;
-    max-width: 1250px;
-    margin: auto;
-}
+    a {
+      text-decoration: none;
+    }
 
 
-/* =====================================================
-   NAVBAR
-===================================================== */
+    /* =====================================================
+       HEADER
+    ===================================================== */
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
 
-    background: rgba(5, 5, 5, 0.95);
+      width: 100%;
 
-    backdrop-filter: blur(10px);
+      background: rgba(255, 253, 248, 0.97);
+      border-bottom: 1px solid #dfcfad;
 
-    border-bottom: 1px solid rgba(212, 164, 61, 0.25);
-}
+      box-shadow: 0 3px 18px rgba(55, 45, 30, 0.06);
+    }
 
-.navbar {
-    min-height: 82px;
+    .navbar {
+      max-width: 1250px;
+      margin: auto;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+      min-height: 78px;
+      padding: 10px 22px;
 
-    gap: 25px;
-}
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-.logo-area {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
+      gap: 20px;
+    }
 
-.logo-area img {
-    width: 72px;
-    height: 58px;
+    .logo {
+      display: flex;
+      align-items: center;
+    }
 
-    object-fit: contain;
-}
+    .logo img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
 
-.logo-text {
-    line-height: 1.1;
-}
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
 
-.logo-text h2 {
-    color: #e5b94d;
+    nav a {
+      color: #38342e;
+      font-size: 14px;
+      font-weight: 500;
 
-    font-family: Georgia, "Times New Roman", serif;
+      transition: 0.3s ease;
+    }
 
-    font-size: 23px;
+    nav a:hover {
+      color: #b18a45;
+    }
 
-    letter-spacing: 1px;
-}
+    .book-btn {
+      background: #c6a15b;
+      color: #fff !important;
 
-.logo-text span {
-    font-size: 11px;
+      padding: 11px 19px;
 
-    color: #ddd;
+      border-radius: 5px;
 
-    letter-spacing: 2px;
-}
+      font-weight: 600;
 
-.nav-links {
-    display: flex;
-    align-items: center;
+      box-shadow: 0 5px 15px rgba(151, 117, 53, 0.18);
+    }
 
-    gap: 28px;
-}
-
-.nav-links a {
-    color: #eee;
-
-    font-size: 15px;
-
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: #e5b94d;
-}
-
-.book-btn {
-    border: 1px solid #e5b94d;
-
-    padding: 10px 18px;
-
-    border-radius: 5px;
-
-    color: #f3c85b !important;
-}
-
-.book-btn:hover {
-    background: #e5b94d;
-
-    color: #111 !important;
-}
+    .book-btn:hover {
+      background: #a9823d;
+      color: #fff !important;
+    }
 
 
-/* =====================================================
-   HERO
-===================================================== */
+    /* =====================================================
+       HERO
+    ===================================================== */
 
-.hero {
+    .hero {
+      position: relative;
 
-    min-height: 100vh;
+      min-height: 650px;
 
-    padding-top: 82px;
-
-    position: relative;
-
-    background:
+      background-image:
         linear-gradient(
-            90deg,
-            rgba(0,0,0,0.30),
-            rgba(0,0,0,0.08),
-            rgba(0,0,0,0.20)
+          90deg,
+          rgba(35, 30, 24, 0.72) 0%,
+          rgba(35, 30, 24, 0.40) 45%,
+          rgba(35, 30, 24, 0.10) 100%
         ),
         url("Hero-image-orignal.png");
 
-    background-size: cover;
-
-    background-position: center center;
-
-    background-repeat: no-repeat;
-
-    display: flex;
-
-    align-items: center;
-}
-
-.hero-overlay {
-
-    width: 100%;
-
-    min-height: calc(100vh - 82px);
-
-    display: flex;
-
-    align-items: center;
-}
-
-.hero-content {
-
-    width: 48%;
-
-    max-width: 650px;
-
-    margin-left: 5%;
-
-    padding: 30px;
-
-    text-align: left;
-
-    text-shadow:
-        0 3px 10px rgba(0,0,0,0.95);
-}
-
-.hero-small {
-
-    color: #e8bd52;
-
-    font-size: 15px;
-
-    letter-spacing: 4px;
-
-    text-transform: uppercase;
-
-    margin-bottom: 14px;
-
-    font-weight: bold;
-}
-
-.hero h1 {
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: clamp(45px, 6vw, 75px);
-
-    line-height: 1.05;
-
-    margin-bottom: 20px;
-}
-
-.hero h1 span {
-    color: #e8bd52;
-}
-
-.hero p {
-
-    font-size: 18px;
-
-    color: #ffffff;
-
-    margin-bottom: 28px;
-}
-
-.hero-buttons {
-
-    display: flex;
-
-    justify-content: flex-start;
-
-    flex-wrap: wrap;
-
-    gap: 12px;
-}
-
-.btn {
-
-    display: inline-block;
-
-    padding: 13px 26px;
-
-    border-radius: 5px;
-
-    font-weight: bold;
-
-    transition: 0.3s;
-}
-
-.btn-gold {
-
-    background: #d9a934;
-
-    color: #111;
-}
-
-.btn-gold:hover {
-
-    background: #f0c75e;
-
-    transform: translateY(-2px);
-}
-
-.btn-outline {
-
-    border: 1px solid #e6ba4c;
-
-    color: #fff;
-
-    background: rgba(0,0,0,0.30);
-}
-
-.btn-outline:hover {
-
-    background: #e6ba4c;
-
-    color: #111;
-}
-
-
-/* =====================================================
-   COMMON SECTION
-===================================================== */
-
-section {
-    padding: 90px 0;
-}
-
-.section-title {
-
-    text-align: center;
-
-    margin-bottom: 50px;
-}
-
-.section-title .small {
-
-    color: #dcb34d;
-
-    text-transform: uppercase;
-
-    letter-spacing: 3px;
-
-    font-size: 13px;
-}
-
-.section-title h2 {
-
-    font-family: Georgia, serif;
-
-    font-size: 42px;
-
-    margin-top: 8px;
-}
-
-.section-title p {
-
-    max-width: 700px;
-
-    margin: 15px auto 0;
-
-    color: #bbb;
-}
-
-
-/* =====================================================
-   ABOUT
-===================================================== */
-
-.about {
-    background: #111;
-}
-
-.about-box {
-
-    max-width: 900px;
-
-    margin: auto;
-
-    text-align: center;
-}
-
-.about-box p {
-
-    color: #ccc;
-
-    font-size: 17px;
-
-    margin-bottom: 18px;
-}
-
-
-/* =====================================================
-   TWO EXPERIENCES
-===================================================== */
-
-.business-section {
-
-    background: #090909;
-}
-
-.business-grid {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 25px;
-}
-
-.business-card {
-
-    min-height: 500px;
-
-    border-radius: 15px;
-
-    overflow: hidden;
-
-    position: relative;
-
-    border: 1px solid rgba(224,177,65,0.5);
-
-    background: #151515;
-
-    display: flex;
-
-    align-items: stretch;
-}
-
-
-/* HOTEL CARD */
-
-.business-card.hotel {
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,0.82),
-            rgba(0,0,0,0.35)
-        ),
-        url("Hotel_nexa.png") center/cover;
-}
-
-
-/* BAKERY CARD */
-
-.business-card.bakery {
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,0.82),
-            rgba(0,0,0,0.35)
-        ),
-        url("Hero-image-orignal.png") center/cover;
-}
-
-.business-content {
-
-    padding: 45px;
-
-    width: 100%;
-
-    min-height: 500px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-}
-
-
-/* APPLE LOGO */
-
-.business-content .logo-icon {
-
-    width: 90px;
-
-    height: 75px;
-
-    object-fit: contain;
-
-    margin-bottom: 18px;
-
-    filter:
-        drop-shadow(
-            0 3px 8px rgba(0,0,0,0.8)
-        );
-}
-
-.business-content h3 {
-
-    color: #e6b94d;
-
-    font-family: Georgia, serif;
-
-    font-size: 31px;
-
-    margin-bottom: 12px;
-}
-
-.business-content p {
-
-    color: #eee;
-
-    font-size: 16px;
-
-    margin-bottom: 22px;
-
-    max-width: 520px;
-}
-
-.product-list {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 10px;
-
-    margin-bottom: 25px;
-}
-
-.product-list span {
-
-    border: 1px solid rgba(231,188,75,0.7);
-
-    padding: 8px 14px;
-
-    border-radius: 30px;
-
-    font-size: 13px;
-
-    color: #f1ca66;
-
-    background: rgba(0,0,0,0.25);
-}
-
-
-/* =====================================================
-   EXPERIENCE
-===================================================== */
-
-.experience {
-
-    background: #080808;
-}
-
-.values-grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 20px;
-}
-
-.value {
-
-    text-align: center;
-
-    padding: 25px 15px;
-}
-
-.value-icon {
-
-    font-size: 35px;
-
-    margin-bottom: 12px;
-}
-
-.value h3 {
-
-    color: #e5b94d;
-
-    font-family: Georgia, serif;
-
-    margin-bottom: 8px;
-}
-
-.value p {
-
-    color: #aaa;
-
-    font-size: 14px;
-}
-
-
-/* =====================================================
-   CTA
-===================================================== */
-
-.cta {
-
-    background:
-        linear-gradient(
-            rgba(0,0,0,0.72),
-            rgba(0,0,0,0.72)
-        ),
-        url("Hero-image-orignal.png") center/cover;
-
-    text-align: center;
-}
-
-.cta h2 {
-
-    font-family: Georgia, serif;
-
-    font-size: 45px;
-
-    margin-bottom: 15px;
-}
-
-.cta p {
-
-    color: #ddd;
-
-    margin-bottom: 25px;
-
-    font-size: 18px;
-}
-
-.cta .hero-buttons {
-
-    justify-content: center;
-}
-
-
-/* =====================================================
-   CONTACT
-===================================================== */
-
-.contact {
-
-    background: #121212;
-}
-
-.contact-box {
-
-    max-width: 800px;
-
-    margin: auto;
-
-    text-align: center;
-}
-
-.contact-box h2 {
-
-    font-family: Georgia, serif;
-
-    font-size: 40px;
-
-    color: #e3b84c;
-
-    margin-bottom: 15px;
-}
-
-.contact-box p {
-
-    color: #bbb;
-
-    margin-bottom: 25px;
-}
-
-.whatsapp {
-
-    display: inline-block;
-
-    background: #25D366;
-
-    color: #fff;
-
-    padding: 14px 25px;
-
-    border-radius: 6px;
-
-    font-weight: bold;
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-footer {
-
-    background: #050505;
-
-    border-top: 1px solid #292929;
-
-    padding: 45px 0 20px;
-}
-
-.footer-main {
-
-    display: grid;
-
-    grid-template-columns: 1.5fr 1fr 1fr;
-
-    gap: 40px;
-
-    margin-bottom: 35px;
-}
-
-.footer-brand h2 {
-
-    color: #e4b94e;
-
-    font-family: Georgia, serif;
-
-    margin-bottom: 8px;
-}
-
-.footer-brand p {
-
-    color: #999;
-
-    font-size: 14px;
-}
-
-.footer-column h3 {
-
-    color: #e4b94e;
-
-    margin-bottom: 15px;
-}
-
-.footer-column a {
-
-    display: block;
-
-    color: #aaa;
-
-    margin-bottom: 8px;
-
-    font-size: 14px;
-}
-
-.footer-column a:hover {
-
-    color: #e4b94e;
-}
-
-.copyright {
-
-    border-top: 1px solid #222;
-
-    padding-top: 18px;
-
-    text-align: center;
-
-    color: #777;
-
-    font-size: 13px;
-}
-
-
-/* =====================================================
-   TABLET
-===================================================== */
-
-@media (max-width: 1000px) {
-
-    .nav-links {
-        gap: 15px;
-    }
-
-    .values-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media (max-width: 750px) {
-
-    .navbar {
-        min-height: 72px;
-    }
-
-    .logo-area {
-        gap: 8px;
-    }
-
-    .logo-area img {
-
-        width: 55px;
-
-        height: 48px;
-    }
-
-    .logo-text h2 {
-
-        font-size: 17px;
-    }
-
-    .logo-text span {
-
-        font-size: 8px;
-
-        letter-spacing: 1.5px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-
-    /* MOBILE HERO */
-
-    .hero {
-
-        min-height: 100vh;
-
-        height: 100vh;
-
-        padding-top: 72px;
-
-        background-size: cover;
-
-        background-position: center center;
-
-        align-items: flex-start;
-    }
-
-    .hero-overlay {
-
-        min-height: calc(100vh - 72px);
-
-        height: calc(100vh - 72px);
-
-        display: block;
-
-        position: relative;
+      background-size: cover;
+      background-position: center;
+
+      display: flex;
+      align-items: center;
     }
 
     .hero-content {
+      width: 100%;
+      max-width: 1250px;
 
-        width: 58%;
+      margin: auto;
+      padding: 60px 30px;
 
-        max-width: 430px;
+      color: #fff;
+    }
 
-        padding: 15px 8px;
-
-        margin-left: 4%;
-
-        margin-top: 5%;
-
-        text-align: left;
-
-        background: rgba(0,0,0,0.12);
-
-        border-radius: 8px;
+    .hero-content-inner {
+      max-width: 560px;
     }
 
     .hero-small {
+      display: inline-block;
 
-        font-size: 10px;
+      margin-bottom: 16px;
 
-        letter-spacing: 2px;
+      color: #f0d9a6;
 
-        margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 600;
+
+      letter-spacing: 3px;
+      text-transform: uppercase;
     }
 
     .hero h1 {
+      font-family: Georgia, "Times New Roman", serif;
 
-        font-size: 30px;
+      font-size: 62px;
+      line-height: 1.08;
 
-        line-height: 1.02;
+      margin-bottom: 20px;
 
-        margin-bottom: 10px;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .hero h1 span {
+      color: #e3c27c;
     }
 
     .hero p {
+      max-width: 510px;
 
-        font-size: 12px;
+      font-size: 18px;
+      line-height: 1.75;
 
-        line-height: 1.4;
+      color: #f5f2eb;
 
-        margin-bottom: 14px;
+      margin-bottom: 30px;
     }
 
     .hero-buttons {
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
     }
 
-    .hero-buttons .btn {
+    .hero-btn {
+      display: inline-block;
 
-        padding: 9px 13px;
+      padding: 13px 25px;
+
+      border-radius: 5px;
+
+      font-size: 14px;
+      font-weight: 600;
+
+      transition: 0.3s ease;
+    }
+
+    .hero-btn-primary {
+      background: #c6a15b;
+      color: #fff;
+
+      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.18);
+    }
+
+    .hero-btn-primary:hover {
+      background: #aa843f;
+      transform: translateY(-2px);
+    }
+
+    .hero-btn-secondary {
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-btn-secondary:hover {
+      background: #fff;
+      color: #292725;
+    }
+
+
+    /* =====================================================
+       COMMON SECTION
+    ===================================================== */
+
+    section {
+      scroll-margin-top: 85px;
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: auto;
+
+      padding: 85px 22px;
+    }
+
+    .section-heading {
+      text-align: center;
+
+      max-width: 750px;
+
+      margin: 0 auto 48px;
+    }
+
+    .section-label {
+      display: inline-block;
+
+      margin-bottom: 10px;
+
+      color: #b18a45;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2 {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 42px;
+      line-height: 1.2;
+
+      color: #302c27;
+
+      font-weight: 500;
+
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: #716b63;
+      font-size: 16px;
+    }
+
+
+    /* =====================================================
+       ABOUT
+    ===================================================== */
+
+    .about-section {
+      background: #f8f5ef;
+    }
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 55px;
+
+      align-items: center;
+    }
+
+    .about-image {
+      min-height: 450px;
+
+      border-radius: 14px;
+
+      overflow: hidden;
+
+      background-image:
+        linear-gradient(
+          rgba(30, 25, 20, 0.12),
+          rgba(30, 25, 20, 0.12)
+        ),
+        url("Hotel_nexa.png");
+
+      background-size: cover;
+      background-position: center;
+
+      box-shadow: 0 15px 40px rgba(45, 38, 27, 0.12);
+    }
+
+    .about-content {
+      padding: 10px;
+    }
+
+    .about-content h2 {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 39px;
+      line-height: 1.2;
+
+      font-weight: 500;
+
+      color: #302c27;
+
+      margin-bottom: 20px;
+    }
+
+    .about-content h2 span {
+      color: #b18a45;
+    }
+
+    .about-content p {
+      color: #6d675f;
+
+      font-size: 16px;
+      line-height: 1.8;
+
+      margin-bottom: 17px;
+    }
+
+    .about-btn {
+      display: inline-block;
+
+      margin-top: 10px;
+
+      padding: 12px 23px;
+
+      border: 1px solid #c6a15b;
+      border-radius: 5px;
+
+      color: #9a7335;
+
+      font-size: 14px;
+      font-weight: 600;
+
+      transition: 0.3s ease;
+    }
+
+    .about-btn:hover {
+      background: #c6a15b;
+      color: #fff;
+    }
+
+
+    /* =====================================================
+       TWO EXPERIENCES
+    ===================================================== */
+
+    .experiences-section {
+      background: #eee8dc;
+    }
+
+    .experience-grid {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 30px;
+    }
+
+    .experience-card {
+      position: relative;
+
+      min-height: 430px;
+
+      border-radius: 14px;
+
+      overflow: hidden;
+
+      background: #fff;
+
+      box-shadow: 0 12px 35px rgba(55, 45, 30, 0.10);
+
+      transition: 0.35s ease;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-6px);
+
+      box-shadow: 0 20px 45px rgba(55, 45, 30, 0.15);
+    }
+
+    .experience-image {
+      position: absolute;
+
+      inset: 0;
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hotel-experience {
+      background-image:
+        linear-gradient(
+          rgba(30, 25, 20, 0.12),
+          rgba(30, 25, 20, 0.72)
+        ),
+        url("Hotel_nexa.png");
+    }
+
+    .bakery-experience {
+      background-image:
+        linear-gradient(
+          rgba(30, 25, 20, 0.12),
+          rgba(30, 25, 20, 0.72)
+        ),
+        url("Apple-bakery-hero.png");
+    }
+
+    .experience-content {
+      position: absolute;
+
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      padding: 30px;
+
+      color: #fff;
+    }
+
+    .logo-icon {
+      width: 48px;
+      height: 48px;
+
+      object-fit: contain;
+
+      background: rgba(255, 255, 255, 0.95);
+
+      border-radius: 50%;
+
+      padding: 6px;
+
+      margin-bottom: 14px;
+    }
+
+    .experience-content h3 {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 30px;
+      font-weight: 500;
+
+      margin-bottom: 10px;
+    }
+
+    .experience-content p {
+      font-size: 15px;
+
+      color: #f4f0e9;
+
+      margin-bottom: 18px;
+    }
+
+    .experience-btn {
+      display: inline-block;
+
+      padding: 11px 21px;
+
+      background: #c6a15b;
+
+      color: #fff;
+
+      border-radius: 5px;
+
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .experience-btn:hover {
+      background: #fff;
+      color: #302c27;
+    }
+
+    .product-pills {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 7px;
+
+      margin-bottom: 17px;
+    }
+
+    .product-pills span {
+      padding: 5px 10px;
+
+      border: 1px solid rgba(255, 255, 255, 0.45);
+
+      border-radius: 20px;
+
+      font-size: 12px;
+
+      color: #fff;
+
+      background: rgba(0, 0, 0, 0.16);
+    }
+
+
+    /* =====================================================
+       LUXURY EXPERIENCE
+    ===================================================== */
+
+    .luxury-section {
+      background: #fffdf9;
+    }
+
+    .luxury-grid {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 20px;
+    }
+
+    .luxury-card {
+      background: #f8f5ef;
+
+      border: 1px solid #e6dccb;
+
+      border-radius: 12px;
+
+      padding: 32px 22px;
+
+      text-align: center;
+
+      transition: 0.3s ease;
+    }
+
+    .luxury-card:hover {
+      transform: translateY(-5px);
+
+      border-color: #c6a15b;
+
+      box-shadow: 0 12px 30px rgba(65, 52, 31, 0.08);
+    }
+
+    .luxury-icon {
+      width: 55px;
+      height: 55px;
+
+      margin: 0 auto 17px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: #e9dfce;
+
+      font-size: 25px;
+    }
+
+    .luxury-card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 21px;
+      font-weight: 500;
+
+      color: #39342d;
+
+      margin-bottom: 8px;
+    }
+
+    .luxury-card p {
+      font-size: 14px;
+
+      color: #777067;
+
+      line-height: 1.65;
+    }
+
+
+    /* =====================================================
+       CTA
+    ===================================================== */
+
+    .cta-section {
+      position: relative;
+
+      background-image:
+        linear-gradient(
+          rgba(45, 36, 25, 0.70),
+          rgba(45, 36, 25, 0.70)
+        ),
+        url("Hero-image-orignal.png");
+
+      background-size: cover;
+      background-position: center;
+
+      padding: 85px 22px;
+
+      text-align: center;
+
+      color: #fff;
+    }
+
+    .cta-content {
+      max-width: 800px;
+
+      margin: auto;
+    }
+
+    .cta-content h2 {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 43px;
+
+      font-weight: 500;
+
+      margin-bottom: 15px;
+    }
+
+    .cta-content p {
+      color: #f0ece4;
+
+      font-size: 16px;
+
+      margin-bottom: 28px;
+    }
+
+    .cta-buttons {
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+
+      padding: 13px 25px;
+
+      border-radius: 5px;
+
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .cta-primary {
+      background: #c6a15b;
+      color: #fff;
+    }
+
+    .cta-primary:hover {
+      background: #fff;
+      color: #302c27;
+    }
+
+    .cta-secondary {
+      border: 1px solid rgba(255,255,255,0.7);
+      color: #fff;
+    }
+
+    .cta-secondary:hover {
+      background: #fff;
+      color: #302c27;
+    }
+
+
+    /* =====================================================
+       CONTACT
+    ===================================================== */
+
+    .contact-section {
+      background: #f8f5ef;
+    }
+
+    .contact-box {
+      background: #fffdf9;
+
+      border: 1px solid #e3d8c6;
+
+      border-radius: 14px;
+
+      padding: 45px 30px;
+
+      text-align: center;
+
+      box-shadow: 0 10px 30px rgba(50, 40, 25, 0.06);
+    }
+
+    .contact-box h2 {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 34px;
+
+      font-weight: 500;
+
+      color: #302c27;
+
+      margin-bottom: 10px;
+    }
+
+    .contact-box p {
+      color: #726b61;
+
+      margin-bottom: 20px;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+
+      background: #c6a15b;
+
+      color: #fff;
+
+      padding: 13px 25px;
+
+      border-radius: 5px;
+
+      font-weight: 600;
+
+      font-size: 14px;
+    }
+
+    .whatsapp-btn:hover {
+      background: #a9823d;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+      background: #302c27;
+
+      color: #fff;
+
+      padding: 45px 20px 30px;
+
+      text-align: center;
+    }
+
+    footer img {
+      width: 55px;
+      height: 55px;
+
+      object-fit: contain;
+
+      background: #fff;
+
+      border-radius: 50%;
+
+      padding: 5px;
+
+      margin-bottom: 13px;
+    }
+
+    footer h3 {
+      font-family: Georgia, "Times New Roman", serif;
+
+      color: #e3c27c;
+
+      font-size: 22px;
+
+      font-weight: 500;
+
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      color: #d0cbc3;
+
+      font-size: 13px;
+    }
+
+    .footer-links {
+      margin: 20px auto;
+
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 16px;
+    }
+
+    .footer-links a {
+      color: #d9d2c8;
+
+      font-size: 13px;
+
+      transition: 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: #e3c27c;
+    }
+
+    .copyright {
+      margin-top: 20px;
+
+      padding-top: 20px;
+
+      border-top: 1px solid rgba(255,255,255,0.12);
+
+      color: #aaa39a;
+
+      font-size: 12px;
+    }
+
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media (max-width: 900px) {
+
+      nav {
+        gap: 15px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .hero {
+        min-height: 580px;
+      }
+
+      .hero h1 {
+        font-size: 52px;
+      }
+
+      .about-grid {
+        gap: 35px;
+      }
+
+      .luxury-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 700px) {
+
+      .navbar {
+        min-height: 65px;
+
+        padding: 7px 14px;
+      }
+
+      .logo img {
+        width: 48px;
+        height: 48px;
+      }
+
+      nav {
+        gap: 9px;
+      }
+
+      nav a {
+        font-size: 11px;
+      }
+
+      nav a:nth-child(2),
+      nav a:nth-child(3),
+      nav a:nth-child(4),
+      nav a:nth-child(5),
+      nav a:nth-child(6) {
+        display: none;
+      }
+
+      .book-btn {
+        padding: 9px 12px;
+
+        font-size: 11px !important;
+      }
+
+
+      /* HERO */
+
+      .hero {
+        min-height: 550px;
+
+        background-position: 62% center;
+
+        align-items: flex-end;
+      }
+
+      .hero-content {
+        padding: 35px 20px 45px;
+      }
+
+      .hero-content-inner {
+        max-width: 100%;
+      }
+
+      .hero-small {
+        font-size: 11px;
+
+        letter-spacing: 2px;
+
+        margin-bottom: 10px;
+      }
+
+      .hero h1 {
+        font-size: 39px;
+
+        line-height: 1.08;
+
+        margin-bottom: 13px;
+      }
+
+      .hero p {
+        font-size: 14px;
+
+        line-height: 1.6;
+
+        margin-bottom: 20px;
+
+        max-width: 350px;
+      }
+
+      .hero-buttons {
+        gap: 9px;
+      }
+
+      .hero-btn {
+        padding: 11px 17px;
 
         font-size: 12px;
-    }
+      }
 
 
-    /* TWO EXPERIENCE */
+      /* COMMON */
 
-    .business-grid {
+      .section {
+        padding: 60px 16px;
+      }
 
-        grid-template-columns: 1fr;
+      .section-heading {
+        margin-bottom: 32px;
+      }
 
-        gap: 20px;
-    }
+      .section-heading h2 {
+        font-size: 31px;
+      }
 
-    .business-card {
-
-        min-height: 460px;
-    }
-
-    .business-content {
-
-        min-height: 460px;
-
-        padding: 30px;
-    }
-
-    .business-content .logo-icon {
-
-        width: 75px;
-
-        height: 62px;
-
-        margin-bottom: 14px;
-    }
-
-    .business-content h3 {
-
-        font-size: 27px;
-    }
-
-    .business-content p {
-
+      .section-heading p {
         font-size: 14px;
-    }
+      }
 
 
-    /* VALUES */
+      /* ABOUT */
 
-    .values-grid {
-
-        grid-template-columns: 1fr 1fr;
-    }
-
-
-    /* FOOTER */
-
-    .footer-main {
-
+      .about-grid {
         grid-template-columns: 1fr;
 
-        gap: 25px;
+        gap: 28px;
+      }
+
+      .about-image {
+        min-height: 320px;
+
+        order: 1;
+      }
+
+      .about-content {
+        order: 2;
+      }
+
+      .about-content h2 {
+        font-size: 31px;
+      }
+
+      .about-content p {
+        font-size: 14px;
+      }
+
+
+      /* EXPERIENCES */
+
+      .experience-grid {
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+      }
+
+      .experience-card {
+        min-height: 390px;
+      }
+
+      .experience-content {
+        padding: 23px;
+      }
+
+      .experience-content h3 {
+        font-size: 26px;
+      }
+
+
+      /* LUXURY */
+
+      .luxury-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+      }
+
+      .luxury-card {
+        padding: 24px 14px;
+      }
+
+      .luxury-card h3 {
+        font-size: 18px;
+      }
+
+      .luxury-card p {
+        font-size: 12px;
+      }
+
+      .luxury-icon {
+        width: 48px;
+        height: 48px;
+
+        font-size: 21px;
+      }
+
+
+      /* CTA */
+
+      .cta-section {
+        padding: 65px 18px;
+      }
+
+      .cta-content h2 {
+        font-size: 32px;
+      }
+
+      .cta-content p {
+        font-size: 14px;
+      }
+
+
+      /* CONTACT */
+
+      .contact-box {
+        padding: 35px 20px;
+      }
+
+      .contact-box h2 {
+        font-size: 28px;
+      }
+
     }
 
 
-    /* SECTIONS */
+    /* =====================================================
+       SMALL MOBILE
+    ===================================================== */
 
-    .section-title h2 {
+    @media (max-width: 420px) {
 
+      .hero {
+        min-height: 510px;
+
+        background-position: 65% center;
+      }
+
+      .hero h1 {
         font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 13px;
+      }
+
+      .hero-btn {
+        padding: 10px 14px;
+      }
+
+      .luxury-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .luxury-card {
+        padding: 25px 20px;
+      }
+
     }
 
-    .cta h2 {
-
-        font-size: 34px;
-    }
-
-}
-
-
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
-
-@media (max-width: 420px) {
-
-    .hero-content {
-
-        width: 55%;
-
-        margin-left: 3%;
-
-        margin-top: 4%;
-    }
-
-    .hero-small {
-
-        font-size: 9px;
-
-        letter-spacing: 1.5px;
-    }
-
-    .hero h1 {
-
-        font-size: 25px;
-    }
-
-    .hero p {
-
-        font-size: 11px;
-    }
-
-    .hero-buttons .btn {
-
-        font-size: 11px;
-
-        padding: 8px 11px;
-    }
-
-    .business-card {
-
-        min-height: 440px;
-    }
-
-    .business-content {
-
-        min-height: 440px;
-    }
-
-}
-
-</style>
-
+  </style>
 </head>
 
 
 <body>
 
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
+  <!-- =====================================================
+       HEADER
+  ===================================================== -->
 
-<header>
+  <header>
 
-<div class="container navbar">
+    <div class="navbar">
 
-
-    <a href="index.html"
-       class="logo-area">
+      <a href="index.html" class="logo">
 
         <img
-            src="Apple-logo.png"
-            alt="Apple Group Logo">
+          src="Apple-logo.png"
+          alt="Apple Group Logo">
 
-        <div class="logo-text">
-
-            <h2>
-                APPLE GROUP
-            </h2>
-
-            <span>
-                HOTELS • BAKERY • UJJAIN
-            </span>
-
-        </div>
-
-    </a>
+      </a>
 
 
-    <nav class="nav-links">
+      <nav>
 
         <a href="index.html">
-            Home
+          Home
         </a>
 
         <a href="#about">
-            About
+          About
         </a>
 
         <a href="hotels.html">
-            Our Hotels
+          Our Hotels
         </a>
 
         <a href="#experience">
-            Experience
+          Experience
         </a>
 
         <a href="apple-bakery.html">
-            Bakery
+          Bakery
         </a>
 
         <a href="#contact">
-            Contact
+          Contact
         </a>
 
         <a
-            href="https://wa.me/918770434255"
-            class="book-btn"
-            target="_blank">
+          href="https://wa.me/918770434255"
+          target="_blank"
+          class="book-btn">
 
-            Book Now
+          Book Now
 
         </a>
 
-    </nav>
+      </nav>
 
-</div>
+    </div>
 
-</header>
+  </header>
 
 
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+  <!-- =====================================================
+       HERO
+  ===================================================== -->
 
-<section class="hero">
-
-<div class="hero-overlay">
+  <section class="hero">
 
     <div class="hero-content">
 
+      <div class="hero-content-inner">
 
         <div class="hero-small">
-            Apple Group • Ujjain
+          Apple Group
         </div>
 
-
         <h1>
-
-            One Group.
-
-            <br>
-
-            <span>
-                Two Experiences.
-            </span>
-
+          Hospitality with
+          <span>Elegance</span>
         </h1>
 
-
         <p>
-
-            Luxury Stays. Fresh Bakes.
-            <br>
-            Warm Hospitality.
-
+          Discover refined stays, warm hospitality and
+          premium experiences with Apple Group of Hotels
+          & Bakery.
         </p>
 
 
         <div class="hero-buttons">
 
+          <a
+            href="hotels.html"
+            class="hero-btn hero-btn-primary">
+
+            Explore Our Hotels
+
+          </a>
+
+
+          <a
+            href="apple-bakery.html"
+            class="hero-btn hero-btn-secondary">
+
+            Visit Apple Bakery
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       ABOUT
+  ===================================================== -->
+
+  <section
+    class="about-section"
+    id="about">
+
+    <div class="section">
+
+      <div class="about-grid">
+
+
+        <div class="about-image">
+        </div>
+
+
+        <div class="about-content">
+
+          <div class="section-label">
+            Welcome to Apple Group
+          </div>
+
+          <h2>
+            Where Comfort Meets
+            <span>Luxury</span>
+          </h2>
+
+          <p>
+            Apple Group brings together premium
+            hospitality and quality bakery experiences
+            under one trusted name.
+          </p>
+
+          <p>
+            Our hotels are designed to offer guests a
+            comfortable, elegant and memorable stay,
+            while Apple Bakery brings carefully prepared
+            bakery products to your everyday moments.
+          </p>
+
+          <p>
+            Every experience is guided by our commitment
+            to quality, cleanliness and genuine hospitality.
+          </p>
+
+
+          <a
+            href="hotels.html"
+            class="about-btn">
+
+            Discover Our Hotels →
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       TWO EXPERIENCES
+  ===================================================== -->
+
+  <section
+    class="experiences-section"
+    id="experience">
+
+    <div class="section">
+
+
+      <div class="section-heading">
+
+        <div class="section-label">
+          Our Businesses
+        </div>
+
+        <h2>
+          Two Experiences,
+          One Trusted Name
+        </h2>
+
+        <p>
+          From a relaxing stay to delicious bakery
+          favourites, experience the Apple Group difference.
+        </p>
+
+      </div>
+
+
+
+      <div class="experience-grid">
+
+
+        <!-- HOTEL -->
+
+        <div class="experience-card">
+
+          <div
+            class="experience-image hotel-experience">
+          </div>
+
+
+          <div class="experience-content">
+
+            <img
+              src="Apple-logo.png"
+              alt="Apple Group"
+              class="logo-icon">
+
+
+            <h3>
+              Apple Group of Hotels
+            </h3>
+
+            <p>
+              Elegant stays, comfortable rooms and
+              thoughtful hospitality for families,
+              tourists and business travellers.
+            </p>
+
 
             <a
-                href="hotels.html"
-                class="btn btn-gold">
+              href="hotels.html"
+              class="experience-btn">
 
-                Explore Our Hotels
+              Explore Our Hotels
 
             </a>
 
+          </div>
+
+        </div>
+
+
+
+        <!-- BAKERY -->
+
+        <div class="experience-card">
+
+          <div
+            class="experience-image bakery-experience">
+          </div>
+
+
+          <div class="experience-content">
+
+            <img
+              src="Apple-logo.png"
+              alt="Apple Bakery"
+              class="logo-icon">
+
+
+            <h3>
+              Apple Bakery
+            </h3>
+
+            <p>
+              Quality bakery products made to bring
+              deliciousness to your everyday moments.
+            </p>
+
+
+            <div class="product-pills">
+
+              <span>
+                Kesar Elaichi Rusk
+              </span>
+
+              <span>
+                Atta Toast
+              </span>
+
+              <span>
+                Roasted Bread
+              </span>
+
+            </div>
+
 
             <a
-                href="apple-bakery.html"
-                class="btn btn-outline">
+              href="apple-bakery.html"
+              class="experience-btn">
 
-                Explore Our Bakery
+              Explore Bakery
 
             </a>
 
+          </div>
 
         </div>
 
 
+      </div>
+
     </div>
 
-</div>
-
-</section>
+  </section>
 
 
 
-<!-- =====================================================
-     ABOUT
-===================================================== -->
+  <!-- =====================================================
+       LUXURY EXPERIENCE
+  ===================================================== -->
 
-<section id="about"
-         class="about">
+  <section class="luxury-section">
 
-<div class="container">
+    <div class="section">
 
 
-    <div class="section-title">
+      <div class="section-heading">
 
-        <div class="small">
-            About Apple Group
+        <div class="section-label">
+          The Apple Experience
         </div>
 
         <h2>
-            More Than A Name
+          Designed Around You
         </h2>
 
-    </div>
-
-
-    <div class="about-box">
-
-
         <p>
-
-            Apple Group brings together premium hospitality
-            and quality bakery products under one trusted name
-            in Ujjain.
-
+          We believe luxury is not only about appearance.
+          It is about the details that make you feel at home.
         </p>
 
+      </div>
 
-        <p>
 
-            From comfortable stays for travellers and families
-            to delicious bakery favourites for everyday moments,
-            our focus is simple — quality, service and trust.
 
-        </p>
+      <div class="luxury-grid">
 
+
+        <div class="luxury-card">
+
+          <div class="luxury-icon">
+            👑
+          </div>
+
+          <h3>
+            Premium Comfort
+          </h3>
+
+          <p>
+            Carefully designed spaces for
+            a relaxing and comfortable stay.
+          </p>
+
+        </div>
+
+
+
+        <div class="luxury-card">
+
+          <div class="luxury-icon">
+            📍
+          </div>
+
+          <h3>
+            Great Locations
+          </h3>
+
+          <p>
+            Convenient locations designed
+            for travellers and families.
+          </p>
+
+        </div>
+
+
+
+        <div class="luxury-card">
+
+          <div class="luxury-icon">
+            ⭐
+          </div>
+
+          <h3>
+            Quality Service
+          </h3>
+
+          <p>
+            Friendly and attentive service
+            throughout your experience.
+          </p>
+
+        </div>
+
+
+
+        <div class="luxury-card">
+
+          <div class="luxury-icon">
+            🤝
+          </div>
+
+          <h3>
+            Trusted Hospitality
+          </h3>
+
+          <p>
+            A warm, dependable experience
+            from Apple Group.
+          </p>
+
+        </div>
+
+
+      </div>
 
     </div>
 
-
-</div>
-
-</section>
+  </section>
 
 
 
-<!-- =====================================================
-     TWO EXPERIENCES
-===================================================== -->
+  <!-- =====================================================
+       CTA
+  ===================================================== -->
 
-<section class="business-section">
+  <section class="cta-section">
 
-<div class="container">
+    <div class="cta-content">
+
+      <h2>
+        Your Next Experience
+        Starts Here
+      </h2>
+
+      <p>
+        Choose a luxurious stay with Apple Group
+        or discover something delicious from Apple Bakery.
+      </p>
 
 
-    <div class="section-title">
+      <div class="cta-buttons">
 
-        <div class="small">
-            Our Businesses
+        <a
+          href="hotels.html"
+          class="cta-btn cta-primary">
+
+          Explore Our Hotels
+
+        </a>
+
+
+        <a
+          href="apple-bakery.html"
+          class="cta-btn cta-secondary">
+
+          Visit Apple Bakery
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       CONTACT
+  ===================================================== -->
+
+  <section
+    class="contact-section"
+    id="contact">
+
+    <div class="section">
+
+
+      <div class="contact-box">
+
+        <div class="section-label">
+          Reservations & Enquiries
         </div>
 
         <h2>
-            Two Experiences
+          Let Us Welcome You
         </h2>
 
         <p>
-            Hospitality for your stay.
-            Bakery goodness for your day.
+          For hotel bookings, enquiries or assistance,
+          connect with us directly on WhatsApp.
         </p>
 
-    </div>
 
+        <a
+          href="https://wa.me/918770434255"
+          target="_blank"
+          class="whatsapp-btn">
 
+          WhatsApp Us
 
-    <div class="business-grid">
+        </a>
 
-
-        <!-- =================================================
-             HOTEL CARD
-        ================================================== -->
-
-        <div class="business-card hotel">
-
-            <div class="business-content">
-
-
-                <img
-                    src="Apple-logo.png"
-                    alt="Apple Group Logo"
-                    class="logo-icon">
-
-
-                <h3>
-                    Apple Group of Hotels
-                </h3>
-
-
-                <p>
-
-                    Premium hotels in Ujjain offering
-                    comfortable stays, quality service
-                    and warm hospitality.
-
-                </p>
-
-
-                <a
-                    href="hotels.html"
-                    class="btn btn-gold">
-
-                    Explore Hotels
-
-                </a>
-
-
-            </div>
-
-        </div>
-
-
-
-        <!-- =================================================
-             BAKERY CARD
-        ================================================== -->
-
-        <div class="business-card bakery">
-
-            <div class="business-content">
-
-
-                <img
-                    src="Apple-logo.png"
-                    alt="Apple Bakery"
-                    class="logo-icon">
-
-
-                <h3>
-                    Apple Bakery
-                </h3>
-
-
-                <p>
-
-                    Quality bakery favourites made for
-                    tea time, breakfast and everyday
-                    moments.
-
-                </p>
-
-
-                <div class="product-list">
-
-                    <span>
-                        Rusk
-                    </span>
-
-                    <span>
-                        Toast
-                    </span>
-
-                    <span>
-                        Roasted Bread
-                    </span>
-
-                </div>
-
-
-                <a
-                    href="apple-bakery.html"
-                    class="btn btn-gold">
-
-                    Explore Bakery
-
-                </a>
-
-
-            </div>
-
-        </div>
-
+      </div>
 
     </div>
 
-
-</div>
-
-</section>
+  </section>
 
 
 
-<!-- =====================================================
-     EXPERIENCE
-===================================================== -->
+  <!-- =====================================================
+       FOOTER
+  ===================================================== -->
 
-<section id="experience"
-         class="experience">
+  <footer>
 
-<div class="container">
-
-
-    <div class="section-title">
-
-        <div class="small">
-            Why Apple Group
-        </div>
-
-        <h2>
-            Built On Trust
-        </h2>
-
-    </div>
+    <img
+      src="Apple-logo.png"
+      alt="Apple Group Logo">
 
 
-
-    <div class="values-grid">
-
-
-        <div class="value">
-
-            <div class="value-icon">
-                👑
-            </div>
-
-            <h3>
-                Legacy of Trust
-            </h3>
-
-            <p>
-
-                Built on trust and driven
-                by a passion for excellence.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="value">
-
-            <div class="value-icon">
-                📍
-            </div>
-
-            <h3>
-                Rooted in Ujjain
-            </h3>
-
-            <p>
-
-                Proudly serving guests and
-                communities in Ujjain.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="value">
-
-            <div class="value-icon">
-                ⭐
-            </div>
-
-            <h3>
-                Quality Assured
-            </h3>
-
-            <p>
-
-                Quality hospitality and
-                quality bakery products.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="value">
-
-            <div class="value-icon">
-                🤝
-            </div>
-
-            <h3>
-                Guests & Community
-            </h3>
-
-            <p>
-
-                Creating memorable experiences
-                for every guest and customer.
-
-            </p>
-
-        </div>
-
-
-    </div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     CTA
-===================================================== -->
-
-<section class="cta">
-
-<div class="container">
-
-
-    <h2>
-        One Group. Two Experiences.
-    </h2>
+    <h3>
+      Apple Group
+    </h3>
 
 
     <p>
-        Luxury stays, fresh bakes and warm hospitality.
+      Hotels & Bakery
     </p>
 
 
-    <div class="hero-buttons">
+    <div class="footer-links">
 
+      <a href="index.html">
+        Home
+      </a>
 
-        <a
-            href="hotels.html"
-            class="btn btn-gold">
+      <a href="hotels.html">
+        Our Hotels
+      </a>
 
-            Explore Hotels
+      <a href="hotel-nexa.html">
+        Hotel Nexa
+      </a>
 
-        </a>
+      <a href="hotel-apple-palace.html">
+        Apple Palace
+      </a>
 
+      <a href="hotel-apple-grand.html">
+        Apple Grand
+      </a>
 
-        <a
-            href="apple-bakery.html"
-            class="btn btn-outline">
+      <a href="hotel-apple-prime.html">
+        Apple Prime
+      </a>
 
-            Visit Bakery
-
-        </a>
-
-
-    </div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     CONTACT
-===================================================== -->
-
-<section id="contact"
-         class="contact">
-
-<div class="container">
-
-
-    <div class="contact-box">
-
-
-        <h2>
-            Connect With Apple Group
-        </h2>
-
-
-        <p>
-
-            For hotel bookings, bakery enquiries
-            and business information, contact us.
-
-        </p>
-
-
-        <a
-            href="https://wa.me/918770434255"
-            target="_blank"
-            class="whatsapp">
-
-            WhatsApp Us
-
-            <br>
-
-            +91 87704 34255
-
-        </a>
-
+      <a href="apple-bakery.html">
+        Apple Bakery
+      </a>
 
     </div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-<div class="container">
-
-
-    <div class="footer-main">
-
-
-        <div class="footer-brand">
-
-
-            <h2>
-                APPLE GROUP
-            </h2>
-
-
-            <p>
-                Hotels • Bakery • Ujjain
-            </p>
-
-
-            <p style="margin-top:12px;">
-
-                One Group. Two Experiences.
-                Endless Memories.
-
-            </p>
-
-
-        </div>
-
-
-
-        <div class="footer-column">
-
-
-            <h3>
-                Hotels
-            </h3>
-
-
-            <a href="hotels.html">
-                All Hotels
-            </a>
-
-
-            <a href="hotel-nexa.html">
-                Hotel Nexa
-            </a>
-
-
-            <a href="hotel-apple-palace.html">
-                Hotel Apple Palace
-            </a>
-
-
-            <a href="hotel-apple-grand.html">
-                Hotel Apple Grand
-            </a>
-
-
-            <a href="hotel-apple-prime.html">
-                Hotel Apple Prime
-            </a>
-
-
-        </div>
-
-
-
-        <div class="footer-column">
-
-
-            <h3>
-                Apple Bakery
-            </h3>
-
-
-            <a href="apple-bakery.html">
-                Bakery
-            </a>
-
-
-            <a href="apple-bakery.html">
-                Rusk
-            </a>
-
-
-            <a href="apple-bakery.html">
-                Toast
-            </a>
-
-
-            <a href="apple-bakery.html">
-                Roasted Bread
-            </a>
-
-
-        </div>
-
-
-    </div>
-
 
 
     <div class="copyright">
 
-        © 2026 Apple Group. All Rights Reserved.
+      © 2026 Apple Group of Hotels & Bakery.
+      All Rights Reserved.
 
     </div>
 
-
-</div>
-
-</footer>
+  </footer>
 
 
 </body>
-
 </html>
