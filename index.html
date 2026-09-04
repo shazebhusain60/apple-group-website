@@ -1,1741 +1,1853 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Apple Group of Hotels & Bakery</title>
+<title>Apple Group of Hotels & Bakery</title>
 
-  <meta
-    name="description"
-    content="Apple Group of Hotels & Bakery - Luxury hospitality and premium bakery products."
-  >
+<meta name="description"
+content="Apple Group of Hotels & Bakery - Luxury hospitality and premium bakery experiences.">
 
-  <style>
+<style>
 
-    /* =====================================================
-       GLOBAL
-    ===================================================== */
+/* =====================================================
+   GLOBAL
+===================================================== */
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f8f5ef;
-      color: #292725;
-      line-height: 1.6;
-    }
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f8f4eb;
+  color:#302b25;
+  line-height:1.6;
+}
 
-    img {
-      max-width: 100%;
-    }
+a{
+  text-decoration:none;
+}
 
-    a {
-      text-decoration: none;
-    }
+img{
+  max-width:100%;
+  display:block;
+}
 
 
-    /* =====================================================
-       HEADER
-    ===================================================== */
+/* =====================================================
+   HEADER
+===================================================== */
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
 
-      width: 100%;
+  background:rgba(255,253,248,.97);
 
-      background: rgba(255, 253, 248, 0.97);
-      border-bottom: 1px solid #dfcfad;
+  border-bottom:1px solid #dfcfa9;
 
-      box-shadow: 0 3px 18px rgba(55, 45, 30, 0.06);
-    }
+  box-shadow:0 4px 20px rgba(55,45,30,.07);
+}
 
-    .navbar {
-      max-width: 1250px;
-      margin: auto;
+.navbar{
+  max-width:1250px;
+  min-height:76px;
 
-      min-height: 78px;
-      padding: 10px 22px;
+  margin:auto;
+  padding:8px 22px;
 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 
-      gap: 20px;
-    }
+  gap:20px;
+}
 
-    .logo {
-      display: flex;
-      align-items: center;
-    }
+.logo img{
+  width:175px;
+  height:auto;
+  object-fit:contain;
+}
 
-    .logo img {
-      width: 60px;
-      height: 60px;
-      object-fit: contain;
-    }
+nav{
+  display:flex;
+  align-items:center;
+  gap:26px;
+}
 
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-    }
+nav a{
+  color:#3d3730;
+  font-size:14px;
+  font-weight:500;
 
-    nav a {
-      color: #38342e;
-      font-size: 14px;
-      font-weight: 500;
+  transition:.3s ease;
+}
 
-      transition: 0.3s ease;
-    }
+nav a:hover{
+  color:#b38435;
+}
 
-    nav a:hover {
-      color: #b18a45;
-    }
+.book-btn{
+  background:#b98938;
+  color:#fff !important;
 
-    .book-btn {
-      background: #c6a15b;
-      color: #fff !important;
+  padding:11px 20px;
 
-      padding: 11px 19px;
+  border-radius:5px;
 
-      border-radius: 5px;
+  font-weight:600;
 
-      font-weight: 600;
+  box-shadow:0 5px 15px rgba(137,100,38,.18);
+}
 
-      box-shadow: 0 5px 15px rgba(151, 117, 53, 0.18);
-    }
+.book-btn:hover{
+  background:#956d29;
+}
 
-    .book-btn:hover {
-      background: #a9823d;
-      color: #fff !important;
-    }
 
+/* =====================================================
+   HERO
+===================================================== */
 
-    /* =====================================================
-       HERO
-    ===================================================== */
+.hero{
+  min-height:580px;
 
-    .hero {
-      position: relative;
+  position:relative;
 
-      min-height: 650px;
+  background-image:
+  linear-gradient(
+    90deg,
+    rgba(35,29,23,.72),
+    rgba(35,29,23,.35),
+    rgba(35,29,23,.08)
+  ),
+  url("Hero-image-orignal.png");
 
-      background-image:
-        linear-gradient(
-          90deg,
-          rgba(35, 30, 24, 0.72) 0%,
-          rgba(35, 30, 24, 0.40) 45%,
-          rgba(35, 30, 24, 0.10) 100%
-        ),
-        url("Hero-image-orignal.png");
+  background-size:cover;
+  background-position:center;
 
-      background-size: cover;
-      background-position: center;
+  display:flex;
+  align-items:center;
+}
 
-      display: flex;
-      align-items: center;
-    }
+.hero-content{
+  width:100%;
+  max-width:1250px;
 
-    .hero-content {
-      width: 100%;
-      max-width: 1250px;
+  margin:auto;
 
-      margin: auto;
-      padding: 60px 30px;
+  padding:60px 30px;
+}
 
-      color: #fff;
-    }
+.hero-inner{
+  max-width:570px;
+}
 
-    .hero-content-inner {
-      max-width: 560px;
-    }
+.hero-label{
+  color:#e5c77f;
 
-    .hero-small {
-      display: inline-block;
+  font-size:13px;
+  font-weight:bold;
 
-      margin-bottom: 16px;
+  letter-spacing:3px;
+  text-transform:uppercase;
 
-      color: #f0d9a6;
+  margin-bottom:14px;
+}
 
-      font-size: 14px;
-      font-weight: 600;
+.hero h1{
+  font-family:Georgia,"Times New Roman",serif;
 
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
+  font-size:60px;
+  line-height:1.08;
 
-    .hero h1 {
-      font-family: Georgia, "Times New Roman", serif;
+  color:#fff;
 
-      font-size: 62px;
-      line-height: 1.08;
+  font-weight:500;
 
-      margin-bottom: 20px;
+  margin-bottom:18px;
+}
 
-      color: #fff;
-      font-weight: 500;
-    }
+.hero h1 span{
+  color:#e2bd6a;
+}
 
-    .hero h1 span {
-      color: #e3c27c;
-    }
+.hero p{
+  color:#f5f1e9;
 
-    .hero p {
-      max-width: 510px;
+  font-size:17px;
+  line-height:1.75;
 
-      font-size: 18px;
-      line-height: 1.75;
+  max-width:510px;
 
-      color: #f5f2eb;
+  margin-bottom:28px;
+}
 
-      margin-bottom: 30px;
-    }
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
 
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
+.hero-btn{
+  display:inline-block;
 
-    .hero-btn {
-      display: inline-block;
+  padding:13px 24px;
 
-      padding: 13px 25px;
+  border-radius:5px;
 
-      border-radius: 5px;
+  font-size:14px;
+  font-weight:600;
 
-      font-size: 14px;
-      font-weight: 600;
+  transition:.3s ease;
+}
 
-      transition: 0.3s ease;
-    }
+.hero-primary{
+  background:#c39a4d;
+  color:#fff;
 
-    .hero-btn-primary {
-      background: #c6a15b;
-      color: #fff;
+  box-shadow:0 7px 20px rgba(0,0,0,.18);
+}
 
-      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.18);
-    }
+.hero-primary:hover{
+  background:#a77c32;
+  transform:translateY(-2px);
+}
 
-    .hero-btn-primary:hover {
-      background: #aa843f;
-      transform: translateY(-2px);
-    }
+.hero-secondary{
+  color:#fff;
 
-    .hero-btn-secondary {
-      border: 1px solid rgba(255, 255, 255, 0.7);
-      color: #fff;
-      background: rgba(255, 255, 255, 0.08);
-    }
+  border:1px solid rgba(255,255,255,.75);
 
-    .hero-btn-secondary:hover {
-      background: #fff;
-      color: #292725;
-    }
+  background:rgba(255,255,255,.08);
+}
 
+.hero-secondary:hover{
+  background:#fff;
+  color:#302b25;
+}
 
-    /* =====================================================
-       COMMON SECTION
-    ===================================================== */
 
-    section {
-      scroll-margin-top: 85px;
-    }
+/* =====================================================
+   COMMON
+===================================================== */
 
-    .section {
-      max-width: 1200px;
-      margin: auto;
+.section{
+  max-width:1200px;
 
-      padding: 85px 22px;
-    }
+  margin:auto;
 
-    .section-heading {
-      text-align: center;
+  padding:80px 22px;
+}
 
-      max-width: 750px;
+.section-heading{
+  text-align:center;
 
-      margin: 0 auto 48px;
-    }
+  max-width:750px;
 
-    .section-label {
-      display: inline-block;
+  margin:0 auto 42px;
+}
 
-      margin-bottom: 10px;
+.section-label{
+  color:#b38338;
 
-      color: #b18a45;
+  font-size:12px;
+  font-weight:bold;
 
-      font-size: 13px;
-      font-weight: 700;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
 
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-    }
+  margin-bottom:8px;
+}
 
-    .section-heading h2 {
-      font-family: Georgia, "Times New Roman", serif;
+.section-heading h2{
+  font-family:Georgia,"Times New Roman",serif;
 
-      font-size: 42px;
-      line-height: 1.2;
+  color:#302b25;
 
-      color: #302c27;
+  font-size:40px;
 
-      font-weight: 500;
+  font-weight:500;
 
-      margin-bottom: 14px;
-    }
+  line-height:1.2;
 
-    .section-heading p {
-      color: #716b63;
-      font-size: 16px;
-    }
+  margin-bottom:12px;
+}
 
+.section-heading p{
+  color:#756e64;
 
-    /* =====================================================
-       ABOUT
-    ===================================================== */
+  font-size:15px;
+}
 
-    .about-section {
-      background: #f8f5ef;
-    }
 
-    .about-grid {
-      display: grid;
+/* =====================================================
+   ABOUT
+===================================================== */
 
-      grid-template-columns: 1fr 1fr;
+.about-section{
+  background:#f8f4eb;
+}
 
-      gap: 55px;
+.about-grid{
+  display:grid;
 
-      align-items: center;
-    }
+  grid-template-columns:1fr 1fr;
 
-    .about-image {
-      min-height: 450px;
+  gap:55px;
 
-      border-radius: 14px;
+  align-items:center;
+}
 
-      overflow: hidden;
+.about-image{
+  min-height:440px;
 
-      background-image:
-        linear-gradient(
-          rgba(30, 25, 20, 0.12),
-          rgba(30, 25, 20, 0.12)
-        ),
-        url("Hotel_nexa.png");
+  border-radius:15px;
 
-      background-size: cover;
-      background-position: center;
+  overflow:hidden;
 
-      box-shadow: 0 15px 40px rgba(45, 38, 27, 0.12);
-    }
+  background-image:
+  linear-gradient(
+    rgba(30,25,20,.12),
+    rgba(30,25,20,.12)
+  ),
+  url("Hotel_nexa.png");
 
-    .about-content {
-      padding: 10px;
-    }
+  background-size:cover;
+  background-position:center;
 
-    .about-content h2 {
-      font-family: Georgia, "Times New Roman", serif;
+  box-shadow:0 15px 40px rgba(55,45,30,.13);
+}
 
-      font-size: 39px;
-      line-height: 1.2;
+.about-content h2{
+  font-family:Georgia,"Times New Roman",serif;
 
-      font-weight: 500;
+  font-size:40px;
+  line-height:1.2;
 
-      color: #302c27;
+  font-weight:500;
 
-      margin-bottom: 20px;
-    }
+  margin:10px 0 20px;
 
-    .about-content h2 span {
-      color: #b18a45;
-    }
+  color:#302b25;
+}
 
-    .about-content p {
-      color: #6d675f;
+.about-content h2 span{
+  color:#b38338;
+}
 
-      font-size: 16px;
-      line-height: 1.8;
+.about-content p{
+  color:#6e675d;
 
-      margin-bottom: 17px;
-    }
+  font-size:15px;
 
-    .about-btn {
-      display: inline-block;
+  line-height:1.8;
 
-      margin-top: 10px;
+  margin-bottom:15px;
+}
 
-      padding: 12px 23px;
+.about-btn{
+  display:inline-block;
 
-      border: 1px solid #c6a15b;
-      border-radius: 5px;
+  margin-top:8px;
 
-      color: #9a7335;
+  padding:11px 21px;
 
-      font-size: 14px;
-      font-weight: 600;
+  border:1px solid #c29a50;
 
-      transition: 0.3s ease;
-    }
+  border-radius:5px;
 
-    .about-btn:hover {
-      background: #c6a15b;
-      color: #fff;
-    }
+  color:#9b722e;
 
+  font-size:13px;
 
-    /* =====================================================
-       TWO EXPERIENCES
-    ===================================================== */
+  font-weight:600;
 
-    .experiences-section {
-      background: #eee8dc;
-    }
+  transition:.3s;
+}
 
-    .experience-grid {
-      display: grid;
+.about-btn:hover{
+  background:#c29a50;
+  color:#fff;
+}
 
-      grid-template-columns: repeat(2, 1fr);
 
-      gap: 30px;
-    }
+/* =====================================================
+   TWO EXPERIENCES
+===================================================== */
 
-    .experience-card {
-      position: relative;
+.experiences-section{
+  background:#eee7d9;
+}
 
-      min-height: 430px;
+.experience-grid{
+  display:grid;
 
-      border-radius: 14px;
+  grid-template-columns:1fr 1fr;
 
-      overflow: hidden;
+  gap:25px;
+}
 
-      background: #fff;
 
-      box-shadow: 0 12px 35px rgba(55, 45, 30, 0.10);
+/* CARD */
 
-      transition: 0.35s ease;
-    }
+.experience-card{
+  position:relative;
 
-    .experience-card:hover {
-      transform: translateY(-6px);
+  height:500px;
 
-      box-shadow: 0 20px 45px rgba(55, 45, 30, 0.15);
-    }
+  overflow:hidden;
 
-    .experience-image {
-      position: absolute;
+  border-radius:15px;
 
-      inset: 0;
+  box-shadow:0 12px 35px rgba(50,40,25,.13);
 
-      background-size: cover;
-      background-position: center;
-    }
+  transition:.35s ease;
+}
 
-    .hotel-experience {
-      background-image:
-        linear-gradient(
-          rgba(30, 25, 20, 0.12),
-          rgba(30, 25, 20, 0.72)
-        ),
-        url("Hotel_nexa.png");
-    }
+.experience-card:hover{
+  transform:translateY(-6px);
 
-    .bakery-experience {
-      background-image:
-        linear-gradient(
-          rgba(30, 25, 20, 0.12),
-          rgba(30, 25, 20, 0.72)
-        ),
-        url("Apple-bakery-hero.png");
-    }
+  box-shadow:0 20px 45px rgba(50,40,25,.18);
+}
 
-    .experience-content {
-      position: absolute;
 
-      left: 0;
-      right: 0;
-      bottom: 0;
+/* IMAGE */
 
-      padding: 30px;
+.experience-image{
+  position:absolute;
 
-      color: #fff;
-    }
+  inset:0;
 
-    .logo-icon {
-      width: 48px;
-      height: 48px;
+  background-size:cover;
+  background-position:center;
 
-      object-fit: contain;
+  transition:.5s ease;
+}
 
-      background: rgba(255, 255, 255, 0.95);
+.experience-card:hover .experience-image{
+  transform:scale(1.03);
+}
 
-      border-radius: 50%;
 
-      padding: 6px;
+/* HOTEL IMAGE */
 
-      margin-bottom: 14px;
-    }
+.hotel-experience{
+  background-image:
+  linear-gradient(
+    rgba(20,17,14,.10),
+    rgba(20,17,14,.32)
+  ),
+  url("Hotel_nexa.png");
 
-    .experience-content h3 {
-      font-family: Georgia, "Times New Roman", serif;
+  background-position:center;
+}
 
-      font-size: 30px;
-      font-weight: 500;
 
-      margin-bottom: 10px;
-    }
+/* BAKERY IMAGE */
 
-    .experience-content p {
-      font-size: 15px;
+.bakery-experience{
+  background-image:
+  linear-gradient(
+    rgba(30,25,15,.08),
+    rgba(30,25,15,.28)
+  ),
+  url("Apple-bakery-hero.png");
 
-      color: #f4f0e9;
+  background-position:center;
+}
 
-      margin-bottom: 18px;
-    }
 
-    .experience-btn {
-      display: inline-block;
+/* =====================================================
+   IMPORTANT TEXT PANEL
+===================================================== */
 
-      padding: 11px 21px;
+.experience-content{
+  position:absolute;
 
-      background: #c6a15b;
+  left:22px;
+  right:22px;
+  bottom:22px;
 
-      color: #fff;
+  padding:24px 25px;
 
-      border-radius: 5px;
+  border-radius:12px;
 
-      font-size: 13px;
-      font-weight: 600;
-    }
+  /*
+    DARK LUXURY GLASS PANEL
+    Text is now clearly readable
+  */
 
-    .experience-btn:hover {
-      background: #fff;
-      color: #302c27;
-    }
+  background:rgba(25,22,18,.78);
 
-    .product-pills {
-      display: flex;
+  border:1px solid rgba(231,199,126,.45);
 
-      flex-wrap: wrap;
+  backdrop-filter:blur(5px);
+  -webkit-backdrop-filter:blur(5px);
 
-      gap: 7px;
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.22);
 
-      margin-bottom: 17px;
-    }
+  color:#fff;
+}
 
-    .product-pills span {
-      padding: 5px 10px;
 
-      border: 1px solid rgba(255, 255, 255, 0.45);
+/* GOLD TOP LINE */
 
-      border-radius: 20px;
+.experience-content:before{
+  content:"";
 
-      font-size: 12px;
+  position:absolute;
 
-      color: #fff;
+  top:0;
+  left:25px;
 
-      background: rgba(0, 0, 0, 0.16);
-    }
+  width:70px;
+  height:3px;
 
+  background:#d4ad5c;
 
-    /* =====================================================
-       LUXURY EXPERIENCE
-    ===================================================== */
+  border-radius:0 0 5px 5px;
+}
 
-    .luxury-section {
-      background: #fffdf9;
-    }
 
-    .luxury-grid {
-      display: grid;
+/* LOGO */
 
-      grid-template-columns: repeat(4, 1fr);
+.logo-icon{
+  width:45px;
+  height:45px;
 
-      gap: 20px;
-    }
+  object-fit:contain;
 
-    .luxury-card {
-      background: #f8f5ef;
+  background:#fff;
 
-      border: 1px solid #e6dccb;
+  border-radius:50%;
 
-      border-radius: 12px;
+  padding:5px;
 
-      padding: 32px 22px;
+  margin-bottom:10px;
 
-      text-align: center;
+  border:2px solid #d5b36d;
+}
 
-      transition: 0.3s ease;
-    }
 
-    .luxury-card:hover {
-      transform: translateY(-5px);
+/* TITLE */
 
-      border-color: #c6a15b;
+.experience-content h3{
+  font-family:Georgia,"Times New Roman",serif;
 
-      box-shadow: 0 12px 30px rgba(65, 52, 31, 0.08);
-    }
+  font-size:29px;
 
-    .luxury-icon {
-      width: 55px;
-      height: 55px;
+  line-height:1.2;
 
-      margin: 0 auto 17px;
+  font-weight:500;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  color:#fff;
 
-      border-radius: 50%;
+  margin-bottom:8px;
 
-      background: #e9dfce;
+  text-shadow:0 2px 5px rgba(0,0,0,.45);
+}
 
-      font-size: 25px;
-    }
 
-    .luxury-card h3 {
-      font-family: Georgia, "Times New Roman", serif;
+/* DESCRIPTION */
 
-      font-size: 21px;
-      font-weight: 500;
+.experience-content p{
+  color:#f5f1e9;
 
-      color: #39342d;
+  font-size:14px;
 
-      margin-bottom: 8px;
-    }
+  line-height:1.6;
 
-    .luxury-card p {
-      font-size: 14px;
+  margin-bottom:14px;
 
-      color: #777067;
+  text-shadow:0 1px 3px rgba(0,0,0,.5);
+}
 
-      line-height: 1.65;
-    }
 
+/* PRODUCT PILLS */
 
-    /* =====================================================
-       CTA
-    ===================================================== */
+.product-pills{
+  display:flex;
 
-    .cta-section {
-      position: relative;
+  flex-wrap:wrap;
 
-      background-image:
-        linear-gradient(
-          rgba(45, 36, 25, 0.70),
-          rgba(45, 36, 25, 0.70)
-        ),
-        url("Hero-image-orignal.png");
+  gap:7px;
 
-      background-size: cover;
-      background-position: center;
+  margin-bottom:15px;
+}
 
-      padding: 85px 22px;
+.product-pills span{
+  display:inline-block;
 
-      text-align: center;
+  padding:5px 10px;
 
-      color: #fff;
-    }
+  border:1px solid rgba(237,203,132,.7);
 
-    .cta-content {
-      max-width: 800px;
+  border-radius:20px;
 
-      margin: auto;
-    }
+  background:rgba(0,0,0,.25);
 
-    .cta-content h2 {
-      font-family: Georgia, "Times New Roman", serif;
+  color:#fff;
 
-      font-size: 43px;
+  font-size:11px;
 
-      font-weight: 500;
+  white-space:nowrap;
+}
 
-      margin-bottom: 15px;
-    }
 
-    .cta-content p {
-      color: #f0ece4;
+/* CARD BUTTON */
 
-      font-size: 16px;
+.experience-btn{
+  display:inline-block;
 
-      margin-bottom: 28px;
-    }
+  padding:11px 19px;
 
-    .cta-buttons {
-      display: flex;
+  background:#d1aa58;
 
-      justify-content: center;
+  color:#211c16;
 
-      flex-wrap: wrap;
+  border-radius:5px;
 
-      gap: 12px;
-    }
+  font-size:13px;
 
-    .cta-btn {
-      display: inline-block;
+  font-weight:bold;
 
-      padding: 13px 25px;
+  transition:.3s;
+}
 
-      border-radius: 5px;
+.experience-btn:hover{
+  background:#fff;
 
-      font-size: 14px;
-      font-weight: 600;
-    }
+  color:#302b25;
+}
 
-    .cta-primary {
-      background: #c6a15b;
-      color: #fff;
-    }
 
-    .cta-primary:hover {
-      background: #fff;
-      color: #302c27;
-    }
+/* =====================================================
+   LUXURY FEATURES
+===================================================== */
 
-    .cta-secondary {
-      border: 1px solid rgba(255,255,255,0.7);
-      color: #fff;
-    }
+.luxury-section{
+  background:#fffdf8;
+}
 
-    .cta-secondary:hover {
-      background: #fff;
-      color: #302c27;
-    }
+.luxury-grid{
+  display:grid;
 
+  grid-template-columns:repeat(4,1fr);
 
-    /* =====================================================
-       CONTACT
-    ===================================================== */
+  gap:0;
 
-    .contact-section {
-      background: #f8f5ef;
-    }
+  border:1px solid #e6dccb;
 
-    .contact-box {
-      background: #fffdf9;
+  border-radius:14px;
 
-      border: 1px solid #e3d8c6;
+  overflow:hidden;
 
-      border-radius: 14px;
+  background:#fffdf8;
+}
 
-      padding: 45px 30px;
+.luxury-card{
+  padding:32px 20px;
 
-      text-align: center;
+  text-align:center;
 
-      box-shadow: 0 10px 30px rgba(50, 40, 25, 0.06);
-    }
+  border-right:1px solid #e6dccb;
 
-    .contact-box h2 {
-      font-family: Georgia, "Times New Roman", serif;
+  transition:.3s;
+}
 
-      font-size: 34px;
+.luxury-card:last-child{
+  border-right:none;
+}
 
-      font-weight: 500;
+.luxury-card:hover{
+  background:#faf5ea;
+}
 
-      color: #302c27;
+.luxury-icon{
+  width:56px;
+  height:56px;
 
-      margin-bottom: 10px;
-    }
+  margin:0 auto 15px;
 
-    .contact-box p {
-      color: #726b61;
+  border-radius:50%;
 
-      margin-bottom: 20px;
-    }
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
-    .whatsapp-btn {
-      display: inline-block;
+  background:#f1e5cc;
 
-      background: #c6a15b;
+  font-size:24px;
+}
 
-      color: #fff;
+.luxury-card h3{
+  font-family:Georgia,"Times New Roman",serif;
 
-      padding: 13px 25px;
+  color:#39332b;
 
-      border-radius: 5px;
+  font-size:20px;
 
-      font-weight: 600;
+  font-weight:500;
 
-      font-size: 14px;
-    }
+  margin-bottom:7px;
+}
 
-    .whatsapp-btn:hover {
-      background: #a9823d;
-    }
+.luxury-card p{
+  color:#777067;
 
+  font-size:13px;
 
-    /* =====================================================
-       FOOTER
-    ===================================================== */
+  line-height:1.6;
+}
 
-    footer {
-      background: #302c27;
 
-      color: #fff;
+/* =====================================================
+   CTA
+===================================================== */
 
-      padding: 45px 20px 30px;
+.cta-section{
+  position:relative;
 
-      text-align: center;
-    }
+  padding:80px 22px;
 
-    footer img {
-      width: 55px;
-      height: 55px;
+  text-align:center;
 
-      object-fit: contain;
+  color:#fff;
 
-      background: #fff;
+  background-image:
+  linear-gradient(
+    rgba(40,31,21,.75),
+    rgba(40,31,21,.75)
+  ),
+  url("Hero-image-orignal.png");
 
-      border-radius: 50%;
+  background-size:cover;
+  background-position:center;
+}
 
-      padding: 5px;
+.cta-content{
+  max-width:800px;
 
-      margin-bottom: 13px;
-    }
+  margin:auto;
+}
 
-    footer h3 {
-      font-family: Georgia, "Times New Roman", serif;
+.cta-label{
+  color:#e3bd69;
 
-      color: #e3c27c;
+  font-size:12px;
 
-      font-size: 22px;
+  letter-spacing:3px;
 
-      font-weight: 500;
+  font-weight:bold;
 
-      margin-bottom: 8px;
-    }
+  margin-bottom:10px;
+}
 
-    footer p {
-      color: #d0cbc3;
+.cta-content h2{
+  font-family:Georgia,"Times New Roman",serif;
 
-      font-size: 13px;
-    }
+  font-size:42px;
 
-    .footer-links {
-      margin: 20px auto;
+  font-weight:500;
 
-      display: flex;
+  line-height:1.2;
 
-      justify-content: center;
+  margin-bottom:14px;
+}
 
-      flex-wrap: wrap;
+.cta-content p{
+  color:#f0ece5;
 
-      gap: 16px;
-    }
+  font-size:15px;
 
-    .footer-links a {
-      color: #d9d2c8;
+  margin-bottom:25px;
+}
 
-      font-size: 13px;
+.cta-buttons{
+  display:flex;
 
-      transition: 0.3s;
-    }
+  justify-content:center;
 
-    .footer-links a:hover {
-      color: #e3c27c;
-    }
+  flex-wrap:wrap;
 
-    .copyright {
-      margin-top: 20px;
+  gap:12px;
+}
 
-      padding-top: 20px;
+.cta-btn{
+  padding:12px 23px;
 
-      border-top: 1px solid rgba(255,255,255,0.12);
+  border-radius:5px;
 
-      color: #aaa39a;
+  font-size:13px;
 
-      font-size: 12px;
-    }
+  font-weight:600;
 
+  transition:.3s;
+}
 
-    /* =====================================================
-       TABLET
-    ===================================================== */
+.cta-primary{
+  background:#d0a853;
+  color:#fff;
+}
 
-    @media (max-width: 900px) {
+.cta-primary:hover{
+  background:#fff;
+  color:#302b25;
+}
 
-      nav {
-        gap: 15px;
-      }
+.cta-secondary{
+  border:1px solid rgba(255,255,255,.7);
+  color:#fff;
+}
 
-      nav a {
-        font-size: 13px;
-      }
+.cta-secondary:hover{
+  background:#fff;
+  color:#302b25;
+}
 
-      .hero {
-        min-height: 580px;
-      }
 
-      .hero h1 {
-        font-size: 52px;
-      }
+/* =====================================================
+   CONTACT
+===================================================== */
 
-      .about-grid {
-        gap: 35px;
-      }
+.contact-section{
+  background:#f8f4eb;
+}
 
-      .luxury-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+.contact-box{
+  max-width:850px;
 
-    }
+  margin:auto;
 
+  text-align:center;
 
-    /* =====================================================
-       MOBILE
-    ===================================================== */
+  padding:45px 25px;
 
-    @media (max-width: 700px) {
+  background:#fffdf9;
 
-      .navbar {
-        min-height: 65px;
+  border:1px solid #e3d7c3;
 
-        padding: 7px 14px;
-      }
+  border-radius:14px;
 
-      .logo img {
-        width: 48px;
-        height: 48px;
-      }
+  box-shadow:0 10px 30px rgba(55,45,30,.07);
+}
 
-      nav {
-        gap: 9px;
-      }
+.contact-box h2{
+  font-family:Georgia,"Times New Roman",serif;
 
-      nav a {
-        font-size: 11px;
-      }
+  font-size:34px;
 
-      nav a:nth-child(2),
-      nav a:nth-child(3),
-      nav a:nth-child(4),
-      nav a:nth-child(5),
-      nav a:nth-child(6) {
-        display: none;
-      }
+  font-weight:500;
 
-      .book-btn {
-        padding: 9px 12px;
+  margin-bottom:10px;
+}
 
-        font-size: 11px !important;
-      }
+.contact-box p{
+  color:#70695f;
 
+  font-size:15px;
 
-      /* HERO */
+  margin-bottom:20px;
+}
 
-      .hero {
-        min-height: 550px;
+.whatsapp-btn{
+  display:inline-block;
 
-        background-position: 62% center;
+  padding:12px 24px;
 
-        align-items: flex-end;
-      }
+  background:#b98a3b;
 
-      .hero-content {
-        padding: 35px 20px 45px;
-      }
+  color:#fff;
 
-      .hero-content-inner {
-        max-width: 100%;
-      }
+  border-radius:5px;
 
-      .hero-small {
-        font-size: 11px;
+  font-size:13px;
 
-        letter-spacing: 2px;
+  font-weight:600;
+}
 
-        margin-bottom: 10px;
-      }
+.whatsapp-btn:hover{
+  background:#946c2c;
+}
 
-      .hero h1 {
-        font-size: 39px;
 
-        line-height: 1.08;
+/* =====================================================
+   FOOTER
+===================================================== */
 
-        margin-bottom: 13px;
-      }
+footer{
+  background:#302b25;
 
-      .hero p {
-        font-size: 14px;
+  color:#fff;
 
-        line-height: 1.6;
+  text-align:center;
 
-        margin-bottom: 20px;
+  padding:42px 20px 25px;
+}
 
-        max-width: 350px;
-      }
+footer img{
+  width:58px;
+  height:58px;
 
-      .hero-buttons {
-        gap: 9px;
-      }
+  object-fit:contain;
 
-      .hero-btn {
-        padding: 11px 17px;
+  background:#fff;
 
-        font-size: 12px;
-      }
+  padding:5px;
 
+  border-radius:50%;
 
-      /* COMMON */
+  margin:0 auto 10px;
+}
 
-      .section {
-        padding: 60px 16px;
-      }
+footer h3{
+  font-family:Georgia,"Times New Roman",serif;
 
-      .section-heading {
-        margin-bottom: 32px;
-      }
+  color:#e1bb6d;
 
-      .section-heading h2 {
-        font-size: 31px;
-      }
+  font-size:22px;
 
-      .section-heading p {
-        font-size: 14px;
-      }
+  font-weight:500;
 
+  margin-bottom:3px;
+}
 
-      /* ABOUT */
+footer p{
+  color:#d3ccc1;
 
-      .about-grid {
-        grid-template-columns: 1fr;
+  font-size:13px;
+}
 
-        gap: 28px;
-      }
+.footer-links{
+  display:flex;
 
-      .about-image {
-        min-height: 320px;
+  justify-content:center;
 
-        order: 1;
-      }
+  flex-wrap:wrap;
 
-      .about-content {
-        order: 2;
-      }
+  gap:17px;
 
-      .about-content h2 {
-        font-size: 31px;
-      }
+  margin:20px auto;
+}
 
-      .about-content p {
-        font-size: 14px;
-      }
+.footer-links a{
+  color:#d6cfc5;
 
+  font-size:12px;
+}
 
-      /* EXPERIENCES */
+.footer-links a:hover{
+  color:#e2bd6b;
+}
 
-      .experience-grid {
-        grid-template-columns: 1fr;
+.copyright{
+  border-top:1px solid rgba(255,255,255,.12);
 
-        gap: 22px;
-      }
+  padding-top:18px;
 
-      .experience-card {
-        min-height: 390px;
-      }
+  margin-top:15px;
 
-      .experience-content {
-        padding: 23px;
-      }
+  color:#aaa299;
 
-      .experience-content h3 {
-        font-size: 26px;
-      }
+  font-size:11px;
+}
 
 
-      /* LUXURY */
+/* =====================================================
+   TABLET
+===================================================== */
 
-      .luxury-grid {
-        grid-template-columns: 1fr 1fr;
+@media(max-width:900px){
 
-        gap: 12px;
-      }
+  nav{
+    gap:14px;
+  }
 
-      .luxury-card {
-        padding: 24px 14px;
-      }
+  nav a{
+    font-size:12px;
+  }
 
-      .luxury-card h3 {
-        font-size: 18px;
-      }
+  .logo img{
+    width:145px;
+  }
 
-      .luxury-card p {
-        font-size: 12px;
-      }
+  .hero h1{
+    font-size:50px;
+  }
 
-      .luxury-icon {
-        width: 48px;
-        height: 48px;
+  .about-grid{
+    gap:30px;
+  }
 
-        font-size: 21px;
-      }
+  .luxury-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 
+  .luxury-card:nth-child(2){
+    border-right:none;
+  }
 
-      /* CTA */
+  .luxury-card:nth-child(-n+2){
+    border-bottom:1px solid #e6dccb;
+  }
+}
 
-      .cta-section {
-        padding: 65px 18px;
-      }
 
-      .cta-content h2 {
-        font-size: 32px;
-      }
+/* =====================================================
+   MOBILE
+===================================================== */
 
-      .cta-content p {
-        font-size: 14px;
-      }
+@media(max-width:700px){
 
+  .navbar{
+    min-height:64px;
 
-      /* CONTACT */
+    padding:7px 14px;
+  }
 
-      .contact-box {
-        padding: 35px 20px;
-      }
+  .logo img{
+    width:125px;
+  }
 
-      .contact-box h2 {
-        font-size: 28px;
-      }
+  nav{
+    gap:8px;
+  }
 
-    }
+  nav a{
+    font-size:11px;
+  }
 
+  nav a:nth-child(2),
+  nav a:nth-child(3),
+  nav a:nth-child(4),
+  nav a:nth-child(5),
+  nav a:nth-child(6){
+    display:none;
+  }
 
-    /* =====================================================
-       SMALL MOBILE
-    ===================================================== */
+  .book-btn{
+    padding:9px 12px;
 
-    @media (max-width: 420px) {
+    font-size:11px !important;
+  }
 
-      .hero {
-        min-height: 510px;
 
-        background-position: 65% center;
-      }
+  /* HERO */
 
-      .hero h1 {
-        font-size: 34px;
-      }
+  .hero{
+    min-height:540px;
 
-      .hero p {
-        font-size: 13px;
-      }
+    background-position:65% center;
 
-      .hero-btn {
-        padding: 10px 14px;
-      }
+    align-items:flex-end;
+  }
 
-      .luxury-grid {
-        grid-template-columns: 1fr;
-      }
+  .hero-content{
+    padding:35px 20px 42px;
+  }
 
-      .luxury-card {
-        padding: 25px 20px;
-      }
+  .hero-inner{
+    max-width:100%;
+  }
 
-    }
+  .hero-label{
+    font-size:10px;
 
-  </style>
+    letter-spacing:2px;
+  }
+
+  .hero h1{
+    font-size:38px;
+  }
+
+  .hero p{
+    font-size:13px;
+
+    line-height:1.6;
+  }
+
+  .hero-btn{
+    padding:10px 15px;
+
+    font-size:11px;
+  }
+
+
+  /* SECTIONS */
+
+  .section{
+    padding:60px 15px;
+  }
+
+  .section-heading h2{
+    font-size:31px;
+  }
+
+  .section-heading p{
+    font-size:13px;
+  }
+
+
+  /* ABOUT */
+
+  .about-grid{
+    grid-template-columns:1fr;
+
+    gap:28px;
+  }
+
+  .about-image{
+    min-height:320px;
+  }
+
+  .about-content h2{
+    font-size:31px;
+  }
+
+  .about-content p{
+    font-size:14px;
+  }
+
+
+  /* TWO EXPERIENCES */
+
+  .experience-grid{
+    grid-template-columns:1fr;
+
+    gap:20px;
+  }
+
+  .experience-card{
+    height:460px;
+  }
+
+  /*
+    Mobile par panel aur clear
+  */
+
+  .experience-content{
+    left:13px;
+    right:13px;
+    bottom:13px;
+
+    padding:21px 18px;
+  }
+
+  .experience-content h3{
+    font-size:25px;
+  }
+
+  .experience-content p{
+    font-size:13px;
+  }
+
+  .logo-icon{
+    width:42px;
+    height:42px;
+  }
+
+
+  /* FEATURES */
+
+  .luxury-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .luxury-card{
+    padding:24px 12px;
+  }
+
+  .luxury-card h3{
+    font-size:17px;
+  }
+
+  .luxury-card p{
+    font-size:11px;
+  }
+
+
+  /* CTA */
+
+  .cta-section{
+    padding:65px 18px;
+  }
+
+  .cta-content h2{
+    font-size:31px;
+  }
+
+  .cta-content p{
+    font-size:13px;
+  }
+
+
+  /* CONTACT */
+
+  .contact-box{
+    padding:35px 18px;
+  }
+
+  .contact-box h2{
+    font-size:29px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:420px){
+
+  .logo img{
+    width:112px;
+  }
+
+  .hero{
+    min-height:500px;
+
+    background-position:66% center;
+  }
+
+  .hero h1{
+    font-size:34px;
+  }
+
+  .hero p{
+    font-size:12px;
+  }
+
+  .hero-btn{
+    padding:9px 12px;
+  }
+
+  .experience-card{
+    height:440px;
+  }
+
+  .experience-content{
+    left:10px;
+    right:10px;
+    bottom:10px;
+
+    padding:18px 15px;
+  }
+
+  .experience-content h3{
+    font-size:23px;
+  }
+
+  .experience-content p{
+    font-size:12px;
+  }
+
+  .product-pills span{
+    font-size:10px;
+    padding:4px 8px;
+  }
+
+  .luxury-grid{
+    grid-template-columns:1fr;
+  }
+
+  .luxury-card{
+    border-right:none !important;
+    border-bottom:1px solid #e6dccb;
+  }
+
+  .luxury-card:last-child{
+    border-bottom:none;
+  }
+
+}
+
+</style>
 </head>
 
 
 <body>
 
 
-  <!-- =====================================================
-       HEADER
-  ===================================================== -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-  <header>
+<header>
 
-    <div class="navbar">
+<div class="navbar">
 
-      <a href="index.html" class="logo">
+<a href="index.html" class="logo">
 
-        <img
-          src="Apple-logo.png"
-          alt="Apple Group Logo">
+<img
+src="Apple-logo.png"
+alt="Apple Group">
 
-      </a>
+</a>
 
 
-      <nav>
+<nav>
 
-        <a href="index.html">
-          Home
-        </a>
+<a href="index.html">Home</a>
 
-        <a href="#about">
-          About
-        </a>
+<a href="#about">About</a>
 
-        <a href="hotels.html">
-          Our Hotels
-        </a>
+<a href="hotels.html">Our Hotels</a>
 
-        <a href="#experience">
-          Experience
-        </a>
+<a href="#experience">Experience</a>
 
-        <a href="apple-bakery.html">
-          Bakery
-        </a>
+<a href="apple-bakery.html">Bakery</a>
 
-        <a href="#contact">
-          Contact
-        </a>
+<a href="#contact">Contact</a>
 
-        <a
-          href="https://wa.me/918770434255"
-          target="_blank"
-          class="book-btn">
+<a
+href="https://wa.me/918770434255"
+target="_blank"
+class="book-btn">
 
-          Book Now
+Book Now
 
-        </a>
+</a>
 
-      </nav>
+</nav>
 
-    </div>
+</div>
 
-  </header>
+</header>
 
 
 
-  <!-- =====================================================
-       HERO
-  ===================================================== -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-  <section class="hero">
+<section class="hero">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-      <div class="hero-content-inner">
+<div class="hero-inner">
 
-        <div class="hero-small">
-          Apple Group
-        </div>
+<div class="hero-label">
+ONE GROUP • TWO EXPERIENCES
+</div>
 
-        <h1>
-          Hospitality with
-          <span>Elegance</span>
-        </h1>
+<h1>
+Hospitality with
+<span>Elegance</span>
+</h1>
 
-        <p>
-          Discover refined stays, warm hospitality and
-          premium experiences with Apple Group of Hotels
-          & Bakery.
-        </p>
+<p>
+Discover refined stays, warm hospitality and
+premium bakery experiences with Apple Group.
+</p>
 
+<div class="hero-buttons">
 
-        <div class="hero-buttons">
+<a
+href="hotels.html"
+class="hero-btn hero-primary">
 
-          <a
-            href="hotels.html"
-            class="hero-btn hero-btn-primary">
+Explore Our Hotels
 
-            Explore Our Hotels
+</a>
 
-          </a>
+<a
+href="apple-bakery.html"
+class="hero-btn hero-secondary">
 
+Visit Apple Bakery
 
-          <a
-            href="apple-bakery.html"
-            class="hero-btn hero-btn-secondary">
+</a>
 
-            Visit Apple Bakery
+</div>
 
-          </a>
+</div>
 
-        </div>
+</div>
 
-      </div>
+</section>
 
-    </div>
 
-  </section>
 
+<!-- =====================================================
+     ABOUT
+===================================================== -->
 
+<section
+class="about-section"
+id="about">
 
-  <!-- =====================================================
-       ABOUT
-  ===================================================== -->
+<div class="section">
 
-  <section
-    class="about-section"
-    id="about">
+<div class="about-grid">
 
-    <div class="section">
 
-      <div class="about-grid">
+<div class="about-image">
+</div>
 
 
-        <div class="about-image">
-        </div>
+<div class="about-content">
 
+<div class="section-label">
+WELCOME TO APPLE GROUP
+</div>
 
-        <div class="about-content">
+<h2>
+Where Comfort Meets
+<span>Luxury</span>
+</h2>
 
-          <div class="section-label">
-            Welcome to Apple Group
-          </div>
+<p>
+Apple Group brings together premium hospitality
+and quality bakery experiences under one trusted name.
+</p>
 
-          <h2>
-            Where Comfort Meets
-            <span>Luxury</span>
-          </h2>
+<p>
+Our hotels are designed to provide comfortable,
+elegant and memorable stays for families, tourists
+and travellers.
+</p>
 
-          <p>
-            Apple Group brings together premium
-            hospitality and quality bakery experiences
-            under one trusted name.
-          </p>
+<p>
+At Apple Bakery, we bring quality bakery products
+made to add something special to your everyday moments.
+</p>
 
-          <p>
-            Our hotels are designed to offer guests a
-            comfortable, elegant and memorable stay,
-            while Apple Bakery brings carefully prepared
-            bakery products to your everyday moments.
-          </p>
+<a
+href="hotels.html"
+class="about-btn">
 
-          <p>
-            Every experience is guided by our commitment
-            to quality, cleanliness and genuine hospitality.
-          </p>
+Discover Our Hotels →
 
+</a>
 
-          <a
-            href="hotels.html"
-            class="about-btn">
+</div>
 
-            Discover Our Hotels →
+</div>
 
-          </a>
+</div>
 
-        </div>
+</section>
 
-      </div>
 
-    </div>
 
-  </section>
+<!-- =====================================================
+     TWO EXPERIENCES
+===================================================== -->
 
+<section
+class="experiences-section"
+id="experience">
 
+<div class="section">
 
-  <!-- =====================================================
-       TWO EXPERIENCES
-  ===================================================== -->
 
-  <section
-    class="experiences-section"
-    id="experience">
+<div class="section-heading">
 
-    <div class="section">
+<div class="section-label">
+OUR BUSINESSES
+</div>
 
+<h2>
+Two Experiences,
+One Trusted Name
+</h2>
 
-      <div class="section-heading">
+<p>
+From a relaxing stay to delicious bakery favourites,
+experience the Apple Group difference.
+</p>
 
-        <div class="section-label">
-          Our Businesses
-        </div>
+</div>
 
-        <h2>
-          Two Experiences,
-          One Trusted Name
-        </h2>
 
-        <p>
-          From a relaxing stay to delicious bakery
-          favourites, experience the Apple Group difference.
-        </p>
 
-      </div>
+<div class="experience-grid">
 
 
+<!-- =================================================
+     HOTEL CARD
+================================================= -->
 
-      <div class="experience-grid">
+<div class="experience-card">
 
+<div class="experience-image hotel-experience">
+</div>
 
-        <!-- HOTEL -->
 
-        <div class="experience-card">
+<div class="experience-content">
 
-          <div
-            class="experience-image hotel-experience">
-          </div>
+<img
+src="Apple-logo.png"
+alt="Apple Group"
+class="logo-icon">
 
 
-          <div class="experience-content">
+<h3>
+Apple Group of Hotels
+</h3>
 
-            <img
-              src="Apple-logo.png"
-              alt="Apple Group"
-              class="logo-icon">
+<p>
+Elegant stays, comfortable rooms and thoughtful
+hospitality for families, tourists and business
+travellers.
+</p>
 
+<a
+href="hotels.html"
+class="experience-btn">
 
-            <h3>
-              Apple Group of Hotels
-            </h3>
+Explore Our Hotels →
 
-            <p>
-              Elegant stays, comfortable rooms and
-              thoughtful hospitality for families,
-              tourists and business travellers.
-            </p>
+</a>
 
+</div>
 
-            <a
-              href="hotels.html"
-              class="experience-btn">
+</div>
 
-              Explore Our Hotels
 
-            </a>
 
-          </div>
+<!-- =================================================
+     BAKERY CARD
+================================================= -->
 
-        </div>
+<div class="experience-card">
 
+<div class="experience-image bakery-experience">
+</div>
 
 
-        <!-- BAKERY -->
+<div class="experience-content">
 
-        <div class="experience-card">
+<img
+src="Apple-logo.png"
+alt="Apple Bakery"
+class="logo-icon">
 
-          <div
-            class="experience-image bakery-experience">
-          </div>
 
+<h3>
+Apple Bakery
+</h3>
 
-          <div class="experience-content">
+<p>
+Quality bakery products made to bring
+deliciousness to your everyday moments.
+</p>
 
-            <img
-              src="Apple-logo.png"
-              alt="Apple Bakery"
-              class="logo-icon">
 
+<div class="product-pills">
 
-            <h3>
-              Apple Bakery
-            </h3>
+<span>
+Kesar Elaichi Rusk
+</span>
 
-            <p>
-              Quality bakery products made to bring
-              deliciousness to your everyday moments.
-            </p>
+<span>
+Atta Toast
+</span>
 
+<span>
+Roasted Bread
+</span>
 
-            <div class="product-pills">
+</div>
 
-              <span>
-                Kesar Elaichi Rusk
-              </span>
 
-              <span>
-                Atta Toast
-              </span>
+<a
+href="apple-bakery.html"
+class="experience-btn">
 
-              <span>
-                Roasted Bread
-              </span>
+Explore Bakery →
 
-            </div>
+</a>
 
+</div>
 
-            <a
-              href="apple-bakery.html"
-              class="experience-btn">
+</div>
 
-              Explore Bakery
 
-            </a>
+</div>
 
-          </div>
+</div>
 
-        </div>
+</section>
 
 
-      </div>
 
-    </div>
+<!-- =====================================================
+     LUXURY FEATURES
+===================================================== -->
 
-  </section>
+<section class="luxury-section">
 
+<div class="section">
 
 
-  <!-- =====================================================
-       LUXURY EXPERIENCE
-  ===================================================== -->
+<div class="section-heading">
 
-  <section class="luxury-section">
+<div class="section-label">
+THE APPLE EXPERIENCE
+</div>
 
-    <div class="section">
+<h2>
+Designed Around You
+</h2>
 
+<p>
+Luxury is in the details that make every
+experience comfortable and memorable.
+</p>
 
-      <div class="section-heading">
+</div>
 
-        <div class="section-label">
-          The Apple Experience
-        </div>
 
-        <h2>
-          Designed Around You
-        </h2>
 
-        <p>
-          We believe luxury is not only about appearance.
-          It is about the details that make you feel at home.
-        </p>
+<div class="luxury-grid">
 
-      </div>
 
+<div class="luxury-card">
 
+<div class="luxury-icon">
+♛
+</div>
 
-      <div class="luxury-grid">
+<h3>
+Premium Comfort
+</h3>
 
+<p>
+Carefully designed spaces for
+a relaxing stay.
+</p>
 
-        <div class="luxury-card">
+</div>
 
-          <div class="luxury-icon">
-            👑
-          </div>
 
-          <h3>
-            Premium Comfort
-          </h3>
 
-          <p>
-            Carefully designed spaces for
-            a relaxing and comfortable stay.
-          </p>
+<div class="luxury-card">
 
-        </div>
+<div class="luxury-icon">
+⌖
+</div>
 
+<h3>
+Great Locations
+</h3>
 
+<p>
+Convenient for travellers
+and families.
+</p>
 
-        <div class="luxury-card">
+</div>
 
-          <div class="luxury-icon">
-            📍
-          </div>
 
-          <h3>
-            Great Locations
-          </h3>
 
-          <p>
-            Convenient locations designed
-            for travellers and families.
-          </p>
+<div class="luxury-card">
 
-        </div>
+<div class="luxury-icon">
+★
+</div>
 
+<h3>
+Quality Service
+</h3>
 
+<p>
+Friendly and attentive
+service throughout.
+</p>
 
-        <div class="luxury-card">
+</div>
 
-          <div class="luxury-icon">
-            ⭐
-          </div>
 
-          <h3>
-            Quality Service
-          </h3>
 
-          <p>
-            Friendly and attentive service
-            throughout your experience.
-          </p>
+<div class="luxury-card">
 
-        </div>
+<div class="luxury-icon">
+♢
+</div>
 
+<h3>
+Trusted Hospitality
+</h3>
 
+<p>
+A warm and dependable
+experience.
+</p>
 
-        <div class="luxury-card">
+</div>
 
-          <div class="luxury-icon">
-            🤝
-          </div>
 
-          <h3>
-            Trusted Hospitality
-          </h3>
+</div>
 
-          <p>
-            A warm, dependable experience
-            from Apple Group.
-          </p>
+</div>
 
-        </div>
+</section>
 
 
-      </div>
 
-    </div>
+<!-- =====================================================
+     CTA
+===================================================== -->
 
-  </section>
+<section class="cta-section">
 
+<div class="cta-content">
 
+<div class="cta-label">
+THE APPLE EXPERIENCE
+</div>
 
-  <!-- =====================================================
-       CTA
-  ===================================================== -->
+<h2>
+Your Next Experience Starts Here
+</h2>
 
-  <section class="cta-section">
+<p>
+Choose a luxurious stay with Apple Group
+or discover something delicious from Apple Bakery.
+</p>
 
-    <div class="cta-content">
 
-      <h2>
-        Your Next Experience
-        Starts Here
-      </h2>
+<div class="cta-buttons">
 
-      <p>
-        Choose a luxurious stay with Apple Group
-        or discover something delicious from Apple Bakery.
-      </p>
+<a
+href="hotels.html"
+class="cta-btn cta-primary">
 
+Explore Our Hotels →
 
-      <div class="cta-buttons">
+</a>
 
-        <a
-          href="hotels.html"
-          class="cta-btn cta-primary">
+<a
+href="apple-bakery.html"
+class="cta-btn cta-secondary">
 
-          Explore Our Hotels
+Visit Apple Bakery →
 
-        </a>
+</a>
 
+</div>
 
-        <a
-          href="apple-bakery.html"
-          class="cta-btn cta-secondary">
+</div>
 
-          Visit Apple Bakery
+</section>
 
-        </a>
 
-      </div>
 
-    </div>
+<!-- =====================================================
+     CONTACT
+===================================================== -->
 
-  </section>
+<section
+class="contact-section"
+id="contact">
 
+<div class="section">
 
+<div class="contact-box">
 
-  <!-- =====================================================
-       CONTACT
-  ===================================================== -->
+<div class="section-label">
+RESERVATIONS & ENQUIRIES
+</div>
 
-  <section
-    class="contact-section"
-    id="contact">
+<h2>
+Let Us Welcome You
+</h2>
 
-    <div class="section">
+<p>
+For hotel bookings, enquiries or assistance,
+connect with us directly on WhatsApp.
+</p>
 
+<a
+href="https://wa.me/918770434255"
+target="_blank"
+class="whatsapp-btn">
 
-      <div class="contact-box">
+WhatsApp Us
 
-        <div class="section-label">
-          Reservations & Enquiries
-        </div>
+</a>
 
-        <h2>
-          Let Us Welcome You
-        </h2>
+</div>
 
-        <p>
-          For hotel bookings, enquiries or assistance,
-          connect with us directly on WhatsApp.
-        </p>
+</div>
 
+</section>
 
-        <a
-          href="https://wa.me/918770434255"
-          target="_blank"
-          class="whatsapp-btn">
 
-          WhatsApp Us
 
-        </a>
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
-      </div>
+<footer>
 
-    </div>
+<img
+src="Apple-logo.png"
+alt="Apple Group Logo">
 
-  </section>
+<h3>
+Apple Group
+</h3>
 
+<p>
+Hotels & Bakery
+</p>
 
 
-  <!-- =====================================================
-       FOOTER
-  ===================================================== -->
+<div class="footer-links">
 
-  <footer>
+<a href="index.html">
+Home
+</a>
 
-    <img
-      src="Apple-logo.png"
-      alt="Apple Group Logo">
+<a href="hotels.html">
+Our Hotels
+</a>
 
+<a href="hotel-nexa.html">
+Hotel Nexa
+</a>
 
-    <h3>
-      Apple Group
-    </h3>
+<a href="hotel-apple-palace.html">
+Apple Palace
+</a>
 
+<a href="hotel-apple-grand.html">
+Apple Grand
+</a>
 
-    <p>
-      Hotels & Bakery
-    </p>
+<a href="hotel-apple-prime.html">
+Apple Prime
+</a>
 
+<a href="apple-bakery.html">
+Apple Bakery
+</a>
 
-    <div class="footer-links">
+</div>
 
-      <a href="index.html">
-        Home
-      </a>
 
-      <a href="hotels.html">
-        Our Hotels
-      </a>
+<div class="copyright">
 
-      <a href="hotel-nexa.html">
-        Hotel Nexa
-      </a>
+© 2026 Apple Group of Hotels & Bakery.
+All Rights Reserved.
 
-      <a href="hotel-apple-palace.html">
-        Apple Palace
-      </a>
+</div>
 
-      <a href="hotel-apple-grand.html">
-        Apple Grand
-      </a>
-
-      <a href="hotel-apple-prime.html">
-        Apple Prime
-      </a>
-
-      <a href="apple-bakery.html">
-        Apple Bakery
-      </a>
-
-    </div>
-
-
-    <div class="copyright">
-
-      © 2026 Apple Group of Hotels & Bakery.
-      All Rights Reserved.
-
-    </div>
-
-  </footer>
+</footer>
 
 
 </body>
