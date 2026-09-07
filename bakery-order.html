@@ -14,11 +14,12 @@
 }
 
 body{
-  font-family:Arial,sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
   background:#f7f4ec;
   color:#222;
 }
 
+/* HEADER */
 header{
   background:#111;
   color:#d4af37;
@@ -28,7 +29,7 @@ header{
   align-items:center;
   position:sticky;
   top:0;
-  z-index:100;
+  z-index:1000;
 }
 
 .logo{
@@ -39,37 +40,40 @@ header{
 
 .logo span{
   display:block;
-  color:white;
+  color:#fff;
   font-size:11px;
   letter-spacing:2px;
-  margin-top:3px;
+  margin-top:4px;
 }
 
 .cart-btn{
   background:#d4af37;
   color:#111;
   border:0;
-  padding:11px 18px;
-  border-radius:25px;
+  padding:12px 18px;
+  border-radius:30px;
   font-weight:bold;
+  font-size:15px;
   cursor:pointer;
 }
 
+/* HERO */
 .hero{
+  min-height:300px;
   background:
     linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-    url("Apple-bakery-hero.png") center/cover;
-  min-height:300px;
+    url("Apple-bakery-hero.png") center/cover no-repeat;
+
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
-  color:white;
+  color:#fff;
   padding:40px 20px;
 }
 
 .hero h1{
-  font-size:42px;
+  font-size:44px;
   color:#d4af37;
   margin-bottom:12px;
 }
@@ -78,23 +82,26 @@ header{
   font-size:18px;
 }
 
+/* CONTAINER */
 .container{
   width:92%;
   max-width:1100px;
   margin:35px auto;
 }
 
+/* DELIVERY */
 .delivery{
   background:#111;
-  color:white;
-  padding:16px;
-  border-radius:12px;
+  color:#fff;
+  padding:18px;
+  border-radius:14px;
   text-align:center;
   margin-bottom:30px;
   font-weight:bold;
   line-height:1.7;
 }
 
+/* PRODUCTS */
 .products{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -102,11 +109,11 @@ header{
 }
 
 .product{
-  background:white;
+  background:#fff;
   border-radius:16px;
   padding:20px;
-  box-shadow:0 5px 20px rgba(0,0,0,.08);
   text-align:center;
+  box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
 .product-image{
@@ -114,9 +121,9 @@ header{
   background:#eee;
   border-radius:12px;
   display:flex;
-  align-items:center;
   justify-content:center;
-  color:#999;
+  align-items:center;
+  color:#888;
   margin-bottom:15px;
   overflow:hidden;
 }
@@ -147,35 +154,37 @@ header{
 }
 
 .qty button{
-  width:34px;
-  height:34px;
+  width:36px;
+  height:36px;
   border:0;
   border-radius:50%;
   background:#111;
-  color:white;
+  color:#fff;
   font-size:20px;
   cursor:pointer;
 }
 
 .qty span{
+  min-width:25px;
   font-weight:bold;
-  min-width:20px;
 }
 
 .add-btn{
   width:100%;
-  padding:12px;
+  padding:13px;
   border:0;
-  border-radius:8px;
+  border-radius:9px;
   background:#d4af37;
   color:#111;
   font-weight:bold;
   cursor:pointer;
+  font-size:15px;
 }
 
+/* CART */
 .cart{
   margin-top:40px;
-  background:white;
+  background:#fff;
   padding:25px;
   border-radius:16px;
   box-shadow:0 5px 20px rgba(0,0,0,.08);
@@ -190,7 +199,7 @@ header{
   justify-content:space-between;
   align-items:center;
   gap:10px;
-  padding:12px 0;
+  padding:14px 0;
   border-bottom:1px solid #ddd;
 }
 
@@ -198,9 +207,9 @@ header{
   margin-left:10px;
   border:0;
   background:#111;
-  color:white;
-  border-radius:5px;
-  padding:5px 8px;
+  color:#fff;
+  border-radius:6px;
+  padding:6px 9px;
   cursor:pointer;
 }
 
@@ -208,109 +217,170 @@ header{
   margin-top:20px;
 }
 
-.summary div{
+.summary-row{
   display:flex;
   justify-content:space-between;
   margin:10px 0;
 }
 
 .total{
-  font-size:22px;
-  font-weight:bold;
   border-top:2px solid #ddd;
   padding-top:15px;
+  margin-top:15px;
+  font-size:22px;
+  font-weight:bold;
 }
 
+/* CHECKOUT */
 .checkout{
   margin-top:40px;
-  background:white;
+  background:#fff;
   padding:25px;
   border-radius:16px;
   box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
 .checkout h2{
-  margin-bottom:20px;
+  margin-bottom:22px;
 }
 
 .form-group{
-  margin-bottom:16px;
+  margin-bottom:18px;
 }
 
 .form-group label{
   display:block;
   font-weight:bold;
-  margin-bottom:7px;
+  margin-bottom:8px;
 }
 
 .form-group input,
 .form-group textarea{
   width:100%;
-  padding:13px;
+  padding:14px;
   border:1px solid #ccc;
-  border-radius:8px;
-  font-size:15px;
+  border-radius:9px;
+  font-size:16px;
+  outline:none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+  border-color:#d4af37;
 }
 
 textarea{
-  min-height:90px;
+  min-height:100px;
   resize:vertical;
 }
 
+/* PAYMENT */
 .payment-box{
-  margin-top:25px;
+  margin-top:28px;
 }
 
+.payment-box > h2{
+  margin-bottom:18px;
+}
+
+/* IMPORTANT: PAYMENT OPTIONS */
 .payment-option{
-  display:block;
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+
+  width:100% !important;
+  min-height:64px;
+
   border:2px solid #ddd;
-  border-radius:12px;
-  padding:15px;
-  margin-bottom:12px;
+  border-radius:14px;
+
+  padding:16px 18px !important;
+
+  margin:0 0 14px 0 !important;
+
+  background:#fff;
+
   cursor:pointer;
-  transition:.2s;
+
+  font-size:18px;
+  line-height:1.4;
+
+  position:relative;
+  overflow:visible;
+
+  white-space:normal;
 }
 
 .payment-option:hover{
   border-color:#d4af37;
 }
 
-.payment-option input{
-  margin-right:8px;
+.payment-option input[type="radio"]{
+  display:block !important;
+
+  width:22px !important;
+  height:22px !important;
+
+  min-width:22px !important;
+  max-width:22px !important;
+
+  margin:0 13px 0 0 !important;
+
+  padding:0 !important;
+
+  flex:none !important;
+
+  accent-color:#d4af37;
+
+  cursor:pointer;
 }
 
+.payment-option span{
+  display:block;
+  flex:1;
+}
+
+/* PAYMENT INFO */
 .payment-info{
   background:#fff8dc;
-  border-left:4px solid #d4af37;
-  padding:16px;
-  margin-top:15px;
-  border-radius:8px;
+  border-left:5px solid #d4af37;
+  padding:18px;
+  border-radius:10px;
   line-height:1.7;
+  margin-top:8px;
 }
 
+/* QR */
 .qr-box{
   display:none;
   text-align:center;
   margin-top:20px;
-  padding:20px;
+  padding:22px;
   background:#fafafa;
   border:1px solid #ddd;
   border-radius:15px;
 }
 
+.qr-box h3{
+  margin-bottom:8px;
+}
+
 .qr-box img{
-  width:240px;
-  max-width:80%;
-  border-radius:10px;
-  margin:12px auto;
   display:block;
+  width:250px;
+  max-width:90%;
+  height:auto;
+  margin:18px auto;
+  border-radius:10px;
 }
 
 .upi-id{
   background:#111;
   color:#d4af37;
-  padding:12px;
-  border-radius:8px;
+  padding:13px;
+  border-radius:9px;
   font-weight:bold;
   margin-top:10px;
   word-break:break-all;
@@ -318,47 +388,55 @@ textarea{
 
 .amount-box{
   background:#111;
-  color:white;
-  padding:15px;
+  color:#fff;
+  padding:16px;
   border-radius:10px;
-  margin-top:15px;
+  margin-top:16px;
   font-size:18px;
 }
 
 .amount-box strong{
   color:#d4af37;
-  font-size:22px;
+  font-size:24px;
 }
 
+/* PLACE ORDER */
 .place-order{
   width:100%;
   margin-top:25px;
-  padding:15px;
+  padding:16px;
   border:0;
-  border-radius:10px;
+  border-radius:11px;
   background:#25D366;
-  color:white;
-  font-size:17px;
+  color:#fff;
+  font-size:18px;
   font-weight:bold;
   cursor:pointer;
 }
 
-.note{
-  margin-top:12px;
-  font-size:13px;
-  color:#666;
-  text-align:center;
+.place-order:hover{
+  opacity:.9;
 }
 
+.note{
+  text-align:center;
+  color:#666;
+  font-size:13px;
+  line-height:1.5;
+  margin-top:12px;
+}
+
+/* EMPTY CART */
 .empty{
   text-align:center;
   color:#777;
   padding:20px;
 }
 
+/* FOOTER */
 footer{
   background:#111;
-  color:white;
+  color:#fff;
   text-align:center;
   padding:25px;
   margin-top:50px;
@@ -368,14 +446,36 @@ footer span{
   color:#d4af37;
 }
 
+/* MOBILE */
 @media(max-width:800px){
 
-  .products{
-    grid-template-columns:1fr;
+  header{
+    padding:16px 20px;
+  }
+
+  .logo{
+    font-size:19px;
+  }
+
+  .cart-btn{
+    padding:11px 14px;
+    font-size:14px;
+  }
+
+  .hero{
+    min-height:260px;
   }
 
   .hero h1{
-    font-size:32px;
+    font-size:34px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .products{
+    grid-template-columns:1fr;
   }
 
   .cart-item{
@@ -389,12 +489,52 @@ footer span{
     justify-content:space-between;
     align-items:center;
   }
+
+  /*
+    PAYMENT MOBILE FIX
+    Both payment options stay completely separate.
+  */
+  .payment-option{
+    display:flex !important;
+    width:100% !important;
+    min-height:68px !important;
+    padding:16px !important;
+    margin-bottom:14px !important;
+    font-size:17px !important;
+  }
+
+  .payment-option input[type="radio"]{
+    width:22px !important;
+    height:22px !important;
+    min-width:22px !important;
+    margin-right:12px !important;
+  }
+
+  .payment-option span{
+    display:block !important;
+    width:auto !important;
+    white-space:normal !important;
+  }
+
+  .payment-info{
+    font-size:16px;
+  }
+
+  .qr-box img{
+    width:230px;
+  }
+
+  .checkout{
+    padding:20px;
+  }
 }
 </style>
 </head>
 
+
 <body>
 
+<!-- HEADER -->
 <header>
 
   <div class="logo">
@@ -402,18 +542,25 @@ footer span{
     <span>APPLE GROUP • UJJAIN</span>
   </div>
 
-  <button class="cart-btn" onclick="scrollToCart()">
+  <button
+    class="cart-btn"
+    onclick="scrollToCart()"
+  >
     🛒 Cart (<span id="cartCount">0</span>)
   </button>
 
 </header>
 
 
+<!-- HERO -->
 <section class="hero">
 
   <div>
     <h1>Order Online</h1>
-    <p>Fresh & Delicious Bakery Products Delivered to You</p>
+    <p>
+      Fresh & Delicious Bakery Products
+      Delivered to You
+    </p>
   </div>
 
 </section>
@@ -421,89 +568,150 @@ footer span{
 
 <div class="container">
 
+
+  <!-- DELIVERY INFO -->
   <div class="delivery">
+
     🚚 Delivery available in Ujjain & nearby cities
+
     <br>
+
     Orders ₹500+ = FREE Delivery
+
     <br>
+
     Orders below ₹500 = ₹100 Delivery
+
   </div>
 
 
   <!-- PRODUCTS -->
-
   <section class="products">
 
 
+    <!-- PRODUCT 1 -->
     <div class="product">
 
       <div class="product-image">
         Kesar Elaichi Rusk
       </div>
 
-      <h3>Kesar Elaichi Rusk</h3>
+      <h3>
+        Kesar Elaichi Rusk
+      </h3>
 
       <div class="price">
         ₹90 / 425 gm
       </div>
 
       <div class="qty">
-        <button onclick="changeQty(0,-1)">−</button>
+
+        <button
+          onclick="changeQty(0,-1)"
+        >
+          −
+        </button>
+
         <span id="qty0">1</span>
-        <button onclick="changeQty(0,1)">+</button>
+
+        <button
+          onclick="changeQty(0,1)"
+        >
+          +
+        </button>
+
       </div>
 
-      <button class="add-btn" onclick="addToCart(0)">
+      <button
+        class="add-btn"
+        onclick="addToCart(0)"
+      >
         Add to Cart
       </button>
 
     </div>
 
 
+    <!-- PRODUCT 2 -->
     <div class="product">
 
       <div class="product-image">
         Makkhan Roasted Bread
       </div>
 
-      <h3>Makkhan Roasted Bread</h3>
+      <h3>
+        Makkhan Roasted Bread
+      </h3>
 
       <div class="price">
         ₹200 / 900 gm
       </div>
 
       <div class="qty">
-        <button onclick="changeQty(1,-1)">−</button>
+
+        <button
+          onclick="changeQty(1,-1)"
+        >
+          −
+        </button>
+
         <span id="qty1">1</span>
-        <button onclick="changeQty(1,1)">+</button>
+
+        <button
+          onclick="changeQty(1,1)"
+        >
+          +
+        </button>
+
       </div>
 
-      <button class="add-btn" onclick="addToCart(1)">
+      <button
+        class="add-btn"
+        onclick="addToCart(1)"
+      >
         Add to Cart
       </button>
 
     </div>
 
 
+    <!-- PRODUCT 3 -->
     <div class="product">
 
       <div class="product-image">
         Prime Toast
       </div>
 
-      <h3>Prime Toast</h3>
+      <h3>
+        Prime Toast
+      </h3>
 
       <div class="price">
         ₹90 / 350 gm
       </div>
 
       <div class="qty">
-        <button onclick="changeQty(2,-1)">−</button>
+
+        <button
+          onclick="changeQty(2,-1)"
+        >
+          −
+        </button>
+
         <span id="qty2">1</span>
-        <button onclick="changeQty(2,1)">+</button>
+
+        <button
+          onclick="changeQty(2,1)"
+        >
+          +
+        </button>
+
       </div>
 
-      <button class="add-btn" onclick="addToCart(2)">
+      <button
+        class="add-btn"
+        onclick="addToCart(2)"
+      >
         Add to Cart
       </button>
 
@@ -513,32 +721,62 @@ footer span{
 
 
   <!-- CART -->
+  <section
+    class="cart"
+    id="cartSection"
+  >
 
-  <section class="cart" id="cartSection">
-
-    <h2>🛒 Your Cart</h2>
+    <h2>
+      🛒 Your Cart
+    </h2>
 
     <div id="cartItems">
+
       <div class="empty">
         Your cart is empty.
       </div>
+
     </div>
+
 
     <div class="summary">
 
-      <div>
-        <span>Subtotal</span>
-        <span>₹<span id="subtotal">0</span></span>
+      <div class="summary-row">
+
+        <span>
+          Subtotal
+        </span>
+
+        <span>
+          ₹<span id="subtotal">0</span>
+        </span>
+
       </div>
 
-      <div>
-        <span>Delivery</span>
-        <span>₹<span id="delivery">0</span></span>
+
+      <div class="summary-row">
+
+        <span>
+          Delivery
+        </span>
+
+        <span>
+          ₹<span id="delivery">0</span>
+        </span>
+
       </div>
 
-      <div class="total">
-        <span>Total</span>
-        <span>₹<span id="total">0</span></span>
+
+      <div class="summary-row total">
+
+        <span>
+          Total
+        </span>
+
+        <span>
+          ₹<span id="total">0</span>
+        </span>
+
       </div>
 
     </div>
@@ -546,16 +784,19 @@ footer span{
   </section>
 
 
-  <!-- CUSTOMER DETAILS -->
-
+  <!-- CHECKOUT -->
   <section class="checkout">
 
-    <h2>📦 Customer Details</h2>
+    <h2>
+      📦 Customer Details
+    </h2>
 
 
     <div class="form-group">
 
-      <label>Full Name</label>
+      <label>
+        Full Name
+      </label>
 
       <input
         type="text"
@@ -568,7 +809,9 @@ footer span{
 
     <div class="form-group">
 
-      <label>Mobile Number</label>
+      <label>
+        Mobile Number
+      </label>
 
       <input
         type="tel"
@@ -581,7 +824,9 @@ footer span{
 
     <div class="form-group">
 
-      <label>Full Delivery Address</label>
+      <label>
+        Full Delivery Address
+      </label>
 
       <textarea
         id="address"
@@ -593,7 +838,9 @@ footer span{
 
     <div class="form-group">
 
-      <label>City</label>
+      <label>
+        City
+      </label>
 
       <input
         type="text"
@@ -606,7 +853,9 @@ footer span{
 
     <div class="form-group">
 
-      <label>PIN Code</label>
+      <label>
+        PIN Code
+      </label>
 
       <input
         type="number"
@@ -617,13 +866,15 @@ footer span{
     </div>
 
 
-    <!-- PAYMENT -->
-
+    <!-- PAYMENT METHOD -->
     <div class="payment-box">
 
-      <h2>💳 Payment Method</h2>
+      <h2>
+        💳 Payment Method
+      </h2>
 
 
+      <!-- ONLINE -->
       <label class="payment-option">
 
         <input
@@ -634,11 +885,14 @@ footer span{
           onchange="updatePaymentInfo()"
         >
 
-        💳 Pay Full Amount Online
+        <span>
+          💳 Pay Full Amount Online
+        </span>
 
       </label>
 
 
+      <!-- COD -->
       <label class="payment-option">
 
         <input
@@ -648,25 +902,29 @@ footer span{
           onchange="updatePaymentInfo()"
         >
 
-        💵 Cash on Delivery
+        <span>
+          💵 Cash on Delivery
+        </span>
 
       </label>
 
 
+      <!-- PAYMENT INFORMATION -->
       <div
         class="payment-info"
         id="paymentInfo"
       ></div>
 
 
-      <!-- QR -->
-
+      <!-- QR CODE -->
       <div
         class="qr-box"
         id="qrBox"
       >
 
-        <h3>📲 Scan & Pay</h3>
+        <h3>
+          📲 Scan & Pay
+        </h3>
 
         <p id="qrInstruction">
           Scan this QR code to make payment.
@@ -680,14 +938,20 @@ footer span{
 
 
         <div class="upi-id">
-          UPI ID:<br>
+
+          UPI ID:
+
+          <br>
+
           8962719649@ybl
+
         </div>
 
 
         <div class="amount-box">
 
           Amount to Pay:
+
           <br>
 
           ₹<strong id="payAmount">0</strong>
@@ -696,7 +960,10 @@ footer span{
 
 
         <p class="note">
-          Payment करने के बाद screenshot WhatsApp पर भेजें।
+
+          Payment करने के बाद
+          screenshot WhatsApp पर भेजें।
+
         </p>
 
       </div>
@@ -704,17 +971,23 @@ footer span{
     </div>
 
 
+    <!-- WHATSAPP BUTTON -->
     <button
       class="place-order"
       onclick="placeOrder()"
     >
+
       📲 Place Order on WhatsApp
+
     </button>
 
 
     <p class="note">
+
       Order submit करने के बाद WhatsApp खुलेगा।
-      वहाँ payment confirmation के लिए screenshot भेजें।
+      वहाँ payment confirmation के लिए
+      screenshot भेजें।
+
     </p>
 
   </section>
@@ -722,16 +995,23 @@ footer span{
 </div>
 
 
+<!-- FOOTER -->
 <footer>
 
   © 2026
-  <span>Apple Bakery</span>
+
+  <span>
+    Apple Bakery
+  </span>
+
   | Apple Group • Ujjain
 
 </footer>
 
 
 <script>
+
+/* PRODUCTS */
 
 const products = [
 
@@ -753,29 +1033,50 @@ const products = [
 ];
 
 
+/* CART */
+
 let cart = [];
+
+
+/* QUANTITY */
 
 let quantities = [1,1,1];
 
-const whatsappNumber = "918770434255";
+
+/* WHATSAPP NUMBER */
+
+const whatsappNumber =
+  "918770434255";
+
+
+/* COD ADVANCE */
 
 const COD_ADVANCE = 100;
 
+
+/* CHANGE QUANTITY */
 
 function changeQty(index,change){
 
   quantities[index] += change;
 
+
   if(quantities[index] < 1){
+
     quantities[index] = 1;
+
   }
+
 
   document.getElementById(
     "qty" + index
-  ).innerText = quantities[index];
+  ).innerText =
+    quantities[index];
 
 }
 
+
+/* ADD TO CART */
 
 function addToCart(index){
 
@@ -787,7 +1088,8 @@ function addToCart(index){
 
   if(existing){
 
-    existing.qty += quantities[index];
+    existing.qty +=
+      quantities[index];
 
   }else{
 
@@ -808,6 +1110,7 @@ function addToCart(index){
 
   updateCart();
 
+
   alert(
     products[index].name +
     " added to cart."
@@ -816,6 +1119,8 @@ function addToCart(index){
 }
 
 
+/* REMOVE */
+
 function removeFromCart(index){
 
   cart =
@@ -823,14 +1128,18 @@ function removeFromCart(index){
       item => item.index !== index
     );
 
+
   updateCart();
 
 }
 
 
+/* CALCULATE TOTAL */
+
 function calculateTotals(){
 
   let subtotal = 0;
+
 
   cart.forEach(item => {
 
@@ -843,7 +1152,10 @@ function calculateTotals(){
   let delivery = 0;
 
 
-  if(subtotal > 0 && subtotal < 500){
+  if(
+    subtotal > 0 &&
+    subtotal < 500
+  ){
 
     delivery = 100;
 
@@ -863,6 +1175,8 @@ function calculateTotals(){
 }
 
 
+/* UPDATE CART */
+
 function updateCart(){
 
   const cartItems =
@@ -874,7 +1188,10 @@ function updateCart(){
   if(cart.length === 0){
 
     cartItems.innerHTML =
-      '<div class="empty">Your cart is empty.</div>';
+
+      '<div class="empty">' +
+      'Your cart is empty.' +
+      '</div>';
 
   }else{
 
@@ -884,7 +1201,10 @@ function updateCart(){
     cart.forEach(item => {
 
       const row =
-        document.createElement("div");
+        document.createElement(
+          "div"
+        );
+
 
       row.className =
         "cart-item";
@@ -944,6 +1264,7 @@ function updateCart(){
   document.getElementById(
     "cartCount"
   ).innerText =
+
     cart.reduce(
       (sum,item) =>
         sum + item.qty,
@@ -955,6 +1276,8 @@ function updateCart(){
 
 }
 
+
+/* PAYMENT INFORMATION */
 
 function updatePaymentInfo(){
 
@@ -1006,7 +1329,9 @@ function updatePaymentInfo(){
     qrBox.style.display =
       "none";
 
+
     info.innerHTML =
+
       "Please add products to your cart first.";
 
     return;
@@ -1014,9 +1339,13 @@ function updatePaymentInfo(){
   }
 
 
+  /* SHOW QR */
+
   qrBox.style.display =
     "block";
 
+
+  /* COD */
 
   if(method === "cod"){
 
@@ -1033,29 +1362,43 @@ function updatePaymentInfo(){
 
 
     qrInstruction.innerHTML =
+
       `COD order confirm करने के लिए
       पहले <b>₹${advance}</b> advance payment करें।`;
 
 
     info.innerHTML = `
 
-      <b>💵 Cash on Delivery</b><br><br>
+      <b>💵 Cash on Delivery</b>
 
-      आपका Total Order Amount:
-      <b>₹${totals.total}</b><br><br>
+      <br><br>
 
-      पहले Online Advance:
-      <b>₹${advance}</b><br>
+      Total Order Amount:
+      <b>₹${totals.total}</b>
+
+      <br><br>
+
+      Online Advance:
+      <b>₹${advance}</b>
+
+      <br>
 
       Delivery के समय Cash:
-      <b>₹${remaining}</b><br><br>
+      <b>₹${remaining}</b>
+
+      <br><br>
 
       नीचे दिए QR को scan करके
       ₹${advance} payment करें।
 
     `;
 
-  }else{
+  }
+
+
+  /* ONLINE */
+
+  else{
 
     const onlineAmount =
       totals.total;
@@ -1066,13 +1409,16 @@ function updatePaymentInfo(){
 
 
     qrInstruction.innerHTML =
+
       `अपने पूरे order का
       <b>₹${onlineAmount}</b> payment करें।`;
 
 
     info.innerHTML = `
 
-      <b>💳 Full Online Payment</b><br><br>
+      <b>💳 Full Online Payment</b>
+
+      <br><br>
 
       आपका पूरा order amount:
       <b>₹${onlineAmount}</b>
@@ -1090,6 +1436,8 @@ function updatePaymentInfo(){
 
 }
 
+
+/* PLACE ORDER */
 
 function placeOrder(){
 
@@ -1171,6 +1519,7 @@ function placeOrder(){
 
 
     orderItems +=
+
       `• ${item.name} × ${item.qty} = ₹${itemTotal}\n`;
 
   });
@@ -1178,6 +1527,8 @@ function placeOrder(){
 
   let paymentDetails = "";
 
+
+  /* COD */
 
   if(method === "cod"){
 
@@ -1191,46 +1542,38 @@ function placeOrder(){
 
     paymentDetails =
 
-      `💵 PAYMENT METHOD: COD
+`💵 PAYMENT METHOD: COD
 
-` +
+TOTAL ORDER: ₹${totals.total}
 
-      `TOTAL ORDER: ₹${totals.total}
-` +
+ONLINE ADVANCE: ₹${advance}
 
-      `ONLINE ADVANCE: ₹${advance}
-` +
+REMAINING CASH AT DELIVERY: ₹${remaining}
 
-      `REMAINING CASH AT DELIVERY: ₹${remaining}
+Customer will pay ₹${advance} advance online.
 
-` +
+Remaining ₹${remaining} will be paid in cash at delivery.
 
-      `Customer will pay ₹${advance} advance online.
-` +
+Please confirm the COD order.`;
 
-      `Remaining ₹${remaining} will be paid in cash at delivery.
 
-` +
+  }
 
-      `Please confirm the COD order and payment.`;
 
-  }else{
+  /* FULL ONLINE */
+
+  else{
 
     paymentDetails =
 
-      `💳 PAYMENT METHOD: FULL ONLINE
+`💳 PAYMENT METHOD: FULL ONLINE
 
-` +
+TOTAL TO PAY ONLINE: ₹${totals.total}
 
-      `TOTAL TO PAY ONLINE: ₹${totals.total}
+Customer will make the full payment online.
 
-` +
+Payment screenshot will be shared on WhatsApp.`;
 
-      `Customer will make the full payment online.
-
-` +
-
-      `Payment screenshot will be shared on WhatsApp.`;
 
   }
 
@@ -1256,7 +1599,9 @@ PIN Code: ${pincode}
 ${orderItems}
 
 Subtotal: ₹${totals.subtotal}
+
 Delivery: ₹${totals.delivery}
+
 TOTAL: ₹${totals.total}
 
 ━━━━━━━━━━━━━━━━━━
@@ -1284,6 +1629,8 @@ Please confirm my order.`;
 }
 
 
+/* SCROLL TO CART */
+
 function scrollToCart(){
 
   document.getElementById(
@@ -1294,6 +1641,8 @@ function scrollToCart(){
 
 }
 
+
+/* INITIAL LOAD */
 
 updateCart();
 
