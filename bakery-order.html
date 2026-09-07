@@ -14,7 +14,7 @@
 }
 
 body{
-  font-family:Arial, sans-serif;
+  font-family:Arial,sans-serif;
   background:#f7f4ec;
   color:#222;
 }
@@ -56,8 +56,9 @@ header{
 }
 
 .hero{
-  background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-  url("Apple-bakery-hero.png") center/cover;
+  background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url("Apple-bakery-hero.png") center/cover;
   min-height:300px;
   display:flex;
   align-items:center;
@@ -91,6 +92,7 @@ header{
   text-align:center;
   margin-bottom:30px;
   font-weight:bold;
+  line-height:1.7;
 }
 
 .products{
@@ -186,8 +188,20 @@ header{
 .cart-item{
   display:flex;
   justify-content:space-between;
+  align-items:center;
+  gap:10px;
   padding:12px 0;
   border-bottom:1px solid #ddd;
+}
+
+.remove-btn{
+  margin-left:10px;
+  border:0;
+  background:#111;
+  color:white;
+  border-radius:5px;
+  padding:5px 8px;
+  cursor:pointer;
 }
 
 .summary{
@@ -230,8 +244,7 @@ header{
 }
 
 .form-group input,
-.form-group textarea,
-.form-group select{
+.form-group textarea{
   width:100%;
   padding:13px;
   border:1px solid #ccc;
@@ -245,15 +258,17 @@ textarea{
 }
 
 .payment-box{
-  margin-top:20px;
+  margin-top:25px;
 }
 
 .payment-option{
+  display:block;
   border:2px solid #ddd;
   border-radius:12px;
   padding:15px;
   margin-bottom:12px;
   cursor:pointer;
+  transition:.2s;
 }
 
 .payment-option:hover{
@@ -267,15 +282,57 @@ textarea{
 .payment-info{
   background:#fff8dc;
   border-left:4px solid #d4af37;
-  padding:15px;
+  padding:16px;
   margin-top:15px;
   border-radius:8px;
-  line-height:1.6;
+  line-height:1.7;
+}
+
+.qr-box{
+  display:none;
+  text-align:center;
+  margin-top:20px;
+  padding:20px;
+  background:#fafafa;
+  border:1px solid #ddd;
+  border-radius:15px;
+}
+
+.qr-box img{
+  width:240px;
+  max-width:80%;
+  border-radius:10px;
+  margin:12px auto;
+  display:block;
+}
+
+.upi-id{
+  background:#111;
+  color:#d4af37;
+  padding:12px;
+  border-radius:8px;
+  font-weight:bold;
+  margin-top:10px;
+  word-break:break-all;
+}
+
+.amount-box{
+  background:#111;
+  color:white;
+  padding:15px;
+  border-radius:10px;
+  margin-top:15px;
+  font-size:18px;
+}
+
+.amount-box strong{
+  color:#d4af37;
+  font-size:22px;
 }
 
 .place-order{
   width:100%;
-  margin-top:20px;
+  margin-top:25px;
   padding:15px;
   border:0;
   border-radius:10px;
@@ -284,6 +341,13 @@ textarea{
   font-size:17px;
   font-weight:bold;
   cursor:pointer;
+}
+
+.note{
+  margin-top:12px;
+  font-size:13px;
+  color:#666;
+  text-align:center;
 }
 
 .empty{
@@ -305,12 +369,25 @@ footer span{
 }
 
 @media(max-width:800px){
+
   .products{
     grid-template-columns:1fr;
   }
 
   .hero h1{
     font-size:32px;
+  }
+
+  .cart-item{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .cart-item > span:last-child{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
   }
 }
 </style>
@@ -319,6 +396,7 @@ footer span{
 <body>
 
 <header>
+
   <div class="logo">
     APPLE BAKERY
     <span>APPLE GROUP • UJJAIN</span>
@@ -327,34 +405,47 @@ footer span{
   <button class="cart-btn" onclick="scrollToCart()">
     🛒 Cart (<span id="cartCount">0</span>)
   </button>
+
 </header>
 
+
 <section class="hero">
+
   <div>
     <h1>Order Online</h1>
     <p>Fresh & Delicious Bakery Products Delivered to You</p>
   </div>
+
 </section>
+
 
 <div class="container">
 
   <div class="delivery">
     🚚 Delivery available in Ujjain & nearby cities
     <br>
-    Orders ₹500+ = FREE Delivery | Below ₹500 = ₹100 Delivery
+    Orders ₹500+ = FREE Delivery
+    <br>
+    Orders below ₹500 = ₹100 Delivery
   </div>
+
+
+  <!-- PRODUCTS -->
 
   <section class="products">
 
-    <!-- PRODUCT 1 -->
+
     <div class="product">
+
       <div class="product-image">
         Kesar Elaichi Rusk
       </div>
 
       <h3>Kesar Elaichi Rusk</h3>
 
-      <div class="price">₹90 / 425 gm</div>
+      <div class="price">
+        ₹90 / 425 gm
+      </div>
 
       <div class="qty">
         <button onclick="changeQty(0,-1)">−</button>
@@ -365,18 +456,21 @@ footer span{
       <button class="add-btn" onclick="addToCart(0)">
         Add to Cart
       </button>
+
     </div>
 
 
-    <!-- PRODUCT 2 -->
     <div class="product">
+
       <div class="product-image">
         Makkhan Roasted Bread
       </div>
 
       <h3>Makkhan Roasted Bread</h3>
 
-      <div class="price">₹200 / 900 gm</div>
+      <div class="price">
+        ₹200 / 900 gm
+      </div>
 
       <div class="qty">
         <button onclick="changeQty(1,-1)">−</button>
@@ -387,18 +481,21 @@ footer span{
       <button class="add-btn" onclick="addToCart(1)">
         Add to Cart
       </button>
+
     </div>
 
 
-    <!-- PRODUCT 3 -->
     <div class="product">
+
       <div class="product-image">
         Prime Toast
       </div>
 
       <h3>Prime Toast</h3>
 
-      <div class="price">₹90 / 350 gm</div>
+      <div class="price">
+        ₹90 / 350 gm
+      </div>
 
       <div class="qty">
         <button onclick="changeQty(2,-1)">−</button>
@@ -409,12 +506,14 @@ footer span{
       <button class="add-btn" onclick="addToCart(2)">
         Add to Cart
       </button>
+
     </div>
 
   </section>
 
 
   <!-- CART -->
+
   <section class="cart" id="cartSection">
 
     <h2>🛒 Your Cart</h2>
@@ -447,75 +546,176 @@ footer span{
   </section>
 
 
-  <!-- CHECKOUT -->
+  <!-- CUSTOMER DETAILS -->
+
   <section class="checkout">
 
     <h2>📦 Customer Details</h2>
 
+
     <div class="form-group">
+
       <label>Full Name</label>
-      <input type="text" id="name" placeholder="Enter your name">
+
+      <input
+        type="text"
+        id="name"
+        placeholder="Enter your name"
+      >
+
     </div>
 
+
     <div class="form-group">
+
       <label>Mobile Number</label>
-      <input type="tel" id="mobile" placeholder="Enter mobile number">
+
+      <input
+        type="tel"
+        id="mobile"
+        placeholder="Enter mobile number"
+      >
+
     </div>
 
+
     <div class="form-group">
+
       <label>Full Delivery Address</label>
-      <textarea id="address" placeholder="House no., street, area, landmark"></textarea>
+
+      <textarea
+        id="address"
+        placeholder="House no., street, area, landmark"
+      ></textarea>
+
     </div>
 
+
     <div class="form-group">
+
       <label>City</label>
-      <input type="text" id="city" value="Ujjain">
+
+      <input
+        type="text"
+        id="city"
+        value="Ujjain"
+      >
+
     </div>
 
+
     <div class="form-group">
+
       <label>PIN Code</label>
-      <input type="number" id="pincode" placeholder="Enter PIN code">
+
+      <input
+        type="number"
+        id="pincode"
+        placeholder="Enter PIN code"
+      >
+
     </div>
 
 
     <!-- PAYMENT -->
+
     <div class="payment-box">
 
       <h2>💳 Payment Method</h2>
 
+
       <label class="payment-option">
+
         <input
           type="radio"
           name="payment"
           value="online"
-          onchange="updatePaymentInfo()"
           checked
+          onchange="updatePaymentInfo()"
         >
+
         💳 Pay Full Amount Online
+
       </label>
 
+
       <label class="payment-option">
+
         <input
           type="radio"
           name="payment"
           value="cod"
           onchange="updatePaymentInfo()"
         >
+
         💵 Cash on Delivery
+
       </label>
 
-      <div class="payment-info" id="paymentInfo">
-        <b>Online Payment</b><br>
-        आपका order WhatsApp पर भेजने के बाद हम आपको payment QR भेजेंगे।
-        QR scan करके पूरा payment करें और payment screenshot WhatsApp पर भेज दें।
+
+      <div
+        class="payment-info"
+        id="paymentInfo"
+      ></div>
+
+
+      <!-- QR -->
+
+      <div
+        class="qr-box"
+        id="qrBox"
+      >
+
+        <h3>📲 Scan & Pay</h3>
+
+        <p id="qrInstruction">
+          Scan this QR code to make payment.
+        </p>
+
+
+        <img
+          src="apple-bakery-qr.jpg"
+          alt="Apple Bakery UPI QR Code"
+        >
+
+
+        <div class="upi-id">
+          UPI ID:<br>
+          8962719649@ybl
+        </div>
+
+
+        <div class="amount-box">
+
+          Amount to Pay:
+          <br>
+
+          ₹<strong id="payAmount">0</strong>
+
+        </div>
+
+
+        <p class="note">
+          Payment करने के बाद screenshot WhatsApp पर भेजें।
+        </p>
+
       </div>
 
     </div>
 
 
-    <button class="place-order" onclick="placeOrder()">
+    <button
+      class="place-order"
+      onclick="placeOrder()"
+    >
       📲 Place Order on WhatsApp
     </button>
+
+
+    <p class="note">
+      Order submit करने के बाद WhatsApp खुलेगा।
+      वहाँ payment confirmation के लिए screenshot भेजें।
+    </p>
 
   </section>
 
@@ -523,26 +723,35 @@ footer span{
 
 
 <footer>
-  © 2026 <span>Apple Bakery</span> | Apple Group • Ujjain
+
+  © 2026
+  <span>Apple Bakery</span>
+  | Apple Group • Ujjain
+
 </footer>
 
 
 <script>
 
 const products = [
+
   {
-    name: "Kesar Elaichi Rusk",
-    price: 90
+    name:"Kesar Elaichi Rusk",
+    price:90
   },
+
   {
-    name: "Makkhan Roasted Bread",
-    price: 200
+    name:"Makkhan Roasted Bread",
+    price:200
   },
+
   {
-    name: "Prime Toast",
-    price: 90
+    name:"Prime Toast",
+    price:90
   }
+
 ];
+
 
 let cart = [];
 
@@ -550,8 +759,10 @@ let quantities = [1,1,1];
 
 const whatsappNumber = "918770434255";
 
+const COD_ADVANCE = 100;
 
-function changeQty(index, change){
+
+function changeQty(index,change){
 
   quantities[index] += change;
 
@@ -559,16 +770,20 @@ function changeQty(index, change){
     quantities[index] = 1;
   }
 
-  document.getElementById("qty" + index).innerText =
-    quantities[index];
+  document.getElementById(
+    "qty" + index
+  ).innerText = quantities[index];
+
 }
 
 
 function addToCart(index){
 
-  const existing = cart.find(
-    item => item.index === index
-  );
+  const existing =
+    cart.find(
+      item => item.index === index
+    );
+
 
   if(existing){
 
@@ -577,84 +792,43 @@ function addToCart(index){
   }else{
 
     cart.push({
+
       index:index,
+
       name:products[index].name,
+
       price:products[index].price,
+
       qty:quantities[index]
+
     });
 
   }
 
+
   updateCart();
 
-  alert(products[index].name + " added to cart");
+  alert(
+    products[index].name +
+    " added to cart."
+  );
 
 }
 
 
 function removeFromCart(index){
 
-  cart = cart.filter(
-    item => item.index !== index
-  );
+  cart =
+    cart.filter(
+      item => item.index !== index
+    );
 
   updateCart();
 
 }
 
 
-function updateCart(){
-
-  const cartItems =
-    document.getElementById("cartItems");
-
-  if(cart.length === 0){
-
-    cartItems.innerHTML =
-      '<div class="empty">Your cart is empty.</div>';
-
-  }else{
-
-    cartItems.innerHTML = "";
-
-    cart.forEach(item => {
-
-      const row =
-        document.createElement("div");
-
-      row.className = "cart-item";
-
-      row.innerHTML = `
-        <span>
-          ${item.name}
-          × ${item.qty}
-        </span>
-
-        <span>
-          ₹${item.price * item.qty}
-          <button
-            onclick="removeFromCart(${item.index})"
-            style="
-              margin-left:10px;
-              border:0;
-              background:#111;
-              color:white;
-              border-radius:5px;
-              padding:4px 8px;
-              cursor:pointer;
-            "
-          >
-            Remove
-          </button>
-        </span>
-      `;
-
-      cartItems.appendChild(row);
-
-    });
-
-  }
-
+function calculateTotals(){
 
   let subtotal = 0;
 
@@ -668,6 +842,7 @@ function updateCart(){
 
   let delivery = 0;
 
+
   if(subtotal > 0 && subtotal < 500){
 
     delivery = 100;
@@ -679,68 +854,236 @@ function updateCart(){
     subtotal + delivery;
 
 
-  document.getElementById("subtotal")
-    .innerText = subtotal;
+  return {
+    subtotal,
+    delivery,
+    total
+  };
 
-  document.getElementById("delivery")
-    .innerText = delivery;
+}
 
-  document.getElementById("total")
-    .innerText = total;
 
-  document.getElementById("cartCount")
-    .innerText =
-      cart.reduce(
-        (sum,item) => sum + item.qty,
-        0
-      );
+function updateCart(){
+
+  const cartItems =
+    document.getElementById(
+      "cartItems"
+    );
+
+
+  if(cart.length === 0){
+
+    cartItems.innerHTML =
+      '<div class="empty">Your cart is empty.</div>';
+
+  }else{
+
+    cartItems.innerHTML = "";
+
+
+    cart.forEach(item => {
+
+      const row =
+        document.createElement("div");
+
+      row.className =
+        "cart-item";
+
+
+      row.innerHTML = `
+
+        <span>
+          ${item.name} × ${item.qty}
+        </span>
+
+        <span>
+
+          ₹${item.price * item.qty}
+
+          <button
+            class="remove-btn"
+            onclick="removeFromCart(${item.index})"
+          >
+            Remove
+          </button>
+
+        </span>
+
+      `;
+
+
+      cartItems.appendChild(row);
+
+    });
+
+  }
+
+
+  const totals =
+    calculateTotals();
+
+
+  document.getElementById(
+    "subtotal"
+  ).innerText =
+    totals.subtotal;
+
+
+  document.getElementById(
+    "delivery"
+  ).innerText =
+    totals.delivery;
+
+
+  document.getElementById(
+    "total"
+  ).innerText =
+    totals.total;
+
+
+  document.getElementById(
+    "cartCount"
+  ).innerText =
+    cart.reduce(
+      (sum,item) =>
+        sum + item.qty,
+      0
+    );
+
+
+  updatePaymentInfo();
 
 }
 
 
 function updatePaymentInfo(){
 
-  const method =
+  const selected =
     document.querySelector(
       'input[name="payment"]:checked'
-    ).value;
+    );
+
+
+  if(!selected){
+    return;
+  }
+
+
+  const method =
+    selected.value;
+
 
   const info =
-    document.getElementById("paymentInfo");
+    document.getElementById(
+      "paymentInfo"
+    );
 
 
-  if(method === "online"){
+  const qrBox =
+    document.getElementById(
+      "qrBox"
+    );
+
+
+  const payAmount =
+    document.getElementById(
+      "payAmount"
+    );
+
+
+  const qrInstruction =
+    document.getElementById(
+      "qrInstruction"
+    );
+
+
+  const totals =
+    calculateTotals();
+
+
+  if(totals.total <= 0){
+
+    qrBox.style.display =
+      "none";
+
+    info.innerHTML =
+      "Please add products to your cart first.";
+
+    return;
+
+  }
+
+
+  qrBox.style.display =
+    "block";
+
+
+  if(method === "cod"){
+
+    const advance =
+      COD_ADVANCE;
+
+
+    const remaining =
+      totals.total - advance;
+
+
+    payAmount.innerText =
+      advance;
+
+
+    qrInstruction.innerHTML =
+      `COD order confirm करने के लिए
+      पहले <b>₹${advance}</b> advance payment करें।`;
+
 
     info.innerHTML = `
-      <b>💳 Online Payment</b><br>
-      आपका order WhatsApp पर भेजने के बाद
-      हम आपको payment QR भेजेंगे।<br><br>
 
-      QR scan करके <b>पूरा order amount</b>
-      online pay करें और payment screenshot
-      WhatsApp पर भेज दें।
+      <b>💵 Cash on Delivery</b><br><br>
+
+      आपका Total Order Amount:
+      <b>₹${totals.total}</b><br><br>
+
+      पहले Online Advance:
+      <b>₹${advance}</b><br>
+
+      Delivery के समय Cash:
+      <b>₹${remaining}</b><br><br>
+
+      नीचे दिए QR को scan करके
+      ₹${advance} payment करें।
+
     `;
 
   }else{
 
+    const onlineAmount =
+      totals.total;
+
+
+    payAmount.innerText =
+      onlineAmount;
+
+
+    qrInstruction.innerHTML =
+      `अपने पूरे order का
+      <b>₹${onlineAmount}</b> payment करें।`;
+
+
     info.innerHTML = `
-      <b>💵 Cash on Delivery</b><br>
 
-      COD order confirm करने के लिए
-      पहले <b>₹100 online advance</b> देना होगा।<br><br>
+      <b>💳 Full Online Payment</b><br><br>
 
-      हम आपको WhatsApp पर ₹100 का
-      payment QR भेजेंगे।<br><br>
+      आपका पूरा order amount:
+      <b>₹${onlineAmount}</b>
 
-      बाकी amount delivery के समय
-      <b>Cash</b> में देना होगा।
-      
+      online payment करना होगा।
+
       <br><br>
 
-      <b>Example:</b><br>
-      अगर आपका total ₹390 है,
-      तो ₹100 advance online और
-      ₹290 delivery पर cash।
+      QR scan करके payment करें
+      और payment screenshot WhatsApp पर भेजें।
+
     `;
 
   }
@@ -752,7 +1095,9 @@ function placeOrder(){
 
   if(cart.length === 0){
 
-    alert("Please add products to your cart first.");
+    alert(
+      "Please add products to your cart first."
+    );
 
     return;
 
@@ -760,31 +1105,42 @@ function placeOrder(){
 
 
   const name =
-    document.getElementById("name")
-      .value.trim();
+    document.getElementById(
+      "name"
+    ).value.trim();
+
 
   const mobile =
-    document.getElementById("mobile")
-      .value.trim();
+    document.getElementById(
+      "mobile"
+    ).value.trim();
+
 
   const address =
-    document.getElementById("address")
-      .value.trim();
+    document.getElementById(
+      "address"
+    ).value.trim();
+
 
   const city =
-    document.getElementById("city")
-      .value.trim();
+    document.getElementById(
+      "city"
+    ).value.trim();
+
 
   const pincode =
-    document.getElementById("pincode")
-      .value.trim();
+    document.getElementById(
+      "pincode"
+    ).value.trim();
 
 
-  if(!name ||
-     !mobile ||
-     !address ||
-     !city ||
-     !pincode){
+  if(
+    !name ||
+    !mobile ||
+    !address ||
+    !city ||
+    !pincode
+  ){
 
     alert(
       "Please fill all customer details."
@@ -795,9 +1151,17 @@ function placeOrder(){
   }
 
 
-  let subtotal = 0;
+  const totals =
+    calculateTotals();
 
-  let orderText = "";
+
+  const method =
+    document.querySelector(
+      'input[name="payment"]:checked'
+    ).value;
+
+
+  let orderItems = "";
 
 
   cart.forEach(item => {
@@ -805,88 +1169,111 @@ function placeOrder(){
     const itemTotal =
       item.price * item.qty;
 
-    subtotal += itemTotal;
 
-    orderText +=
-      `• ${item.name} × ${item.qty} = ₹${itemTotal}%0A`;
+    orderItems +=
+      `• ${item.name} × ${item.qty} = ₹${itemTotal}\n`;
 
   });
-
-
-  let delivery = 0;
-
-  if(subtotal < 500){
-
-    delivery = 100;
-
-  }
-
-
-  const total =
-    subtotal + delivery;
-
-
-  const payment =
-    document.querySelector(
-      'input[name="payment"]:checked'
-    ).value;
 
 
   let paymentDetails = "";
 
 
-  if(payment === "cod"){
+  if(method === "cod"){
 
-    const advance = 100;
+    const advance =
+      COD_ADVANCE;
+
 
     const remaining =
-      total - advance;
+      totals.total - advance;
 
 
     paymentDetails =
-      `PAYMENT METHOD: COD%0A` +
-      `Advance Required: ₹${advance}%0A` +
-      `Advance Status: Pending%0A` +
-      `Remaining Cash at Delivery: ₹${remaining}%0A%0A` +
-      `Please send ₹100 payment QR on WhatsApp.`;
+
+      `💵 PAYMENT METHOD: COD
+
+` +
+
+      `TOTAL ORDER: ₹${totals.total}
+` +
+
+      `ONLINE ADVANCE: ₹${advance}
+` +
+
+      `REMAINING CASH AT DELIVERY: ₹${remaining}
+
+` +
+
+      `Customer will pay ₹${advance} advance online.
+` +
+
+      `Remaining ₹${remaining} will be paid in cash at delivery.
+
+` +
+
+      `Please confirm the COD order and payment.`;
 
   }else{
 
     paymentDetails =
-      `PAYMENT METHOD: FULL ONLINE PAYMENT%0A` +
-      `Online Payment Required: ₹${total}%0A` +
-      `Payment Status: Pending%0A%0A` +
-      `Please send payment QR on WhatsApp.`;
+
+      `💳 PAYMENT METHOD: FULL ONLINE
+
+` +
+
+      `TOTAL TO PAY ONLINE: ₹${totals.total}
+
+` +
+
+      `Customer will make the full payment online.
+
+` +
+
+      `Payment screenshot will be shared on WhatsApp.`;
 
   }
 
 
   const message =
-    `*🍞 APPLE BAKERY - NEW ORDER*%0A` +
-    `━━━━━━━━━━━━━━━━━━%0A%0A` +
 
-    `*CUSTOMER DETAILS*%0A` +
-    `Name: ${encodeURIComponent(name)}%0A` +
-    `Mobile: ${encodeURIComponent(mobile)}%0A` +
-    `Address: ${encodeURIComponent(address)}%0A` +
-    `City: ${encodeURIComponent(city)}%0A` +
-    `PIN Code: ${encodeURIComponent(pincode)}%0A%0A` +
+`🍞 APPLE BAKERY - NEW ORDER
 
-    `*ORDER DETAILS*%0A` +
-    `${orderText}%0A` +
+━━━━━━━━━━━━━━━━━━
 
-    `Subtotal: ₹${subtotal}%0A` +
-    `Delivery: ₹${delivery}%0A` +
-    `*TOTAL: ₹${total}*%0A%0A` +
+👤 CUSTOMER DETAILS
 
-    `*${paymentDetails}*%0A%0A` +
+Name: ${name}
+Mobile: ${mobile}
+Address: ${address}
+City: ${city}
+PIN Code: ${pincode}
 
-    `━━━━━━━━━━━━━━━━━━%0A` +
-    `Please confirm my order.`;
+━━━━━━━━━━━━━━━━━━
+
+🛒 ORDER DETAILS
+
+${orderItems}
+
+Subtotal: ₹${totals.subtotal}
+Delivery: ₹${totals.delivery}
+TOTAL: ₹${totals.total}
+
+━━━━━━━━━━━━━━━━━━
+
+${paymentDetails}
+
+━━━━━━━━━━━━━━━━━━
+
+Please confirm my order.`;
 
 
   const whatsappURL =
-    `https://wa.me/${whatsappNumber}?text=${message}`;
+
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    encodeURIComponent(message);
 
 
   window.open(
@@ -909,8 +1296,6 @@ function scrollToCart(){
 
 
 updateCart();
-
-updatePaymentInfo();
 
 </script>
 
