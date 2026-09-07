@@ -17,6 +17,10 @@ content="Apple Bakery - Fresh bakery products and distributorship opportunities.
 
 <style>
 
+/* =========================
+   RESET
+========================= */
+
 *{
     margin:0;
     padding:0;
@@ -28,12 +32,13 @@ html{
 }
 
 body{
-    font-family:Arial,sans-serif;
+    font-family:Arial, sans-serif;
     background:#f8f6f1;
     color:#2b241d;
     line-height:1.6;
     overflow-x:hidden;
 }
+
 
 /* =========================
    HEADER
@@ -41,7 +46,7 @@ body{
 
 header{
     background:#1d3328;
-    padding:14px 6%;
+    padding:16px 6%;
     position:sticky;
     top:0;
     z-index:1000;
@@ -54,25 +59,33 @@ header{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:20px;
+    gap:25px;
 }
 
 .logo{
-    color:white;
-    font-size:24px;
+    color:#fff;
+    font-size:25px;
     font-weight:bold;
     letter-spacing:2px;
     text-decoration:none;
 }
 
+.logo span{
+    display:block;
+    color:#d4af37;
+    font-size:10px;
+    letter-spacing:3px;
+    margin-top:2px;
+}
+
 nav{
     display:flex;
     align-items:center;
-    gap:22px;
+    gap:30px;
 }
 
 nav a{
-    color:white;
+    color:#fff;
     text-decoration:none;
     font-size:15px;
     font-weight:600;
@@ -83,20 +96,18 @@ nav a:hover{
     color:#d4af37;
 }
 
-/* ORDER BUTTON */
-
 .order-nav{
     background:#d4af37;
-    color:#1d3328 !important;
-    padding:10px 18px;
-    border-radius:7px;
+    color:#17251e !important;
+    padding:11px 20px;
+    border-radius:8px;
     font-weight:bold;
 }
 
 .order-nav:hover{
-    background:#f2c94c;
-    color:#1d3328 !important;
+    background:#f1c84b;
 }
+
 
 /* =========================
    HERO
@@ -104,13 +115,13 @@ nav a:hover{
 
 .hero{
 
-    min-height:520px;
+    min-height:650px;
 
     background:
     linear-gradient(
         90deg,
-        rgba(29,51,40,.88),
-        rgba(0,0,0,.45)
+        rgba(20,39,30,.88),
+        rgba(0,0,0,.35)
     ),
     url('Apple-bakery-hero.png');
 
@@ -121,27 +132,28 @@ nav a:hover{
     display:flex;
     align-items:center;
 
-    padding:70px 7%;
+    padding:80px 7%;
 
-    color:white;
+    color:#fff;
 }
 
 .hero-content{
-    max-width:700px;
+    max-width:720px;
 }
 
 .hero-tag{
     color:#f2c94c;
-    font-size:14px;
-    letter-spacing:3px;
+    font-size:15px;
+    letter-spacing:4px;
     font-weight:bold;
-    margin-bottom:15px;
+    margin-bottom:18px;
 }
 
 .hero h1{
-    font-size:clamp(42px,6vw,72px);
-    line-height:1.1;
-    margin-bottom:18px;
+    font-family:Georgia,serif;
+    font-size:clamp(45px,6vw,76px);
+    line-height:1.08;
+    margin-bottom:22px;
 }
 
 .hero h1 span{
@@ -151,10 +163,11 @@ nav a:hover{
 
 .hero p{
     font-size:20px;
-    color:#f0f0f0;
-    margin-bottom:30px;
-    max-width:600px;
+    color:#f5f5f5;
+    margin-bottom:32px;
+    max-width:680px;
 }
+
 
 /* =========================
    BUTTONS
@@ -164,15 +177,15 @@ nav a:hover{
     display:inline-block;
 
     background:#d4af37;
-    color:#1d3328;
+    color:#17251e;
 
     text-decoration:none;
 
     font-weight:bold;
 
-    padding:14px 25px;
+    padding:15px 27px;
 
-    border-radius:8px;
+    border-radius:9px;
 
     border:none;
 
@@ -190,17 +203,21 @@ nav a:hover{
 
 .order-btn{
     background:#25d366;
-    color:white;
-    margin-left:10px;
+    color:#fff;
 }
 
 .order-btn:hover{
     background:#20bd5a;
-    color:white;
+    color:#fff;
 }
 
+.hero .order-btn{
+    margin-right:15px;
+}
+
+
 /* =========================
-   GENERAL
+   GENERAL SECTIONS
 ========================= */
 
 section{
@@ -215,28 +232,30 @@ section{
 .section-tag{
     color:#b88935;
     text-transform:uppercase;
-    letter-spacing:2px;
+    letter-spacing:3px;
     font-weight:bold;
     font-size:14px;
-    margin-bottom:8px;
+    margin-bottom:10px;
     text-align:center;
 }
 
 .section-title{
     text-align:center;
-    font-size:40px;
+    font-family:Georgia,serif;
+    font-size:42px;
     color:#1d3328;
-    margin-bottom:15px;
+    margin-bottom:16px;
     line-height:1.2;
 }
 
 .section-text{
-    max-width:720px;
+    max-width:750px;
     margin:0 auto 40px;
     text-align:center;
     color:#666;
     font-size:17px;
 }
+
 
 /* =========================
    ONLINE ORDER SECTION
@@ -247,6 +266,7 @@ section{
 }
 
 .order-box{
+
     max-width:1000px;
     margin:auto;
 
@@ -259,9 +279,9 @@ section{
 
     border-radius:22px;
 
-    padding:45px 35px;
+    padding:50px 40px;
 
-    color:white;
+    color:#fff;
 
     box-shadow:
     0 15px 40px rgba(0,0,0,.15);
@@ -271,39 +291,56 @@ section{
 
 .order-box h2{
     font-family:Georgia,serif;
-    font-size:38px;
+    font-size:40px;
     margin-bottom:12px;
 }
 
 .order-box p{
     color:#ddd;
     max-width:650px;
-    margin:0 auto 25px;
+    margin:0 auto 28px;
 }
 
 .order-features{
+
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-    margin:25px 0;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:16px;
+
+    margin:30px 0;
 }
 
 .order-feature{
-    background:rgba(255,255,255,.08);
-    padding:18px 10px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    padding:20px 12px;
+
     border-radius:12px;
 }
 
 .order-feature strong{
+
     display:block;
+
     color:#f2c94c;
+
     font-size:17px;
+
+    margin-bottom:5px;
 }
 
 .order-feature span{
+
     font-size:13px;
+
     color:#ddd;
 }
+
 
 /* =========================
    BENEFITS
@@ -314,15 +351,23 @@ section{
 }
 
 .benefit-grid{
+
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:22px;
 }
 
 .benefit-card{
-    background:white;
-    padding:25px 20px;
-    border-radius:14px;
+
+    background:#fff;
+
+    padding:28px 20px;
+
+    border-radius:15px;
+
     text-align:center;
 
     box-shadow:
@@ -330,20 +375,28 @@ section{
 }
 
 .benefit-icon{
-    font-size:32px;
+
+    font-size:34px;
+
     margin-bottom:10px;
 }
 
 .benefit-card h3{
+
     color:#1d3328;
+
     margin-bottom:8px;
+
     font-size:18px;
 }
 
 .benefit-card p{
+
     color:#666;
+
     font-size:14px;
 }
+
 
 /* =========================
    DISTRIBUTORSHIP
@@ -354,11 +407,11 @@ section{
     background:
     linear-gradient(
         135deg,
-        rgba(29,51,40,.96),
-        rgba(16,35,27,.96)
+        rgba(29,51,40,.97),
+        rgba(16,35,27,.97)
     );
 
-    color:white;
+    color:#fff;
 }
 
 .distributorship .section-tag{
@@ -366,7 +419,7 @@ section{
 }
 
 .distributorship .section-title{
-    color:white;
+    color:#fff;
 }
 
 .distributorship .section-text{
@@ -376,11 +429,12 @@ section{
 .form-box{
 
     max-width:850px;
+
     margin:auto;
 
-    background:white;
+    background:#fff;
 
-    padding:35px;
+    padding:38px;
 
     border-radius:18px;
 
@@ -467,8 +521,10 @@ section{
 }
 
 .form-submit .btn{
+
     min-width:240px;
 }
+
 
 /* =========================
    CONTACT
@@ -485,7 +541,9 @@ section{
 
 .contact h2{
 
-    font-size:36px;
+    font-family:Georgia,serif;
+
+    font-size:38px;
 
     margin-bottom:12px;
 }
@@ -506,6 +564,7 @@ section{
     text-decoration:none;
 }
 
+
 /* =========================
    FOOTER
 ========================= */
@@ -514,11 +573,11 @@ footer{
 
     background:#10231b;
 
-    color:white;
+    color:#fff;
 
     text-align:center;
 
-    padding:28px 6%;
+    padding:30px 6%;
 }
 
 footer p{
@@ -528,8 +587,9 @@ footer p{
     color:#ddd;
 }
 
+
 /* =========================
-   WHATSAPP
+   FLOATING WHATSAPP
 ========================= */
 
 .floating-whatsapp{
@@ -548,7 +608,7 @@ footer p{
 
     background:#25d366;
 
-    color:white;
+    color:#fff;
 
     display:flex;
 
@@ -558,13 +618,14 @@ footer p{
 
     text-decoration:none;
 
-    font-size:25px;
+    font-size:26px;
 
     box-shadow:
     0 5px 20px rgba(0,0,0,.25);
 
     z-index:999;
 }
+
 
 /* =========================
    MOBILE
@@ -573,132 +634,272 @@ footer p{
 @media(max-width:768px){
 
     header{
-        padding:13px 5%;
+        padding:14px 5%;
     }
 
     .navbar{
+
         flex-direction:column;
-        gap:10px;
+
+        gap:12px;
     }
 
     .logo{
-        font-size:21px;
+
+        font-size:23px;
+
+        text-align:center;
     }
 
     nav{
+
         width:100%;
+
         justify-content:center;
-        gap:10px;
+
+        gap:16px;
+
         flex-wrap:wrap;
     }
 
     nav a{
-        font-size:12px;
+
+        font-size:13px;
     }
 
     .order-nav{
-        padding:8px 13px;
+
+        padding:9px 15px;
     }
+
+
+    /* HERO */
 
     .hero{
 
-        min-height:460px;
+        min-height:650px;
 
         padding:55px 6%;
+
+        align-items:center;
 
         background-position:center;
     }
 
+    .hero-content{
+
+        width:100%;
+    }
+
+    .hero-tag{
+
+        font-size:13px;
+
+        letter-spacing:3px;
+    }
+
     .hero h1{
-        font-size:40px;
+
+        font-size:42px;
+
+        line-height:1.08;
     }
 
     .hero p{
-        font-size:16px;
+
+        font-size:17px;
+
+        line-height:1.65;
+
+        margin-bottom:28px;
     }
 
-    .hero .order-btn{
-        margin-left:0;
-        margin-top:10px;
+
+    /* IMPORTANT:
+       BUTTONS SEPARATED
+    */
+
+    .hero-content .btn{
+
+        display:block;
+
+        width:100%;
+
+        max-width:430px;
+
+        margin-left:0 !important;
+
+        margin-right:0 !important;
+
+        margin-bottom:25px;
+
+        text-align:center;
     }
+
+    .hero-content .order-btn{
+
+        margin-top:0 !important;
+
+        margin-bottom:25px !important;
+    }
+
+    .hero-content .btn:last-child{
+
+        margin-bottom:0;
+    }
+
+
+    /* SECTIONS */
 
     section{
+
         padding:55px 5%;
     }
 
     .section-title{
-        font-size:30px;
+
+        font-size:32px;
     }
 
     .section-text{
+
         font-size:15px;
+
+        line-height:1.6;
     }
 
+
+    /* ORDER */
+
     .order-box{
+
         padding:35px 20px;
+
+        border-radius:18px;
     }
 
     .order-box h2{
-        font-size:30px;
+
+        font-size:32px;
     }
 
     .order-features{
-        grid-template-columns:repeat(2,1fr);
-    }
 
-    .benefit-grid{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:
+        repeat(2,1fr);
+
         gap:12px;
     }
 
+
+    /* BENEFITS */
+
+    .benefit-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+        gap:13px;
+    }
+
     .benefit-card{
-        padding:18px 12px;
+
+        padding:20px 12px;
     }
 
     .benefit-icon{
-        font-size:26px;
+
+        font-size:28px;
     }
 
     .benefit-card h3{
+
         font-size:15px;
     }
 
     .benefit-card p{
+
         font-size:12px;
     }
 
+
+    /* FORM */
+
     .form-box{
-        padding:20px 15px;
+
+        padding:22px 16px;
+
         border-radius:14px;
     }
 
     .form-grid{
+
         grid-template-columns:1fr;
-        gap:14px;
+
+        gap:15px;
     }
 
     .form-group.full{
+
         grid-column:auto;
     }
 
     .form-group input,
     .form-group select,
     .form-group textarea{
+
         padding:12px;
+
         font-size:14px;
     }
 
     .form-submit .btn{
+
         width:100%;
+
         min-width:0;
     }
 
+
+    /* CONTACT */
+
     .contact h2{
-        font-size:28px;
+
+        font-size:30px;
     }
 
     .contact p{
+
         font-size:15px;
+    }
+
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media(max-width:420px){
+
+    .hero h1{
+
+        font-size:37px;
+    }
+
+    .hero p{
+
+        font-size:16px;
+    }
+
+    .order-features{
+
+        grid-template-columns:1fr;
+    }
+
+    .benefit-grid{
+
+        grid-template-columns:1fr;
     }
 
 }
@@ -720,8 +921,15 @@ footer p{
 <div class="navbar">
 
 <a href="index.html" class="logo">
+
 APPLE BAKERY
+
+<span>
+A PART OF APPLE GROUP
+</span>
+
 </a>
+
 
 <nav>
 
@@ -733,8 +941,10 @@ Home
 Distributorship
 </a>
 
-<a href="bakery-order.html"
-   class="order-nav">
+<a
+href="bakery-order.html"
+class="order-nav"
+>
 🛒 Order Online
 </a>
 
@@ -749,6 +959,7 @@ Contact
 </header>
 
 
+
 <!-- =========================
      HERO
 ========================= -->
@@ -757,16 +968,24 @@ Contact
 
 <div class="hero-content">
 
+
 <div class="hero-tag">
+
 APPLE BAKERY
+
 </div>
+
 
 <h1>
 
 Fresh Bakes.
-<span>Delivered to You.</span>
+
+<span>
+Delivered to You.
+</span>
 
 </h1>
+
 
 <p>
 
@@ -798,6 +1017,7 @@ Apply for Distributorship
 </section>
 
 
+
 <!-- =========================
      ONLINE ORDER
 ========================= -->
@@ -806,13 +1026,20 @@ Apply for Distributorship
 
 <div class="container">
 
+
 <div class="section-tag">
+
 APPLE BAKERY ONLINE
+
 </div>
 
+
 <h2 class="section-title">
+
 Order Fresh Bakery Products
+
 </h2>
+
 
 <p class="section-text">
 
@@ -825,9 +1052,13 @@ directly through WhatsApp.
 
 <div class="order-box">
 
+
 <h2>
+
 Order Online
+
 </h2>
+
 
 <p>
 
@@ -838,6 +1069,7 @@ Ujjain and nearby cities.
 
 
 <div class="order-features">
+
 
 <div class="order-feature">
 
@@ -890,6 +1122,7 @@ On orders ₹500+
 
 </div>
 
+
 </div>
 
 
@@ -900,11 +1133,13 @@ class="btn order-btn"
 🛒 START ORDER
 </a>
 
+
 </div>
 
 </div>
 
 </section>
+
 
 
 <!-- =========================
@@ -915,13 +1150,20 @@ class="btn order-btn"
 
 <div class="container">
 
+
 <div class="section-tag">
+
 GROW WITH APPLE BAKERY
+
 </div>
 
+
 <h2 class="section-title">
+
 Why Partner With Us?
+
 </h2>
+
 
 <p class="section-text">
 
@@ -1010,8 +1252,9 @@ Be part of the expanding Apple Bakery network.
 </section>
 
 
+
 <!-- =========================
-     DISTRIBUTORSHIP FORM
+     DISTRIBUTORSHIP
 ========================= -->
 
 <section
@@ -1021,13 +1264,20 @@ id="distributorship"
 
 <div class="container">
 
+
 <div class="section-tag">
+
 BUSINESS OPPORTUNITY
+
 </div>
 
+
 <h2 class="section-title">
+
 Apply for Distributorship
+
 </h2>
+
 
 <p class="section-text">
 
@@ -1268,6 +1518,7 @@ Submit Application
 </section>
 
 
+
 <!-- =========================
      CONTACT
 ========================= -->
@@ -1279,27 +1530,38 @@ id="contact"
 
 <div class="container">
 
+
 <h2>
 Let's Grow Together
 </h2>
+
 
 <p>
 For Apple Bakery Distributorship Enquiries
 </p>
 
+
 <p>
+
 📞
+
 <a href="tel:+918770434255">
 8770434255
 </a>
+
 </p>
 
+
 <p>
+
 🌐
+
 <a href="index.html">
-www.applegroup.info
+Apple Group
 </a>
+
 </p>
+
 
 <br>
 
@@ -1330,6 +1592,7 @@ class="btn order-btn"
 </section>
 
 
+
 <!-- =========================
      FOOTER
 ========================= -->
@@ -1351,6 +1614,7 @@ A Part of Apple Group
 </p>
 
 </footer>
+
 
 
 <!-- =========================
