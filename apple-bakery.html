@@ -2,532 +2,708 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
 
-  <title>Apple Bakery | Distributorship Opportunity</title>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="description"
-    content="Join Apple Bakery as a distributor. Apply for distributorship and grow your business with us."
-  >
+<title>Apple Bakery | Fresh Bakes & Distributorship</title>
 
-  <style>
+<meta
+name="description"
+content="Apple Bakery - Fresh bakery products and distributorship opportunities."
+>
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f8f6f1;
+    color:#2b241d;
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background:#1d3328;
+    padding:14px 6%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+    letter-spacing:2px;
+    text-decoration:none;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:22px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s ease;
+}
+
+nav a:hover{
+    color:#d4af37;
+}
+
+/* ORDER BUTTON */
+
+.order-nav{
+    background:#d4af37;
+    color:#1d3328 !important;
+    padding:10px 18px;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+.order-nav:hover{
+    background:#f2c94c;
+    color:#1d3328 !important;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    min-height:520px;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(29,51,40,.88),
+        rgba(0,0,0,.45)
+    ),
+    url('Apple-bakery-hero.png');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    align-items:center;
+
+    padding:70px 7%;
+
+    color:white;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero-tag{
+    color:#f2c94c;
+    font-size:14px;
+    letter-spacing:3px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.hero h1{
+    font-size:clamp(42px,6vw,72px);
+    line-height:1.1;
+    margin-bottom:18px;
+}
+
+.hero h1 span{
+    color:#f2c94c;
+    display:block;
+}
+
+.hero p{
+    font-size:20px;
+    color:#f0f0f0;
+    margin-bottom:30px;
+    max-width:600px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn{
+    display:inline-block;
+
+    background:#d4af37;
+    color:#1d3328;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    padding:14px 25px;
+
+    border-radius:8px;
+
+    border:none;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+
+    font-size:16px;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+    background:#f2c94c;
+}
+
+.order-btn{
+    background:#25d366;
+    color:white;
+    margin-left:10px;
+}
+
+.order-btn:hover{
+    background:#20bd5a;
+    color:white;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+section{
+    padding:75px 7%;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-tag{
+    color:#b88935;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-weight:bold;
+    font-size:14px;
+    margin-bottom:8px;
+    text-align:center;
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    color:#1d3328;
+    margin-bottom:15px;
+    line-height:1.2;
+}
+
+.section-text{
+    max-width:720px;
+    margin:0 auto 40px;
+    text-align:center;
+    color:#666;
+    font-size:17px;
+}
+
+/* =========================
+   ONLINE ORDER SECTION
+========================= */
+
+.online-order{
+    background:#fff;
+}
+
+.order-box{
+    max-width:1000px;
+    margin:auto;
+
+    background:
+    linear-gradient(
+        135deg,
+        #1d3328,
+        #10231b
+    );
+
+    border-radius:22px;
+
+    padding:45px 35px;
+
+    color:white;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.15);
+
+    text-align:center;
+}
+
+.order-box h2{
+    font-family:Georgia,serif;
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.order-box p{
+    color:#ddd;
+    max-width:650px;
+    margin:0 auto 25px;
+}
+
+.order-features{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin:25px 0;
+}
+
+.order-feature{
+    background:rgba(255,255,255,.08);
+    padding:18px 10px;
+    border-radius:12px;
+}
+
+.order-feature strong{
+    display:block;
+    color:#f2c94c;
+    font-size:17px;
+}
+
+.order-feature span{
+    font-size:13px;
+    color:#ddd;
+}
+
+/* =========================
+   BENEFITS
+========================= */
+
+.benefits{
+    background:#f8f6f1;
+}
+
+.benefit-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.benefit-card{
+    background:white;
+    padding:25px 20px;
+    border-radius:14px;
+    text-align:center;
+
+    box-shadow:
+    0 5px 18px rgba(0,0,0,.06);
+}
+
+.benefit-icon{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.benefit-card h3{
+    color:#1d3328;
+    margin-bottom:8px;
+    font-size:18px;
+}
+
+.benefit-card p{
+    color:#666;
+    font-size:14px;
+}
+
+/* =========================
+   DISTRIBUTORSHIP
+========================= */
+
+.distributorship{
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(29,51,40,.96),
+        rgba(16,35,27,.96)
+    );
+
+    color:white;
+}
+
+.distributorship .section-tag{
+    color:#f2c94c;
+}
+
+.distributorship .section-title{
+    color:white;
+}
+
+.distributorship .section-text{
+    color:#ddd;
+}
+
+.form-box{
+
+    max-width:850px;
+    margin:auto;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    color:#222;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.25);
+}
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:18px;
+}
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.form-group.full{
+    grid-column:1/-1;
+}
+
+.form-group label{
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    margin-bottom:7px;
+
+    color:#333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    width:100%;
+
+    padding:13px 14px;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    font-family:Arial,sans-serif;
+
+    outline:none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+    border-color:#d4af37;
+
+    box-shadow:
+    0 0 0 3px
+    rgba(212,175,55,.12);
+}
+
+.form-group textarea{
+
+    min-height:120px;
+
+    resize:vertical;
+}
+
+.form-submit{
+
+    margin-top:25px;
+
+    text-align:center;
+}
+
+.form-submit .btn{
+    min-width:240px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+
+    background:#d4af37;
+
+    text-align:center;
+
+    color:#1d3328;
+}
+
+.contact h2{
+
+    font-size:36px;
+
+    margin-bottom:12px;
+}
+
+.contact p{
+
+    font-size:18px;
+
+    margin-bottom:8px;
+}
+
+.contact a{
+
+    color:#1d3328;
+
+    font-weight:bold;
+
+    text-decoration:none;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:#10231b;
+
+    color:white;
+
+    text-align:center;
+
+    padding:28px 6%;
+}
+
+footer p{
+
+    margin-bottom:5px;
+
+    color:#ddd;
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.floating-whatsapp{
+
+    position:fixed;
+
+    right:18px;
+
+    bottom:18px;
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    background:#25d366;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+    font-size:25px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.25);
+
+    z-index:999;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    header{
+        padding:13px 5%;
     }
 
-    html {
-      scroll-behavior: smooth;
+    .navbar{
+        flex-direction:column;
+        gap:10px;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8f6f1;
-      color: #2b241d;
-      line-height: 1.6;
-      overflow-x: hidden;
+    .logo{
+        font-size:21px;
     }
 
-
-    /* =========================
-       HEADER
-    ========================= */
-
-    header {
-      background: #1d3328;
-      padding: 14px 6%;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+    nav{
+        width:100%;
+        justify-content:center;
+        gap:10px;
+        flex-wrap:wrap;
     }
 
-    .navbar {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
+    nav a{
+        font-size:12px;
     }
 
-    .logo {
-      color: white;
-      font-size: 24px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-decoration: none;
+    .order-nav{
+        padding:8px 13px;
     }
 
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 24px;
+    .hero{
+
+        min-height:460px;
+
+        padding:55px 6%;
+
+        background-position:center;
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 600;
-      transition: 0.3s ease;
+    .hero h1{
+        font-size:40px;
     }
 
-    nav a:hover {
-      color: #d4af37;
+    .hero p{
+        font-size:16px;
     }
 
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      min-height: 500px;
-
-      background:
-        linear-gradient(
-          90deg,
-          rgba(29, 51, 40, 0.88),
-          rgba(0, 0, 0, 0.45)
-        ),
-        url('Apple-bakery-hero.png');
-
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-
-      display: flex;
-      align-items: center;
-
-      padding: 70px 7%;
-      color: white;
+    .hero .order-btn{
+        margin-left:0;
+        margin-top:10px;
     }
 
-    .hero-content {
-      max-width: 650px;
+    section{
+        padding:55px 5%;
     }
 
-    .hero-tag {
-      color: #f2c94c;
-      font-size: 14px;
-      letter-spacing: 3px;
-      font-weight: bold;
-      margin-bottom: 15px;
+    .section-title{
+        font-size:30px;
     }
 
-    .hero h1 {
-      font-size: clamp(42px, 6vw, 72px);
-      line-height: 1.1;
-      margin-bottom: 18px;
+    .section-text{
+        font-size:15px;
     }
 
-    .hero h1 span {
-      color: #f2c94c;
+    .order-box{
+        padding:35px 20px;
     }
 
-    .hero p {
-      font-size: 20px;
-      color: #f0f0f0;
-      margin-bottom: 30px;
-      max-width: 600px;
+    .order-box h2{
+        font-size:30px;
     }
 
-
-    /* =========================
-       BUTTON
-    ========================= */
-
-    .btn {
-      display: inline-block;
-      background: #d4af37;
-      color: #1d3328;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 14px 25px;
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
-      transition: 0.3s ease;
-      font-size: 16px;
+    .order-features{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
-      background: #f2c94c;
+    .benefit-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
     }
 
-
-    /* =========================
-       GENERAL
-    ========================= */
-
-    section {
-      padding: 75px 7%;
+    .benefit-card{
+        padding:18px 12px;
     }
 
-    .container {
-      max-width: 1200px;
-      margin: auto;
+    .benefit-icon{
+        font-size:26px;
     }
 
-    .section-tag {
-      color: #b88935;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: bold;
-      font-size: 14px;
-      margin-bottom: 8px;
-      text-align: center;
+    .benefit-card h3{
+        font-size:15px;
     }
 
-    .section-title {
-      text-align: center;
-      font-size: 40px;
-      color: #1d3328;
-      margin-bottom: 15px;
-      line-height: 1.2;
+    .benefit-card p{
+        font-size:12px;
     }
 
-    .section-text {
-      max-width: 720px;
-      margin: 0 auto 40px;
-      text-align: center;
-      color: #666;
-      font-size: 17px;
+    .form-box{
+        padding:20px 15px;
+        border-radius:14px;
     }
 
-
-    /* =========================
-       BENEFITS
-    ========================= */
-
-    .benefits {
-      background: #f8f6f1;
+    .form-grid{
+        grid-template-columns:1fr;
+        gap:14px;
     }
 
-    .benefit-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .benefit-card {
-      background: white;
-      padding: 25px 20px;
-      border-radius: 14px;
-      text-align: center;
-      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
-    }
-
-    .benefit-icon {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-
-    .benefit-card h3 {
-      color: #1d3328;
-      margin-bottom: 8px;
-      font-size: 18px;
-    }
-
-    .benefit-card p {
-      color: #666;
-      font-size: 14px;
-    }
-
-
-    /* =========================
-       DISTRIBUTORSHIP
-    ========================= */
-
-    .distributorship {
-      background:
-        linear-gradient(
-          135deg,
-          rgba(29, 51, 40, 0.96),
-          rgba(16, 35, 27, 0.96)
-        );
-
-      color: white;
-    }
-
-    .distributorship .section-tag {
-      color: #f2c94c;
-    }
-
-    .distributorship .section-title {
-      color: white;
-    }
-
-    .distributorship .section-text {
-      color: #dddddd;
-    }
-
-    .form-box {
-      max-width: 850px;
-      margin: auto;
-      background: white;
-      padding: 35px;
-      border-radius: 18px;
-      color: #222;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .form-group.full {
-      grid-column: 1 / -1;
-    }
-
-    .form-group label {
-      font-size: 14px;
-      font-weight: bold;
-      margin-bottom: 7px;
-      color: #333;
+    .form-group.full{
+        grid-column:auto;
     }
 
     .form-group input,
     .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 13px 14px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-size: 15px;
-      font-family: Arial, sans-serif;
-      outline: none;
+    .form-group textarea{
+        padding:12px;
+        font-size:14px;
     }
 
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: #d4af37;
-      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.12);
+    .form-submit .btn{
+        width:100%;
+        min-width:0;
     }
 
-    .form-group textarea {
-      min-height: 120px;
-      resize: vertical;
+    .contact h2{
+        font-size:28px;
     }
 
-    .form-submit {
-      margin-top: 25px;
-      text-align: center;
+    .contact p{
+        font-size:15px;
     }
 
-    .form-submit .btn {
-      min-width: 240px;
-    }
+}
 
-
-    /* =========================
-       CONTACT
-    ========================= */
-
-    .contact {
-      background: #d4af37;
-      text-align: center;
-      color: #1d3328;
-    }
-
-    .contact h2 {
-      font-size: 36px;
-      margin-bottom: 12px;
-    }
-
-    .contact p {
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-
-    .contact a {
-      color: #1d3328;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      background: #10231b;
-      color: white;
-      text-align: center;
-      padding: 28px 6%;
-    }
-
-    footer p {
-      margin-bottom: 5px;
-      color: #dddddd;
-    }
-
-
-    /* =========================
-       WHATSAPP BUTTON
-    ========================= */
-
-    .floating-whatsapp {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-
-      width: 58px;
-      height: 58px;
-
-      border-radius: 50%;
-
-      background: #25d366;
-      color: white;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      text-decoration: none;
-      font-size: 26px;
-
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
-      z-index: 999;
-    }
-
-
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media (max-width: 768px) {
-
-      header {
-        padding: 13px 5%;
-      }
-
-      .navbar {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .logo {
-        font-size: 21px;
-      }
-
-      nav {
-        width: 100%;
-        justify-content: center;
-        gap: 14px;
-        flex-wrap: wrap;
-      }
-
-      nav a {
-        font-size: 13px;
-      }
-
-      .hero {
-        min-height: 420px;
-        padding: 55px 6%;
-        background-position: center;
-      }
-
-      .hero-tag {
-        font-size: 12px;
-        letter-spacing: 2px;
-      }
-
-      .hero h1 {
-        font-size: 40px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      section {
-        padding: 55px 5%;
-      }
-
-      .section-title {
-        font-size: 30px;
-      }
-
-      .section-text {
-        font-size: 15px;
-        margin-bottom: 30px;
-      }
-
-      .benefit-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-      }
-
-      .benefit-card {
-        padding: 18px 12px;
-      }
-
-      .benefit-icon {
-        font-size: 26px;
-      }
-
-      .benefit-card h3 {
-        font-size: 15px;
-      }
-
-      .benefit-card p {
-        font-size: 12px;
-      }
-
-      .form-box {
-        padding: 20px 15px;
-        border-radius: 14px;
-      }
-
-      .form-grid {
-        grid-template-columns: 1fr;
-        gap: 14px;
-      }
-
-      .form-group.full {
-        grid-column: auto;
-      }
-
-      .form-group input,
-      .form-group select,
-      .form-group textarea {
-        padding: 12px;
-        font-size: 14px;
-      }
-
-      .form-submit .btn {
-        width: 100%;
-        min-width: 0;
-      }
-
-      .contact h2 {
-        font-size: 28px;
-      }
-
-      .contact p {
-        font-size: 15px;
-      }
-
-    }
-
-  </style>
+</style>
 
 </head>
 
@@ -535,478 +711,661 @@
 <body>
 
 
-  <!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
-  <header>
+<header>
 
-    <div class="navbar">
+<div class="navbar">
 
-      <a href="index.html" class="logo">
-        APPLE BAKERY
-      </a>
+<a href="index.html" class="logo">
+APPLE BAKERY
+</a>
 
-      <nav>
+<nav>
 
-        <a href="index.html">
-          Home
-        </a>
+<a href="index.html">
+Home
+</a>
 
-        <a href="#distributorship">
-          Distributorship
-        </a>
+<a href="#distributorship">
+Distributorship
+</a>
 
-        <a href="#contact">
-          Contact
-        </a>
+<a href="bakery-order.html"
+   class="order-nav">
+🛒 Order Online
+</a>
 
-      </nav>
+<a href="#contact">
+Contact
+</a>
 
-    </div>
+</nav>
 
-  </header>
+</div>
 
+</header>
 
 
-  <!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
-  <section class="hero">
+<section class="hero">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-      <div class="hero-tag">
-        APPLE BAKERY
-      </div>
+<div class="hero-tag">
+APPLE BAKERY
+</div>
 
-      <h1>
-        Grow Your Business
-        <span>With Apple Bakery</span>
-      </h1>
+<h1>
 
-      <p>
-        Become a part of the Apple Bakery network and explore
-        an exciting distributorship opportunity with us.
-      </p>
+Fresh Bakes.
+<span>Delivered to You.</span>
 
-      <a href="#distributorship" class="btn">
-        Apply for Distributorship
-      </a>
+</h1>
 
-    </div>
+<p>
 
-  </section>
+Enjoy Apple Bakery favourites from the comfort
+of your home. Order online with Cash on Delivery
+and get your bakery products delivered to your doorstep.
 
+</p>
 
 
-  <!-- BENEFITS -->
+<a
+href="bakery-order.html"
+class="btn order-btn"
+>
+🛒 Order Online
+</a>
 
-  <section class="benefits">
 
-    <div class="container">
+<a
+href="#distributorship"
+class="btn"
+>
+Apply for Distributorship
+</a>
 
-      <div class="section-tag">
-        GROW WITH APPLE BAKERY
-      </div>
 
-      <h2 class="section-title">
-        Why Partner With Us?
-      </h2>
+</div>
 
-      <p class="section-text">
-        Join Apple Bakery and explore an exciting opportunity
-        to grow your business with quality bakery products.
-      </p>
+</section>
 
 
-      <div class="benefit-grid">
+<!-- =========================
+     ONLINE ORDER
+========================= -->
 
-        <div class="benefit-card">
+<section class="online-order">
 
-          <div class="benefit-icon">🏆</div>
+<div class="container">
 
-          <h3>Quality Products</h3>
+<div class="section-tag">
+APPLE BAKERY ONLINE
+</div>
 
-          <p>
-            Products focused on taste and consistent quality.
-          </p>
+<h2 class="section-title">
+Order Fresh Bakery Products
+</h2>
 
-        </div>
+<p class="section-text">
 
+Choose your favourite Apple Bakery products,
+add them to your cart and place your order
+directly through WhatsApp.
 
-        <div class="benefit-card">
+</p>
 
-          <div class="benefit-icon">📈</div>
 
-          <h3>Business Growth</h3>
+<div class="order-box">
 
-          <p>
-            Opportunity to expand your local market and business.
-          </p>
+<h2>
+Order Online
+</h2>
 
-        </div>
+<p>
 
+Fresh bakery favourites delivered to
+Ujjain and nearby cities.
 
-        <div class="benefit-card">
+</p>
 
-          <div class="benefit-icon">🤝</div>
 
-          <h3>Trusted Partnership</h3>
+<div class="order-features">
 
-          <p>
-            Build a long-term business relationship with our team.
-          </p>
+<div class="order-feature">
 
-        </div>
+<strong>
+🛒 Easy Ordering
+</strong>
 
+<span>
+Add products to cart
+</span>
 
-        <div class="benefit-card">
+</div>
 
-          <div class="benefit-icon">🚚</div>
 
-          <h3>Growing Network</h3>
+<div class="order-feature">
 
-          <p>
-            Be part of the expanding Apple Bakery network.
-          </p>
+<strong>
+💵 COD
+</strong>
 
-        </div>
+<span>
+Cash on Delivery
+</span>
 
-      </div>
+</div>
 
-    </div>
 
-  </section>
+<div class="order-feature">
 
+<strong>
+🚚 ₹100 Delivery
+</strong>
 
+<span>
+Fixed delivery charge
+</span>
 
-  <!-- DISTRIBUTORSHIP FORM -->
+</div>
 
-  <section
-    class="distributorship"
-    id="distributorship"
-  >
 
-    <div class="container">
+<div class="order-feature">
 
-      <div class="section-tag">
-        BUSINESS OPPORTUNITY
-      </div>
+<strong>
+🎉 FREE DELIVERY
+</strong>
 
-      <h2 class="section-title">
-        Apply for Distributorship
-      </h2>
+<span>
+On orders ₹500+
+</span>
 
-      <p class="section-text">
-        Interested in becoming an Apple Bakery distributor?
-        Fill in the form below and our team will contact you.
-      </p>
+</div>
 
+</div>
 
-      <div class="form-box">
 
-        <form
-          action="https://formsubmit.co/applebakeryujn@gmail.com"
-          method="POST"
-        >
+<a
+href="bakery-order.html"
+class="btn order-btn"
+>
+🛒 START ORDER
+</a>
 
-          <input
-            type="hidden"
-            name="_subject"
-            value="New Apple Bakery Distributorship Application"
-          >
+</div>
 
-          <input
-            type="hidden"
-            name="_captcha"
-            value="false"
-          >
+</div>
 
-          <input
-            type="hidden"
-            name="_template"
-            value="table"
-          >
+</section>
 
 
-          <div class="form-grid">
+<!-- =========================
+     BENEFITS
+========================= -->
 
+<section class="benefits">
 
-            <div class="form-group">
+<div class="container">
 
-              <label>
-                Full Name *
-              </label>
+<div class="section-tag">
+GROW WITH APPLE BAKERY
+</div>
 
-              <input
-                type="text"
-                name="Full Name"
-                placeholder="Enter your full name"
-                required
-              >
+<h2 class="section-title">
+Why Partner With Us?
+</h2>
 
-            </div>
+<p class="section-text">
 
+Join Apple Bakery and explore an exciting
+opportunity to grow your business with
+quality bakery products.
 
-            <div class="form-group">
+</p>
 
-              <label>
-                Mobile Number *
-              </label>
 
-              <input
-                type="tel"
-                name="Mobile Number"
-                placeholder="Enter mobile number"
-                required
-              >
+<div class="benefit-grid">
 
-            </div>
 
+<div class="benefit-card">
 
-            <div class="form-group">
+<div class="benefit-icon">
+🏆
+</div>
 
-              <label>
-                Email Address
-              </label>
+<h3>
+Quality Products
+</h3>
 
-              <input
-                type="email"
-                name="Email"
-                placeholder="Enter email address"
-              >
+<p>
+Products focused on taste and consistent quality.
+</p>
 
-            </div>
+</div>
 
 
-            <div class="form-group">
+<div class="benefit-card">
 
-              <label>
-                City *
-              </label>
+<div class="benefit-icon">
+📈
+</div>
 
-              <input
-                type="text"
-                name="City"
-                placeholder="Enter your city"
-                required
-              >
+<h3>
+Business Growth
+</h3>
 
-            </div>
+<p>
+Opportunity to expand your local market and business.
+</p>
 
+</div>
 
-            <div class="form-group">
 
-              <label>
-                State *
-              </label>
+<div class="benefit-card">
 
-              <input
-                type="text"
-                name="State"
-                placeholder="Enter your state"
-                required
-              >
+<div class="benefit-icon">
+🤝
+</div>
 
-            </div>
+<h3>
+Trusted Partnership
+</h3>
 
+<p>
+Build a long-term business relationship with our team.
+</p>
 
-            <div class="form-group">
+</div>
 
-              <label>
-                Business Name
-              </label>
 
-              <input
-                type="text"
-                name="Business Name"
-                placeholder="Your shop or business name"
-              >
+<div class="benefit-card">
 
-            </div>
+<div class="benefit-icon">
+🚚
+</div>
 
+<h3>
+Growing Network
+</h3>
 
-            <div class="form-group">
+<p>
+Be part of the expanding Apple Bakery network.
+</p>
 
-              <label>
-                Business Experience
-              </label>
+</div>
 
-              <select name="Business Experience">
 
-                <option value="">
-                  Select Experience
-                </option>
+</div>
 
-                <option>
-                  No Previous Experience
-                </option>
+</div>
 
-                <option>
-                  Less Than 1 Year
-                </option>
+</section>
 
-                <option>
-                  1 - 3 Years
-                </option>
 
-                <option>
-                  More Than 3 Years
-                </option>
+<!-- =========================
+     DISTRIBUTORSHIP FORM
+========================= -->
 
-              </select>
+<section
+class="distributorship"
+id="distributorship"
+>
 
-            </div>
+<div class="container">
 
+<div class="section-tag">
+BUSINESS OPPORTUNITY
+</div>
 
-            <div class="form-group">
+<h2 class="section-title">
+Apply for Distributorship
+</h2>
 
-              <label>
-                Investment Capacity
-              </label>
+<p class="section-text">
 
-              <select name="Investment Capacity">
+Interested in becoming an Apple Bakery distributor?
+Fill in the form below and our team will contact you.
 
-                <option value="">
-                  Select Range
-                </option>
+</p>
 
-                <option>
-                  Below ₹50,000
-                </option>
 
-                <option>
-                  ₹50,000 - ₹1 Lakh
-                </option>
+<div class="form-box">
 
-                <option>
-                  ₹1 Lakh - ₹3 Lakh
-                </option>
 
-                <option>
-                  Above ₹3 Lakh
-                </option>
+<form
+action="https://formsubmit.co/applebakeryujn@gmail.com"
+method="POST"
+>
 
-              </select>
 
-            </div>
+<input
+type="hidden"
+name="_subject"
+value="New Apple Bakery Distributorship Application"
+>
 
 
-            <div class="form-group full">
+<input
+type="hidden"
+name="_captcha"
+value="false"
+>
 
-              <label>
-                Message / Additional Information
-              </label>
 
-              <textarea
-                name="Message"
-                placeholder="Tell us about your business and distributorship requirements..."
-              ></textarea>
+<input
+type="hidden"
+name="_template"
+value="table"
+>
 
-            </div>
 
+<div class="form-grid">
 
-          </div>
 
+<div class="form-group">
 
-          <div class="form-submit">
+<label>
+Full Name *
+</label>
 
-            <button
-              type="submit"
-              class="btn"
-            >
-              Submit Application
-            </button>
+<input
+type="text"
+name="Full Name"
+placeholder="Enter your full name"
+required
+>
 
-          </div>
+</div>
 
 
-        </form>
+<div class="form-group">
 
-      </div>
+<label>
+Mobile Number *
+</label>
 
-    </div>
+<input
+type="tel"
+name="Mobile Number"
+placeholder="Enter mobile number"
+required
+>
 
-  </section>
+</div>
 
 
+<div class="form-group">
 
-  <!-- CONTACT -->
+<label>
+Email Address
+</label>
 
-  <section class="contact" id="contact">
+<input
+type="email"
+name="Email"
+placeholder="Enter email address"
+>
 
-    <div class="container">
+</div>
 
-      <h2>
-        Let's Grow Together
-      </h2>
 
-      <p>
-        For Apple Bakery Distributorship Enquiries
-      </p>
+<div class="form-group">
 
-      <p>
-        📞
-        <a href="tel:+918770434255">
-          8770434255
-        </a>
-      </p>
+<label>
+City *
+</label>
 
-      <p>
-        🌐
-        <a href="index.html">
-          www.applegroup.info
-        </a>
-      </p>
+<input
+type="text"
+name="City"
+placeholder="Enter your city"
+required
+>
 
-      <br>
+</div>
 
-      <a
-        href="https://wa.me/918770434255?text=Hello%2C%20I%20am%20interested%20in%20Apple%20Bakery%20distributorship."
-        class="btn"
-        target="_blank"
-        rel="noopener"
-      >
-        WhatsApp Us
-      </a>
 
-    </div>
+<div class="form-group">
 
-  </section>
+<label>
+State *
+</label>
 
+<input
+type="text"
+name="State"
+placeholder="Enter your state"
+required
+>
 
+</div>
 
-  <!-- FOOTER -->
 
-  <footer>
+<div class="form-group">
 
-    <p>
-      <strong>
-        APPLE BAKERY
-      </strong>
-    </p>
+<label>
+Business Name
+</label>
 
-    <p>
-      A Part of Apple Group
-    </p>
+<input
+type="text"
+name="Business Name"
+placeholder="Your shop or business name"
+>
 
-    <p>
-      © 2026 Apple Group. All Rights Reserved.
-    </p>
+</div>
 
-  </footer>
 
+<div class="form-group">
 
+<label>
+Business Experience
+</label>
 
-  <!-- FLOATING WHATSAPP -->
+<select name="Business Experience">
 
-  <a
-    href="https://wa.me/918770434255?text=Hello%2C%20I%20want%20to%20know%20more%20about%20Apple%20Bakery%20distributorship."
-    class="floating-whatsapp"
-    target="_blank"
-    rel="noopener"
-    aria-label="Chat on WhatsApp"
-  >
-    ☎
-  </a>
+<option value="">
+Select Experience
+</option>
+
+<option>
+No Previous Experience
+</option>
+
+<option>
+Less Than 1 Year
+</option>
+
+<option>
+1 - 3 Years
+</option>
+
+<option>
+More Than 3 Years
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Investment Capacity
+</label>
+
+<select name="Investment Capacity">
+
+<option value="">
+Select Range
+</option>
+
+<option>
+Below ₹50,000
+</option>
+
+<option>
+₹50,000 - ₹1 Lakh
+</option>
+
+<option>
+₹1 Lakh - ₹3 Lakh
+</option>
+
+<option>
+Above ₹3 Lakh
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group full">
+
+<label>
+Message / Additional Information
+</label>
+
+<textarea
+name="Message"
+placeholder="Tell us about your business and distributorship requirements..."
+></textarea>
+
+</div>
+
+
+</div>
+
+
+<div class="form-submit">
+
+<button
+type="submit"
+class="btn"
+>
+Submit Application
+</button>
+
+</div>
+
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+class="contact"
+id="contact"
+>
+
+<div class="container">
+
+<h2>
+Let's Grow Together
+</h2>
+
+<p>
+For Apple Bakery Distributorship Enquiries
+</p>
+
+<p>
+📞
+<a href="tel:+918770434255">
+8770434255
+</a>
+</p>
+
+<p>
+🌐
+<a href="index.html">
+www.applegroup.info
+</a>
+</p>
+
+<br>
+
+
+<a
+href="https://wa.me/918770434255?text=Hello%2C%20I%20am%20interested%20in%20Apple%20Bakery."
+class="btn"
+target="_blank"
+rel="noopener"
+>
+WhatsApp Us
+</a>
+
+
+<br><br>
+
+
+<a
+href="bakery-order.html"
+class="btn order-btn"
+>
+🛒 Order Bakery Products
+</a>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<p>
+<strong>
+APPLE BAKERY
+</strong>
+</p>
+
+<p>
+A Part of Apple Group
+</p>
+
+<p>
+© 2026 Apple Group. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<a
+href="https://wa.me/918770434255?text=Hello%2C%20I%20want%20to%20know%20more%20about%20Apple%20Bakery."
+class="floating-whatsapp"
+target="_blank"
+rel="noopener"
+aria-label="Chat on WhatsApp"
+>
+☎
+</a>
 
 
 </body>
