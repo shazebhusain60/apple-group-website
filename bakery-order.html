@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Order Online | Apple Bakery</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f8f5ef;
+    color:#222;
+}
+
+header{
+    background:#111;
+    color:#fff;
+    padding:18px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    color:#d4af37;
+    font-size:25px;
+    font-weight:bold;
+}
+
+.logo span{
+    display:block;
+    color:#fff;
+    font-size:11px;
+    letter-spacing:3px;
+    margin-top:3px;
+}
+
+.cart-top{
+    background:#d4af37;
+    color:#111;
+    border:0;
+    padding:11px 18px;
+    border-radius:25px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.hero{
+    text-align:center;
+    padding:45px 20px 30px;
+}
+
+.hero h1{
+    font-family:Georgia,serif;
+    font-size:42px;
+    color:#8b6415;
+    margin-bottom:10px;
+}
+
+.hero p{
+    color:#666;
+    font-size:16px;
+}
+
+.delivery-banner{
+    max-width:900px;
+    margin:10px auto 30px;
+    background:#fff;
+    border:1px solid #d4af37;
+    border-radius:12px;
+    padding:15px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.delivery-banner span{
+    color:#8b6415;
+}
+
+.products{
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.product{
+    background:#fff;
+    border-radius:18px;
+    padding:22px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    border:1px solid #eee;
+    text-align:center;
+}
+
+.product-image{
+    height:180px;
+    background:#f2eee5;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:18px;
+    color:#9a8148;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.product h2{
+    font-family:Georgia,serif;
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.weight{
+    color:#777;
+    margin-bottom:8px;
+}
+
+.price{
+    font-size:22px;
+    color:#9a741b;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.qty{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+.qty button{
+    width:38px;
+    height:38px;
+    border:0;
+    border-radius:50%;
+    background:#111;
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+}
+
+.qty span{
+    font-size:18px;
+    font-weight:bold;
+    min-width:25px;
+}
+
+.add-btn{
+    width:100%;
+    padding:12px;
+    border:0;
+    border-radius:25px;
+    background:#d4af37;
+    color:#111;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.cart-section{
+    max-width:900px;
+    margin:45px auto;
+    padding:25px;
+    background:#fff;
+    border-radius:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.cart-section h2{
+    font-family:Georgia,serif;
+    color:#8b6415;
+    margin-bottom:20px;
+}
+
+.cart-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:13px 0;
+    border-bottom:1px solid #eee;
+}
+
+.summary{
+    margin-top:20px;
+    line-height:2;
+}
+
+.summary-row{
+    display:flex;
+    justify-content:space-between;
+}
+
+.grand-total{
+    font-size:22px;
+    font-weight:bold;
+    color:#8b6415;
+    border-top:1px solid #ddd;
+    margin-top:10px;
+    padding-top:10px;
+}
+
+.free{
+    color:green;
+    font-weight:bold;
+}
+
+.checkout{
+    max-width:900px;
+    margin:30px auto 60px;
+    padding:30px;
+    background:#111;
+    color:#fff;
+    border-radius:18px;
+}
+
+.checkout h2{
+    color:#d4af37;
+    font-family:Georgia,serif;
+    margin-bottom:20px;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:6px;
+}
+
+.form-group input,
+.form-group textarea{
+    width:100%;
+    padding:13px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:15px;
+}
+
+.form-group textarea{
+    min-height:90px;
+    resize:vertical;
+}
+
+.cod{
+    background:#fff;
+    color:#111;
+    padding:13px;
+    border-radius:8px;
+    margin:15px 0;
+    font-weight:bold;
+}
+
+.whatsapp-btn{
+    width:100%;
+    padding:16px;
+    border:0;
+    border-radius:30px;
+    background:#25D366;
+    color:#fff;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+footer{
+    background:#111;
+    color:#aaa;
+    text-align:center;
+    padding:25px;
+    font-size:13px;
+}
+
+@media(max-width:600px){
+    .hero h1{
+        font-size:32px;
+    }
+
+    header{
+        padding:15px 4%;
+    }
+
+    .logo{
+        font-size:20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        APPLE BAKERY
+        <span>APPLE GROUP • UJJAIN</span>
+    </div>
+
+    <button class="cart-top" onclick="scrollToCart()">
+        🛒 Cart (<span id="cartCount">0</span>)
+    </button>
+</header>
+
+
+<section class="hero">
+
+    <h1>Order Online</h1>
+
+    <p>
+        Fresh Apple Bakery favourites delivered to your doorstep.
+    </p>
+
+</section>
+
+
+<div class="delivery-banner">
+    🚚 Delivery Charge: <span>₹100</span>
+    &nbsp; | &nbsp;
+    🥳 Orders of <span>₹500 or more = FREE DELIVERY</span>
+</div>
+
+
+<section class="products">
+
+    <!-- PRODUCT 1 -->
+
+    <div class="product">
+
+        <div class="product-image">
+            KESAR ELAICHI RUSK
+        </div>
+
+        <h2>Kesar Elaichi Rusk</h2>
+
+        <div class="weight">
+            425 gm
+        </div>
+
+        <div class="price">
+            ₹90
+        </div>
+
+        <div class="qty">
+            <button onclick="changeQty(0,-1)">−</button>
+            <span id="qty0">1</span>
+            <button onclick="changeQty(0,1)">+</button>
+        </div>
+
+        <button class="add-btn" onclick="addToCart(0)">
+            Add to Cart
+        </button>
+
+    </div>
+
+
+    <!-- PRODUCT 2 -->
+
+    <div class="product">
+
+        <div class="product-image">
+            MAKKHAN ROASTED BREAD
+        </div>
+
+        <h2>Makkhan Roasted Bread</h2>
+
+        <div class="weight">
+            900 gm
+        </div>
+
+        <div class="price">
+            ₹200
+        </div>
+
+        <div class="qty">
+            <button onclick="changeQty(1,-1)">−</button>
+            <span id="qty1">1</span>
+            <button onclick="changeQty(1,1)">+</button>
+        </div>
+
+        <button class="add-btn" onclick="addToCart(1)">
+            Add to Cart
+        </button>
+
+    </div>
+
+
+    <!-- PRODUCT 3 -->
+
+    <div class="product">
+
+        <div class="product-image">
+            PRIME TOAST
+        </div>
+
+        <h2>Prime Toast</h2>
+
+        <div class="weight">
+            350 gm
+        </div>
+
+        <div class="price">
+            ₹90
+        </div>
+
+        <div class="qty">
+            <button onclick="changeQty(2,-1)">−</button>
+            <span id="qty2">1</span>
+            <button onclick="changeQty(2,1)">+</button>
+        </div>
+
+        <button class="add-btn" onclick="addToCart(2)">
+            Add to Cart
+        </button>
+
+    </div>
+
+</section>
+
+
+<section class="cart-section" id="cart">
+
+    <h2>🛒 Your Cart</h2>
+
+    <div id="cartItems">
+        Your cart is empty.
+    </div>
+
+    <div class="summary">
+
+        <div class="summary-row">
+            <span>Subtotal</span>
+            <span>₹<span id="subtotal">0</span></span>
+        </div>
+
+        <div class="summary-row">
+            <span>Delivery</span>
+            <span id="delivery">₹0</span>
+        </div>
+
+        <div class="summary-row grand-total">
+            <span>Total</span>
+            <span>₹<span id="total">0</span></span>
+        </div>
+
+        <div id="deliveryMessage"></div>
+
+    </div>
+
+</section>
+
+
+<section class="checkout">
+
+    <h2>Checkout</h2>
+
+    <div class="form-group">
+        <label>Customer Name *</label>
+        <input type="text" id="customerName" placeholder="Enter your name">
+    </div>
+
+    <div class="form-group">
+        <label>Mobile Number *</label>
+        <input type="tel" id="customerMobile" placeholder="Enter mobile number">
+    </div>
+
+    <div class="form-group">
+        <label>Full Delivery Address *</label>
+        <textarea id="customerAddress" placeholder="House / Shop / Street / Area"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label>City *</label>
+        <input type="text" id="customerCity" placeholder="Enter city">
+    </div>
+
+    <div class="form-group">
+        <label>Pincode *</label>
+        <input type="number" id="customerPincode" placeholder="Enter pincode">
+    </div>
+
+    <div class="cod">
+        💵 Payment Method: Cash on Delivery (COD)
+    </div>
+
+    <button class="whatsapp-btn" onclick="placeOrder()">
+        📲 Place Order on WhatsApp
+    </button>
+
+</section>
+
+
+<footer>
+    © Apple Bakery • Apple Group • Ujjain
+</footer>
+
+
+<script>
+
+const products = [
+
+    {
+        name: "Kesar Elaichi Rusk",
+        weight: "425 gm",
+        price: 90
+    },
+
+    {
+        name: "Makkhan Roasted Bread",
+        weight: "900 gm",
+        price: 200
+    },
+
+    {
+        name: "Prime Toast",
+        weight: "350 gm",
+        price: 90
+    }
+
+];
+
+let cart = [];
+
+
+let quantities = [1,1,1];
+
+
+function changeQty(index, amount){
+
+    quantities[index] += amount;
+
+    if(quantities[index] < 1){
+        quantities[index] = 1;
+    }
+
+    document.getElementById("qty" + index).innerText =
+        quantities[index];
+
+}
+
+
+function addToCart(index){
+
+    const quantity = quantities[index];
+
+    const existing = cart.find(
+        item => item.index === index
+    );
+
+    if(existing){
+
+        existing.quantity += quantity;
+
+    }else{
+
+        cart.push({
+            index:index,
+            quantity:quantity
+        });
+
+    }
+
+    updateCart();
+
+    scrollToCart();
+
+}
+
+
+function updateCart(){
+
+    const cartItems =
+        document.getElementById("cartItems");
+
+    if(cart.length === 0){
+
+        cartItems.innerHTML =
+            "Your cart is empty.";
+
+        document.getElementById("cartCount").innerText = 0;
+        document.getElementById("subtotal").innerText = 0;
+        document.getElementById("delivery").innerText = "₹0";
+        document.getElementById("total").innerText = 0;
+
+        return;
+    }
+
+
+    let html = "";
+    let subtotal = 0;
+    let itemCount = 0;
+
+
+    cart.forEach((item, cartIndex) => {
+
+        const product = products[item.index];
+
+        const amount =
+            product.price * item.quantity;
+
+        subtotal += amount;
+
+        itemCount += item.quantity;
+
+
+        html += `
+
+        <div class="cart-item">
+
+            <div>
+                <strong>${product.name}</strong>
+                <br>
+                ${product.weight} × ${item.quantity}
+            </div>
+
+            <div>
+                ₹${amount}
+                <br>
+
+                <button
+                    onclick="removeCartItem(${cartIndex})"
+                    style="
+                    border:0;
+                    background:none;
+                    color:#b00000;
+                    cursor:pointer;
+                    margin-top:5px;
+                    "
+                >
+                    Remove
+                </button>
+
+            </div>
+
+        </div>
+
+        `;
+
+    });
+
+
+    let delivery = 100;
+
+    if(subtotal >= 500){
+
+        delivery = 0;
+
+        document.getElementById("deliveryMessage").innerHTML =
+            '<div class="free">🎉 Congratulations! FREE DELIVERY</div>';
+
+    }else{
+
+        document.getElementById("deliveryMessage").innerHTML =
+            'Add ₹' + (500 - subtotal) +
+            ' more to get FREE DELIVERY.';
+
+    }
+
+
+    const total = subtotal + delivery;
+
+
+    cartItems.innerHTML = html;
+
+    document.getElementById("cartCount").innerText =
+        itemCount;
+
+    document.getElementById("subtotal").innerText =
+        subtotal;
+
+    document.getElementById("delivery").innerText =
+        delivery === 0 ? "FREE" : "₹" + delivery;
+
+    document.getElementById("total").innerText =
+        total;
+
+}
+
+
+function removeCartItem(index){
+
+    cart.splice(index,1);
+
+    updateCart();
+
+}
+
+
+function scrollToCart(){
+
+    document.getElementById("cart")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+}
+
+
+function placeOrder(){
+
+    if(cart.length === 0){
+
+        alert("Please add products to your cart first.");
+
+        scrollToCart();
+
+        return;
+    }
+
+
+    const name =
+        document.getElementById("customerName").value.trim();
+
+    const mobile =
+        document.getElementById("customerMobile").value.trim();
+
+    const address =
+        document.getElementById("customerAddress").value.trim();
+
+    const city =
+        document.getElementById("customerCity").value.trim();
+
+    const pincode =
+        document.getElementById("customerPincode").value.trim();
+
+
+    if(!name || !mobile || !address || !city || !pincode){
+
+        alert("Please fill all delivery details.");
+
+        return;
+    }
+
+
+    if(mobile.length < 10){
+
+        alert("Please enter a valid mobile number.");
+
+        return;
+    }
+
+
+    let subtotal = 0;
+
+    let message =
+        "🍎 *APPLE BAKERY - NEW ORDER*%0A";
+
+    message +=
+        "━━━━━━━━━━━━━━━━━━%0A%0A";
+
+
+    message +=
+        "*Customer:* " +
+        encodeURIComponent(name) +
+        "%0A";
+
+    message +=
+        "*Mobile:* " +
+        encodeURIComponent(mobile) +
+        "%0A";
+
+    message +=
+        "*Address:* " +
+        encodeURIComponent(address) +
+        "%0A";
+
+    message +=
+        "*City:* " +
+        encodeURIComponent(city) +
+        "%0A";
+
+    message +=
+        "*Pincode:* " +
+        encodeURIComponent(pincode) +
+        "%0A%0A";
+
+
+    message +=
+        "*ORDER DETAILS*%0A";
+
+
+    cart.forEach(item => {
+
+        const product =
+            products[item.index];
+
+        const amount =
+            product.price * item.quantity;
+
+        subtotal += amount;
+
+
+        message +=
+            "• " +
+            encodeURIComponent(product.name) +
+            " (" +
+            product.weight +
+            ") × " +
+            item.quantity +
+            " = ₹" +
+            amount +
+            "%0A";
+
+    });
+
+
+    let delivery =
+        subtotal >= 500 ? 0 : 100;
+
+    let total =
+        subtotal + delivery;
+
+
+    message += "%0A";
+
+    message +=
+        "*Subtotal:* ₹" +
+        subtotal +
+        "%0A";
+
+    message +=
+        "*Delivery:* " +
+        (delivery === 0 ? "FREE" : "₹100") +
+        "%0A";
+
+    message +=
+        "*TOTAL:* ₹" +
+        total +
+        "%0A%0A";
+
+    message +=
+        "*Payment:* Cash on Delivery (COD)%0A";
+
+
+    const whatsappNumber =
+        "918770434255";
+
+
+    const whatsappURL =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        message;
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+}
+
+updateCart();
+
+</script>
+
+</body>
+</html>
